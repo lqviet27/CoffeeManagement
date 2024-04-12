@@ -90,7 +90,8 @@
             this.buttonLogin.Size = new System.Drawing.Size(210, 48);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // buttonExit
             // 
@@ -102,7 +103,8 @@
             this.buttonExit.Size = new System.Drawing.Size(210, 48);
             this.buttonExit.TabIndex = 3;
             this.buttonExit.Text = "Thoat";
-            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FormLogin
             // 

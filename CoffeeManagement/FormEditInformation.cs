@@ -16,5 +16,31 @@ namespace CoffeManagement
         {
             InitializeComponent();
         }
+
+        private void buttonTable_Click(object sender, EventArgs e)
+        {
+            FormTable formTable = new FormTable();
+            this.Dispose();
+            formTable.ShowDialog();
+        }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            FormAdmin formAdmin = new FormAdmin();
+            this.Dispose();
+            formAdmin.ShowDialog();
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            this.Dispose();
+            formLogin.ShowDialog();
+        }
+
+        private void FormEditInformation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

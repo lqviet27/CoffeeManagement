@@ -100,6 +100,7 @@
             this.btn_changeInfo.TabIndex = 5;
             this.btn_changeInfo.Text = "Thay Doi Thong Tin";
             this.btn_changeInfo.UseVisualStyleBackColor = true;
+            this.btn_changeInfo.Click += new System.EventHandler(this.btn_changeInfo_Click);
             // 
             // btn_logout
             // 
@@ -111,6 +112,7 @@
             this.btn_logout.TabIndex = 4;
             this.btn_logout.Text = "Dang Xuat";
             this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_admin
             // 
@@ -122,6 +124,7 @@
             this.btn_admin.TabIndex = 3;
             this.btn_admin.Text = "Admin";
             this.btn_admin.UseVisualStyleBackColor = true;
+            this.btn_admin.Click += new System.EventHandler(this.btn_admin_Click);
             // 
             // btn_table
             // 
@@ -133,6 +136,7 @@
             this.btn_table.TabIndex = 2;
             this.btn_table.Text = "Table";
             this.btn_table.UseVisualStyleBackColor = true;
+            this.btn_table.Click += new System.EventHandler(this.btn_table_Click);
             // 
             // panel4
             // 
@@ -149,8 +153,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(13, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 24);
             this.label1.TabIndex = 0;
@@ -158,15 +161,16 @@
             // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 554);
+            this.ClientSize = new System.Drawing.Size(804, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMainMenu_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
