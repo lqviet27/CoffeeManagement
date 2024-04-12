@@ -19,28 +19,31 @@ namespace CoffeManagement
 
         private void buttonTable_Click(object sender, EventArgs e)
         {
-            FormTable formTable = new FormTable();
-            this.Dispose();
-            formTable.ShowDialog();
+            //FormTable formTable = new FormTable();
+            //this.Hide();
+            //formTable.ShowDialog();
+            //this.Show();
         }
 
         private void buttonAdmin_Click(object sender, EventArgs e)
         {
-            FormAdmin formAdmin = new FormAdmin();
-            this.Dispose();
-            formAdmin.ShowDialog();
+            //FormAdmin formAdmin = new FormAdmin();
+            //this.Hide();
+            //formAdmin.ShowDialog();
+            //this.Show();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            this.Dispose();
-            formLogin.ShowDialog();
+            //FormLogin formLogin = new FormLogin();
+            //this.Hide();
+            //formLogin.ShowDialog();
+            //this.Show();
         }
 
         private void FormEditInformation_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Dispose();
+            //this.Dispose();
         }
     }
 }

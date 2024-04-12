@@ -36,5 +36,10 @@ namespace CoffeManagement
         {
 
         }
+
+        private void txtTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

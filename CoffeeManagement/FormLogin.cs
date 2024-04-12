@@ -19,14 +19,16 @@ namespace CoffeManagement
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            FormMainMenu formMainMenu = new FormMainMenu(this);
+            FormMainMenu mainMenu = new FormMainMenu();
             this.Hide();
-            formMainMenu.Show();
+            mainMenu.ShowDialog();
+            this.Show();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            //this.Dispose();
+            this.Close();
         }
     }
 }
