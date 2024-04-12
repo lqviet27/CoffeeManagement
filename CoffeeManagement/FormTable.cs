@@ -16,5 +16,10 @@ namespace CoffeManagement
         {
             InitializeComponent();
         }
+
+        private void FormTable_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

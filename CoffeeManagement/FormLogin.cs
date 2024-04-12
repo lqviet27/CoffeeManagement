@@ -17,7 +17,16 @@ namespace CoffeManagement
             InitializeComponent();
         }
 
-        
-        
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            FormMainMenu formMainMenu = new FormMainMenu(this);
+            this.Hide();
+            formMainMenu.Show();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
