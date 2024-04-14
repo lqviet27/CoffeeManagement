@@ -1,4 +1,4 @@
-﻿namespace CoffeManagement
+﻿namespace CoffeeManagement
 {
     partial class FormLogin
     {
@@ -34,6 +34,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.rjDatePicker1 = new CustomControls.RJControls.RJDatePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +66,7 @@
             // textBoxUserName
             // 
             this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxUserName.Location = new System.Drawing.Point(235, 176);
+            this.textBoxUserName.Location = new System.Drawing.Point(235, 177);
             this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(475, 29);
@@ -106,11 +107,25 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // rjDatePicker1
+            // 
+            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjDatePicker1.BorderSize = 0;
+            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.rjDatePicker1.Location = new System.Drawing.Point(325, 77);
+            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.rjDatePicker1.Name = "rjDatePicker1";
+            this.rjDatePicker1.Size = new System.Drawing.Size(275, 35);
+            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjDatePicker1.TabIndex = 4;
+            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 434);
+            this.Controls.Add(this.rjDatePicker1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
@@ -133,6 +148,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonExit;
+        private CustomControls.RJControls.RJDatePicker rjDatePicker1;
     }
 }
 

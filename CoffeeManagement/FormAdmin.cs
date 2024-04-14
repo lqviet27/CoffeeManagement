@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoffeManagement
+namespace CoffeeManagement
 {
     public partial class FormAdmin : Form
     {

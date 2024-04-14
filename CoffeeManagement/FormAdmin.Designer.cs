@@ -1,4 +1,4 @@
-﻿namespace CoffeManagement
+﻿namespace CoffeeManagement
 {
     partial class FormAdmin
     {
