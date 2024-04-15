@@ -157,5 +157,17 @@
   <ItemGroup>
     <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidepass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visiblepass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

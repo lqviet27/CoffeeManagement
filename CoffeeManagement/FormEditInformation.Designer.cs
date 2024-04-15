@@ -329,6 +329,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FormEditInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditInformation_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

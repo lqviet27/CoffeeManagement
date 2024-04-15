@@ -17,19 +17,32 @@ namespace CoffeeManagement
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void rjBtn_Login_Click(object sender, EventArgs e)
         {
             FormMainMenu mainMenu = new FormMainMenu();
             this.Hide();
             mainMenu.ShowDialog();
             this.Show();
         }
-
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void btn_closed_Click(object sender, EventArgs e)
         {
-            //this.Dispose();
             this.Close();
         }
 
+        private void pictureBox_hidepass_Click(object sender, EventArgs e)
+        {
+            pictureBox_visiblepass.Visible = true;
+            pictureBox_hidepass.Visible = false;
+            rjTextBox6.PasswordChar = false;
+        }
+
+        private void pictureBox_visiblepass_Click(object sender, EventArgs e)
+        {
+            pictureBox_visiblepass.Visible = false;
+            pictureBox_hidepass.Visible = true;
+            rjTextBox6.PasswordChar = true;
+        }
+
+        
     }
 }
