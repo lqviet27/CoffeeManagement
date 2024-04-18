@@ -17,6 +17,19 @@ namespace CoffeeManagement
             InitializeComponent();
         }
 
-        
+        private void nmDrinkPrice_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel18_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
