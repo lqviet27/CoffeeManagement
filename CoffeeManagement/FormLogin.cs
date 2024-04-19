@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,13 @@ namespace CoffeeManagement
 
         private void rjBtn_Login_Click(object sender, EventArgs e)
         {
-            FormMainMenu mainMenu = new FormMainMenu();
-            this.Hide();
-            mainMenu.ShowDialog();
-            this.Show();
+            //FormMainMenu mainMenu = new FormMainMenu();
+            //this.Hide();
+            //mainMenu.ShowDialog();
+            //this.Show();
+            DataProvider.Instance.con.Open();
+            MessageBox.Show(DataProvider.Instance.con.State.ToString());
+            DataProvider.Instance.con.Close();
         }
         private void btn_closed_Click(object sender, EventArgs e)
         {
