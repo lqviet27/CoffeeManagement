@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,45 @@ namespace CoffeeManagement
             //this.Hide();
             //mainMenu.ShowDialog();
             //this.Show();
-            DataProvider.Instance.con.Open();
-            MessageBox.Show(DataProvider.Instance.con.State.ToString());
-            DataProvider.Instance.con.Close();
+            //DataProvider.Instance.con.Open();
+            string s = "Select * from Account";
+            string username = rjTextBoxUsername.Texts;
+            string password = rjTextBoxPassword.Texts;
+            SqlCommand cmd = new SqlCommand(s, DataProvider.Instance.con);
+            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
+            bool checkSuccess = false;
+            bool checkExist = false;
+            foreach (DataRow i in dt.Rows)
+            {
+                if (i["UserName"].ToString() == username)
+                {
+                    if (i["PassWord"].ToString() == password)
+                    {
+                        MessageBox.Show("Login Successfully");
+                        checkSuccess = true;
+                        checkExist = true;
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username or Password is not correct!");
+                        checkExist = true;
+                        break;
+                    }
+                }
+            }
+            if (!checkExist)
+            {
+                MessageBox.Show("Account does not exist!");
+            }
+            if (checkSuccess)
+            {
+                FormMainMenu formMainMenu = new FormMainMenu();
+                this.Hide();
+                formMainMenu.ShowDialog();
+                this.Show();
+            }
+            //DataProvider.Instance.con.Close();
         }
         private void btn_closed_Click(object sender, EventArgs e)
         {
@@ -37,14 +74,14 @@ namespace CoffeeManagement
         {
             pictureBox_visiblepass.Visible = true;
             pictureBox_hidepass.Visible = false;
-            rjTextBox6.PasswordChar = false;
+            rjTextBoxPassword.PasswordChar = false;
         }
 
         private void pictureBox_visiblepass_Click(object sender, EventArgs e)
         {
             pictureBox_visiblepass.Visible = false;
             pictureBox_hidepass.Visible = true;
-            rjTextBox6.PasswordChar = true;
+            rjTextBoxPassword.PasswordChar = true;
         }
 
         
