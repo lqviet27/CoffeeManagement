@@ -49,12 +49,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDrink = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTable = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxDrinkType = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -65,7 +65,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,12 +282,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBoxDrink);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxTable);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.numericUpDownQuantity);
+            this.groupBox2.Controls.Add(this.comboBoxDrinkType);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -310,20 +310,20 @@
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // comboBoxDrink
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBoxDrink.FormattingEnabled = true;
+            this.comboBoxDrink.Items.AddRange(new object[] {
             "Type1",
             "Type2",
             "Type3",
             "Type4"});
-            this.comboBox2.Location = new System.Drawing.Point(141, 100);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 28);
-            this.comboBox2.TabIndex = 9;
+            this.comboBoxDrink.Location = new System.Drawing.Point(106, 81);
+            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrink.Name = "comboBoxDrink";
+            this.comboBoxDrink.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrink.TabIndex = 9;
             // 
             // label15
             // 
@@ -335,13 +335,13 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Drink :";
             // 
-            // textBox1
+            // textBoxTable
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 30);
-            this.textBox1.TabIndex = 7;
+            this.textBoxTable.Location = new System.Drawing.Point(106, 22);
+            this.textBoxTable.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTable.Name = "textBoxTable";
+            this.textBoxTable.Size = new System.Drawing.Size(137, 26);
+            this.textBoxTable.TabIndex = 7;
             // 
             // label14
             // 
@@ -353,39 +353,40 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Table :";
             // 
-            // numericUpDown1
+            // numericUpDownQuantity
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 137);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(106, 111);
+            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(181, 26);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownQuantity.Name = "numericUpDownQuantity";
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(136, 23);
+            this.numericUpDownQuantity.TabIndex = 4;
+            this.numericUpDownQuantity.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // comboBox1
+            // comboBoxDrinkType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxDrinkType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBoxDrinkType.FormattingEnabled = true;
+            this.comboBoxDrinkType.Items.AddRange(new object[] {
             "Type1",
             "Type2",
             "Type3",
             "Type4"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 63);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 28);
-            this.comboBox1.TabIndex = 2;
+            this.comboBoxDrinkType.Location = new System.Drawing.Point(106, 51);
+            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrinkType.Name = "comboBoxDrinkType";
+            this.comboBoxDrinkType.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrinkType.TabIndex = 2;
+            this.comboBoxDrinkType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrinkType_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -439,6 +440,7 @@
             this.Name = "FormTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTable";
+            this.Load += new System.EventHandler(this.FormTable_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -448,7 +450,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -461,13 +463,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox comboBoxDrinkType;
+        private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBoxTable;
+        private System.Windows.Forms.ComboBox comboBoxDrink;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox2;
