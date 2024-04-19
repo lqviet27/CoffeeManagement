@@ -39,7 +39,6 @@ namespace CoffeeManagement
                 {
                     if (i["PassWord"].ToString() == password)
                     {
-                        MessageBox.Show("Login Successfully");
                         checkSuccess = true;
                         checkExist = true;
                         break;
@@ -63,7 +62,7 @@ namespace CoffeeManagement
                 formMainMenu.ShowDialog();
                 this.Show();
             }
-            //DataProvider.Instance.con.Close();
+            DataProvider.Instance.con.Close();
         }
         private void btn_closed_Click(object sender, EventArgs e)
         {

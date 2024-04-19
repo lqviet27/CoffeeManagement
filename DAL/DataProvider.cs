@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DataProvider
     {
-        private static string ConStr = @"Data Source=LAPTOP-DB0H1E2V\SQLEXPRESS;Initial Catalog=PBL3;Integrated Security=True";
+        private static string ConStr = @"Data Source=BIETTO\LQVIET;Initial Catalog=PBL3;Integrated Security=True";
         public SqlConnection con { get; set; }
         private static DataProvider _instance;
         private DataProvider()
@@ -84,26 +84,5 @@ namespace DAL
                 con.Close();
             }
         }
-
-        public SqlDataReader ExecuteReader(SqlCommand cmd)
-        {
-            try
-            {
-                con.Open();
-                cmd.Connection = con;
-                return cmd.ExecuteReader();
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Check Information Again11 !", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            finally
-            {
-                con.Close();
-            }
-            
-        }
-
     }
 }

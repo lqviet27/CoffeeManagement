@@ -130,7 +130,7 @@
             this.label5.Location = new System.Drawing.Point(68, 75);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(266, 22);
+            this.label5.Size = new System.Drawing.Size(215, 18);
             this.label5.TabIndex = 27;
             this.label5.Text = "ID              Drink            Quantity";
             // 
@@ -147,7 +147,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(272, 599);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(51, 22);
+            this.label21.Size = new System.Drawing.Size(43, 19);
             this.label21.TabIndex = 25;
             this.label21.Text = "VND";
             // 
@@ -156,7 +156,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(21, 599);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 22);
+            this.label19.Size = new System.Drawing.Size(51, 19);
             this.label19.TabIndex = 23;
             this.label19.Text = "Price : ";
             // 
@@ -195,7 +195,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(199, 34);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(57, 22);
+            this.label18.Size = new System.Drawing.Size(46, 19);
             this.label18.TabIndex = 1;
             this.label18.Text = "Status";
             // 
@@ -204,7 +204,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(52, 34);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 22);
+            this.label11.Size = new System.Drawing.Size(42, 19);
             this.label11.TabIndex = 0;
             this.label11.Text = "Table";
             // 
@@ -230,7 +230,7 @@
             this.textBox2.Location = new System.Drawing.Point(75, 34);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 30);
+            this.textBox2.Size = new System.Drawing.Size(161, 26);
             this.textBox2.TabIndex = 7;
             // 
             // label16
@@ -239,7 +239,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label16.Location = new System.Drawing.Point(5, 41);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 20);
+            this.label16.Size = new System.Drawing.Size(48, 17);
             this.label16.TabIndex = 6;
             this.label16.Text = "From: ";
             // 
@@ -258,15 +258,10 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Type1",
-            "Type2",
-            "Type3",
-            "Type4"});
             this.comboBox4.Location = new System.Drawing.Point(75, 87);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(161, 28);
+            this.comboBox4.Size = new System.Drawing.Size(161, 24);
             this.comboBox4.TabIndex = 2;
             // 
             // label17
@@ -275,7 +270,7 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label17.Location = new System.Drawing.Point(5, 91);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 20);
+            this.label17.Size = new System.Drawing.Size(33, 17);
             this.label17.TabIndex = 1;
             this.label17.Text = "To: ";
             // 
@@ -304,7 +299,7 @@
             // 
             this.button1.Image = global::CoffeeManagement.Properties.Resources.icons8_add_32;
             this.button1.Location = new System.Drawing.Point(104, 171);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
             this.button1.TabIndex = 10;
@@ -314,15 +309,10 @@
             // 
             this.comboBoxDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxDrink.FormattingEnabled = true;
-            this.comboBoxDrink.Items.AddRange(new object[] {
-            "Type1",
-            "Type2",
-            "Type3",
-            "Type4"});
-            this.comboBoxDrink.Location = new System.Drawing.Point(106, 81);
+            this.comboBoxDrink.Location = new System.Drawing.Point(127, 100);
             this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDrink.Name = "comboBoxDrink";
-            this.comboBoxDrink.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrink.Size = new System.Drawing.Size(177, 24);
             this.comboBoxDrink.TabIndex = 9;
             // 
             // label15
@@ -331,16 +321,16 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label15.Location = new System.Drawing.Point(15, 105);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 20);
+            this.label15.Size = new System.Drawing.Size(49, 17);
             this.label15.TabIndex = 8;
             this.label15.Text = "Drink :";
             // 
             // textBoxTable
             // 
-            this.textBoxTable.Location = new System.Drawing.Point(106, 22);
+            this.textBoxTable.Location = new System.Drawing.Point(127, 22);
             this.textBoxTable.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTable.Name = "textBoxTable";
-            this.textBoxTable.Size = new System.Drawing.Size(137, 26);
+            this.textBoxTable.Size = new System.Drawing.Size(177, 26);
             this.textBoxTable.TabIndex = 7;
             // 
             // label14
@@ -349,14 +339,14 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label14.Location = new System.Drawing.Point(15, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 20);
+            this.label14.Size = new System.Drawing.Size(52, 17);
             this.label14.TabIndex = 6;
             this.label14.Text = "Table :";
             // 
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.numericUpDownQuantity.Location = new System.Drawing.Point(106, 111);
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(127, 134);
             this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownQuantity.Minimum = new decimal(new int[] {
             1,
@@ -364,7 +354,7 @@
             0,
             0});
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
-            this.numericUpDownQuantity.Size = new System.Drawing.Size(136, 23);
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(177, 23);
             this.numericUpDownQuantity.TabIndex = 4;
             this.numericUpDownQuantity.Value = new decimal(new int[] {
             1,
@@ -381,10 +371,10 @@
             "Type2",
             "Type3",
             "Type4"});
-            this.comboBoxDrinkType.Location = new System.Drawing.Point(106, 51);
+            this.comboBoxDrinkType.Location = new System.Drawing.Point(127, 61);
             this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDrinkType.Name = "comboBoxDrinkType";
-            this.comboBoxDrinkType.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrinkType.Size = new System.Drawing.Size(177, 24);
             this.comboBoxDrinkType.TabIndex = 2;
             this.comboBoxDrinkType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrinkType_SelectedIndexChanged);
             // 
@@ -394,7 +384,7 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label12.Location = new System.Drawing.Point(15, 64);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 20);
+            this.label12.Size = new System.Drawing.Size(85, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "Drink Type :";
             // 
@@ -404,7 +394,7 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label13.Location = new System.Drawing.Point(15, 140);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 20);
+            this.label13.Size = new System.Drawing.Size(73, 17);
             this.label13.TabIndex = 3;
             this.label13.Text = "Quantity : ";
             // 
