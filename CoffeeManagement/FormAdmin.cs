@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BUS;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,21 +37,14 @@ namespace CoffeeManagement
 
         private void btn_ShowDrink_Click(object sender, EventArgs e)
         {
-            string query = "Select * from Drink ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dgv_Drink.DataSource = dt;
+            BUS_Drink.Instance.ShowDGV(dgv_Drink);
             ResizeDataGridViewColumns(dgv_Drink);
-
 
         }
 
         private void btn_Show_Drink_Type_Click(object sender, EventArgs e)
         {
-            string query = "Select * from DrinkType ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dataGridView1.DataSource = dt;
+            BUS_DrinkType.Instance.ShowDGV(dataGridView1);
             ResizeDataGridViewColumns(dataGridView1);
 
         }
@@ -66,10 +60,7 @@ namespace CoffeeManagement
 
         private void btn_Show_Acc_Click(object sender, EventArgs e)
         {
-            string query = "Select * from Account ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dataGridView3.DataSource = dt;
+            BUS_Account.Instance.ShowDGV(dataGridView3);
             ResizeDataGridViewColumns(dataGridView3);
         }
         private void ResizeDataGridViewColumns(DataGridView dataGridView)

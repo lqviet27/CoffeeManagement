@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DAL_Account.cs" />
+    <Compile Include="DAL_Bill.cs" />
+    <Compile Include="DAL_BillDetail.cs" />
+    <Compile Include="DAL_Drink.cs" />
+    <Compile Include="DAL_DrinkType.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

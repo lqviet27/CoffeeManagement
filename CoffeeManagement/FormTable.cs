@@ -20,21 +20,16 @@ namespace CoffeeManagement
         
         public FormTable()
         {
-            
             InitializeComponent();
             LoadComboBox();
             loadData();
-
         }
-
 
         public void loadData()
         {
             List<Table> tables = new List<Table>();
             Point point = new Point(3, 30) ;
             //3 111 224
-
-
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "Select * From [Table]";
@@ -67,14 +62,8 @@ namespace CoffeeManagement
                 pn_Table.Controls.Add(btn);
                 point.X += 90 + 10;
              
-            }
-            
-
-             
+            } 
         }
-
-
-        
 
         private DataTable DrinkType;
         private DataTable Drink;
