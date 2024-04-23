@@ -34,24 +34,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_closed = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_visiblepass = new System.Windows.Forms.PictureBox();
             this.pictureBox_hidepass = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
             this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
-            this.btn_closed = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_visiblepass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hidepass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +67,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 431);
+            this.panel1.Size = new System.Drawing.Size(252, 431);
             this.panel1.TabIndex = 4;
             // 
             // label7
@@ -130,15 +130,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Welcome to the";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 98);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.rjBtn_Login);
@@ -151,31 +142,38 @@
             this.panel2.Controls.Add(this.rjTextBox7);
             this.panel2.Controls.Add(this.btn_closed);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(244, 0);
+            this.panel2.Location = new System.Drawing.Point(252, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(438, 431);
+            this.panel2.Size = new System.Drawing.Size(467, 431);
             this.panel2.TabIndex = 5;
             // 
-            // rjBtn_Login
+            // label9
             // 
-            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderRadius = 20;
-            this.rjBtn_Login.BorderSize = 2;
-            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
-            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
-            this.rjBtn_Login.Location = new System.Drawing.Point(122, 263);
-            this.rjBtn_Login.Name = "rjBtn_Login";
-            this.rjBtn_Login.Size = new System.Drawing.Size(199, 44);
-            this.rjBtn_Login.TabIndex = 58;
-            this.rjBtn_Login.Text = "Login";
-            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
-            this.rjBtn_Login.UseVisualStyleBackColor = false;
-            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label9.Location = new System.Drawing.Point(89, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(236, 24);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Login to your account";
+            // 
+            // btn_closed
+            // 
+            this.btn_closed.FlatAppearance.BorderSize = 0;
+            this.btn_closed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_closed.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_closed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_closed.Location = new System.Drawing.Point(426, 0);
+            this.btn_closed.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_closed.Name = "btn_closed";
+            this.btn_closed.Size = new System.Drawing.Size(41, 44);
+            this.btn_closed.TabIndex = 4;
+            this.btn_closed.Text = "X";
+            this.btn_closed.UseVisualStyleBackColor = true;
+            this.btn_closed.Click += new System.EventHandler(this.btn_closed_Click);
             // 
             // pictureBox3
             // 
@@ -202,7 +200,7 @@
             // pictureBox_visiblepass
             // 
             this.pictureBox_visiblepass.Image = global::CoffeeManagement.Properties.Resources.visiblepass;
-            this.pictureBox_visiblepass.Location = new System.Drawing.Point(375, 199);
+            this.pictureBox_visiblepass.Location = new System.Drawing.Point(387, 199);
             this.pictureBox_visiblepass.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_visiblepass.Name = "pictureBox_visiblepass";
             this.pictureBox_visiblepass.Size = new System.Drawing.Size(38, 24);
@@ -215,7 +213,7 @@
             // pictureBox_hidepass
             // 
             this.pictureBox_hidepass.Image = global::CoffeeManagement.Properties.Resources.hidepass;
-            this.pictureBox_hidepass.Location = new System.Drawing.Point(375, 199);
+            this.pictureBox_hidepass.Location = new System.Drawing.Point(387, 199);
             this.pictureBox_hidepass.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_hidepass.Name = "pictureBox_hidepass";
             this.pictureBox_hidepass.Size = new System.Drawing.Size(38, 24);
@@ -224,17 +222,36 @@
             this.pictureBox_hidepass.TabStop = false;
             this.pictureBox_hidepass.Click += new System.EventHandler(this.pictureBox_hidepass_Click);
             // 
-            // label9
+            // pictureBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label9.Location = new System.Drawing.Point(89, 72);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(236, 24);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Login to your account";
+            this.pictureBox1.Image = global::CoffeeManagement.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rjBtn_Login
+            // 
+            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderRadius = 20;
+            this.rjBtn_Login.BorderSize = 2;
+            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
+            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
+            this.rjBtn_Login.Location = new System.Drawing.Point(141, 279);
+            this.rjBtn_Login.Name = "rjBtn_Login";
+            this.rjBtn_Login.Size = new System.Drawing.Size(202, 44);
+            this.rjBtn_Login.TabIndex = 58;
+            this.rjBtn_Login.Text = "Login";
+            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
+            this.rjBtn_Login.UseVisualStyleBackColor = false;
+            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
             // 
             // rjTextBox6
             // 
@@ -245,7 +262,7 @@
             this.rjTextBox6.BorderSize = 2;
             this.rjTextBox6.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox6.ForeColor = System.Drawing.Color.HotPink;
-            this.rjTextBox6.Location = new System.Drawing.Point(93, 193);
+            this.rjTextBox6.Location = new System.Drawing.Point(105, 193);
             this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox6.Multiline = false;
             this.rjTextBox6.Name = "rjTextBox6";
@@ -267,7 +284,7 @@
             this.rjTextBox7.BorderSize = 2;
             this.rjTextBox7.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox7.ForeColor = System.Drawing.Color.HotPink;
-            this.rjTextBox7.Location = new System.Drawing.Point(93, 133);
+            this.rjTextBox7.Location = new System.Drawing.Point(105, 133);
             this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox7.Multiline = false;
             this.rjTextBox7.Name = "rjTextBox7";
@@ -280,41 +297,27 @@
             this.rjTextBox7.Texts = "";
             this.rjTextBox7.UnderlinedStyle = true;
             // 
-            // btn_closed
-            // 
-            this.btn_closed.FlatAppearance.BorderSize = 0;
-            this.btn_closed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_closed.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_closed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_closed.Location = new System.Drawing.Point(406, 0);
-            this.btn_closed.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_closed.Name = "btn_closed";
-            this.btn_closed.Size = new System.Drawing.Size(30, 32);
-            this.btn_closed.TabIndex = 4;
-            this.btn_closed.Text = "X";
-            this.btn_closed.UseVisualStyleBackColor = true;
-            this.btn_closed.Click += new System.EventHandler(this.btn_closed_Click);
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 431);
+            this.ClientSize = new System.Drawing.Size(719, 431);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_visiblepass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hidepass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

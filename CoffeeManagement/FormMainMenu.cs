@@ -17,13 +17,8 @@ namespace CoffeeManagement
         {
             InitializeComponent();
         }
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            this.Close();
 
-        }
-
-        private void btn_table_Click(object sender, EventArgs e)
+        private void btn_Table_Click(object sender, EventArgs e)
         {
             FormTable formTable = new FormTable();
             this.Hide();
@@ -31,7 +26,7 @@ namespace CoffeeManagement
             this.Show();
         }
 
-        private void btn_admin_Click(object sender, EventArgs e)
+        private void btn_Admin_Click(object sender, EventArgs e)
         {
             FormAdmin formAdmin = new FormAdmin();
             this.Hide();
@@ -39,7 +34,12 @@ namespace CoffeeManagement
             this.Show();
         }
 
-        private void btn_changeInfo_Click(object sender, EventArgs e)
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_ChangeInfo_Click(object sender, EventArgs e)
         {
             FormEditInformation formEditInformation = new FormEditInformation();
             this.Hide();
