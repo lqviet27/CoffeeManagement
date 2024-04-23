@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BUS;
+using DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -17,41 +18,28 @@ namespace CoffeeManagement
 {
     public partial class FormTable : Form
     {
+        private List<Table> tables = new List<Table>();
+        private Table currentTable;
+        private List<DrinkType> drinkTypes = new List<DrinkType>();
+        private List<Drink> drinks = new List<Drink>();
         
         public FormTable()
         {
-            
             InitializeComponent();
             LoadComboBox();
-            loadData();
+            loadTable();
         }
 
-        public void loadData()
+
+        public void loadTable()
         {
-            List<Table> tables = new List<Table>();
+            BUS_Table.Instance.getList(tables);
             Point point = new Point(3, 30) ;
-            //3 111 224
-
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * From [Table]";
-            DataProvider.Instance.con.Open();
-            cmd.Connection = DataProvider.Instance.con;
-
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                tables.Add(new Table(Int32.Parse(dr["ID"].ToString()), dr["Name"].ToString(), dr["Status"].ToString()));
-            }
-            dr.Close();
-
-            //pn_Table 
-            int j = 0;
+            
             for(int i=0;i<tables.Count;i++)
             {
                 Button btn = new Button();
+                btn.MouseClick += Btn_MouseClick;
                 btn.Size=new Size(90, 40);
                 btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
                 if (tables[i].status=="Online")
@@ -67,31 +55,28 @@ namespace CoffeeManagement
              
             }
             
-
              
         }
 
+        private void Btn_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+              Button btn=  (Button) sender;
+                tx_Table.Text = btn.Text;
+        }
 
-        
-
-        private DataTable DrinkType;
-        private DataTable Drink;
+        private DataTable DT_Drink;
 
         private void LoadComboBox()
         {
             comboBoxDrinkType.Items.Clear();
-            string s = "Select * from DrinkType";
-            string s1 = "Select * from Drink";
-            SqlCommand cmd = new SqlCommand(s, DataProvider.Instance.con);
-            SqlCommand cmd1 = new SqlCommand(s1, DataProvider.Instance.con);
-            DrinkType = DataProvider.Instance.ExecuteTable(cmd);
-            Drink = DataProvider.Instance.ExecuteTable(cmd1);
-            foreach (DataRow dr in DrinkType.Rows)
+
+            BUS_DrinkType.Instance.getList(drinkTypes);
+            BUS_Drink.Instance.getList(drinks);
+
+            foreach (DrinkType dt in drinkTypes)
             {
-
-                comboBoxDrinkType.Items.Add(dr["Name"]);
-
-
+                comboBoxDrinkType.Items.Add(dt.name);
             }
         }
         private void FormTable_Load(object sender, EventArgs e)
@@ -104,22 +89,17 @@ namespace CoffeeManagement
             comboBoxDrink.Items.Clear();
             comboBoxDrink.Text = "";
             string NameType = comboBoxDrinkType.Text.ToString();
-            string IDType = "";
-            foreach (DataRow row in DrinkType.Rows)
+            foreach (Drink dr in drinks)
             {
-                if (row["Name"].ToString() == NameType) 
-                { 
-                    IDType = row["ID"].ToString();
-                    break;
-                }
-            }
-            foreach(DataRow row in Drink.Rows)
-            {
-                if (row["IDType"].ToString() ==  IDType)
+                if (dr.type == NameType) 
                 {
-                    comboBoxDrink.Items.Add(row["Name"].ToString());
+                    comboBoxDrink.Items.Add(dr.name);
                 }
             }
         }
+
+        
+
+        
     }
 }

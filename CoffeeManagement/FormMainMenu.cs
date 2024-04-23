@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +13,21 @@ namespace CoffeeManagement
 {
     public partial class FormMainMenu : Form
     {
-
+        //******
+        private string Type = FormLogin.Type;
+        //******
         public FormMainMenu()
         {
             InitializeComponent();
+            checkAdmin();
         }
-
+        private void checkAdmin()
+        {
+            if (Type == "Admin")
+                btn_Admin.Enabled = true;
+            else
+                btn_Admin.Enabled = false;
+        }
         private void btn_Table_Click(object sender, EventArgs e)
         {
             FormTable formTable = new FormTable();

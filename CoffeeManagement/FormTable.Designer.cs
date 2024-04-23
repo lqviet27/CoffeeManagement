@@ -51,7 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBoxDrink = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBoxTable = new System.Windows.Forms.TextBox();
+            this.tx_Table = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.comboBoxDrinkType = new System.Windows.Forms.ComboBox();
@@ -136,6 +136,7 @@
             // 
             // panel4
             // 
+            this.panel4.AutoScroll = true;
             this.panel4.Location = new System.Drawing.Point(9, 105);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
@@ -258,11 +259,6 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Type1",
-            "Type2",
-            "Type3",
-            "Type4"});
             this.comboBox4.Location = new System.Drawing.Point(75, 87);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
@@ -284,7 +280,7 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.comboBoxDrink);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBoxTable);
+            this.groupBox2.Controls.Add(this.tx_Table);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.numericUpDownQuantity);
             this.groupBox2.Controls.Add(this.comboBoxDrinkType);
@@ -304,7 +300,7 @@
             // 
             this.button1.Image = global::CoffeeManagement.Properties.Resources.icons8_add_32;
             this.button1.Location = new System.Drawing.Point(104, 171);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
             this.button1.TabIndex = 10;
@@ -314,15 +310,10 @@
             // 
             this.comboBoxDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxDrink.FormattingEnabled = true;
-            this.comboBoxDrink.Items.AddRange(new object[] {
-            "Type1",
-            "Type2",
-            "Type3",
-            "Type4"});
-            this.comboBoxDrink.Location = new System.Drawing.Point(106, 81);
-            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrink.Location = new System.Drawing.Point(127, 100);
+            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxDrink.Name = "comboBoxDrink";
-            this.comboBoxDrink.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrink.Size = new System.Drawing.Size(177, 28);
             this.comboBoxDrink.TabIndex = 9;
             // 
             // label15
@@ -335,13 +326,13 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Drink :";
             // 
-            // textBoxTable
+            // tx_Table
             // 
-            this.textBoxTable.Location = new System.Drawing.Point(106, 22);
-            this.textBoxTable.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTable.Name = "textBoxTable";
-            this.textBoxTable.Size = new System.Drawing.Size(137, 26);
-            this.textBoxTable.TabIndex = 7;
+            this.tx_Table.Location = new System.Drawing.Point(127, 22);
+            this.tx_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tx_Table.Name = "tx_Table";
+            this.tx_Table.Size = new System.Drawing.Size(177, 30);
+            this.tx_Table.TabIndex = 7;
             // 
             // label14
             // 
@@ -356,15 +347,15 @@
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.numericUpDownQuantity.Location = new System.Drawing.Point(106, 111);
-            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(127, 134);
+            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
-            this.numericUpDownQuantity.Size = new System.Drawing.Size(136, 23);
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(177, 26);
             this.numericUpDownQuantity.TabIndex = 4;
             this.numericUpDownQuantity.Value = new decimal(new int[] {
             1,
@@ -381,10 +372,10 @@
             "Type2",
             "Type3",
             "Type4"});
-            this.comboBoxDrinkType.Location = new System.Drawing.Point(106, 51);
-            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrinkType.Location = new System.Drawing.Point(127, 62);
+            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxDrinkType.Name = "comboBoxDrinkType";
-            this.comboBoxDrinkType.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxDrinkType.Size = new System.Drawing.Size(177, 28);
             this.comboBoxDrinkType.TabIndex = 2;
             this.comboBoxDrinkType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrinkType_SelectedIndexChanged);
             // 
@@ -424,6 +415,7 @@
             // pn_Table
             // 
             this.pn_Table.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pn_Table.AutoScroll = true;
             this.pn_Table.Location = new System.Drawing.Point(12, 37);
             this.pn_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_Table.Name = "pn_Table";
@@ -468,7 +460,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBoxTable;
+        private System.Windows.Forms.TextBox tx_Table;
         private System.Windows.Forms.ComboBox comboBoxDrink;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
