@@ -203,6 +203,10 @@
     <None Include="Resources\icons8-search-32.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{1ADCAF0A-A7A1-4B4B-B79F-35464B80C22C}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5708CB4A-8390-4B2C-825F-E2852A05E3DB}</Project>
       <Name>DAL</Name>

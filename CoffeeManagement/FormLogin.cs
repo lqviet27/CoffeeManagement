@@ -1,4 +1,6 @@
-﻿using DAL;
+﻿using BUS;
+using DAL;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,16 +11,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CoffeeManagement
 {
     public partial class FormLogin : Form
     {
+        //******
+        private List<Account> listAccount = new List<Account>();
+        public static string Type;
+        public static string Cashier;
+        //******
         public FormLogin()
         {
             InitializeComponent();
         }
-
+        private bool checkLogin(string username, string password)
+        {
+            BUS_Account.Instance.getList(listAccount);
+            foreach (Account i in listAccount)
+            {
+                if (i.userName == username && i.password == password)
+                {
+                    Type = i.type;
+                    Cashier = i.displayName;
+                    return true;
+                }
+            }
+            return false;
+        }
         private void rjBtn_Login_Click(object sender, EventArgs e)
         {
             //FormMainMenu mainMenu = new FormMainMenu();
@@ -26,43 +47,26 @@ namespace CoffeeManagement
             //mainMenu.ShowDialog();
             //this.Show();
             //DataProvider.Instance.con.Open();
-            string s = "Select * from Account";
-            string username = rjTextBoxUsername.Texts;
-            string password = rjTextBoxPassword.Texts;
-            SqlCommand cmd = new SqlCommand(s, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            bool checkSuccess = false;
-            bool checkExist = false;
-            foreach (DataRow i in dt.Rows)
+            string userName = rjTextBoxUsername.Texts;
+            string passWord = rjTextBoxPassword.Texts;
+            if (checkLogin(userName, passWord))
             {
-                if (i["UserName"].ToString() == username)
-                {
-                    if (i["PassWord"].ToString() == password)
-                    {
-                        checkSuccess = true;
-                        checkExist = true;
-                        break;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username or Password is not correct!");
-                        checkExist = true;
-                        break;
-                    }
-                }
-            }
-            if (!checkExist)
-            {
-                MessageBox.Show("Account does not exist!");
-            }
-            if (checkSuccess)
-            {
-                FormMainMenu formMainMenu = new FormMainMenu();
+
+                rjTextBoxUsername.Texts = String.Empty;
+                rjTextBoxPassword.Texts = String.Empty;
+                //Show Form MainMenu
+                //MessageBox.Show(Type);
+                FormMainMenu mainMenu = new FormMainMenu();
                 this.Hide();
-                formMainMenu.ShowDialog();
+                mainMenu.ShowDialog();
                 this.Show();
             }
-            DataProvider.Instance.con.Close();
+            else
+            {
+                //MessageBox.Show("Your Password or User Name is not correct!");
+                lb_invalidInput.Visible = true;
+            }
+            
         }
         private void btn_closed_Click(object sender, EventArgs e)
         {
@@ -83,6 +87,9 @@ namespace CoffeeManagement
             rjTextBoxPassword.PasswordChar = true;
         }
 
-        
+        private void rjTextBoxUsername__TextChanged(object sender, EventArgs e)
+        {
+            lb_invalidInput.Visible = false;
+        }
     }
 }
