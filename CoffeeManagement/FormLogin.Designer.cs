@@ -34,24 +34,25 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btn_closed = new System.Windows.Forms.Button();
+            this.lb_invalidInput = new System.Windows.Forms.Label();
+            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_visiblepass = new System.Windows.Forms.PictureBox();
             this.pictureBox_hidepass = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.rjTextBoxPassword = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBoxUsername = new CustomControls.RJControls.RJTextBox();
+            this.btn_closed = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_visiblepass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hidepass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +66,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 431);
             this.panel1.TabIndex = 4;
@@ -130,23 +131,115 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Welcome to the";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CoffeeManagement.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lb_invalidInput);
             this.panel2.Controls.Add(this.rjBtn_Login);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox_visiblepass);
             this.panel2.Controls.Add(this.pictureBox_hidepass);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.rjTextBox6);
-            this.panel2.Controls.Add(this.rjTextBox7);
+            this.panel2.Controls.Add(this.rjTextBoxPassword);
+            this.panel2.Controls.Add(this.rjTextBoxUsername);
             this.panel2.Controls.Add(this.btn_closed);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(252, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(467, 431);
             this.panel2.TabIndex = 5;
+            // 
+            // lb_invalidInput
+            // 
+            this.lb_invalidInput.AutoSize = true;
+            this.lb_invalidInput.Font = new System.Drawing.Font("Meiryo UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_invalidInput.ForeColor = System.Drawing.Color.Red;
+            this.lb_invalidInput.Location = new System.Drawing.Point(38, 249);
+            this.lb_invalidInput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_invalidInput.Name = "lb_invalidInput";
+            this.lb_invalidInput.Size = new System.Drawing.Size(404, 24);
+            this.lb_invalidInput.TabIndex = 59;
+            this.lb_invalidInput.Text = "Tên đăng nhập hoặc mật khẩu không đúng";
+            this.lb_invalidInput.Visible = false;
+            // 
+            // rjBtn_Login
+            // 
+            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderRadius = 20;
+            this.rjBtn_Login.BorderSize = 2;
+            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
+            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
+            this.rjBtn_Login.Location = new System.Drawing.Point(113, 288);
+            this.rjBtn_Login.Name = "rjBtn_Login";
+            this.rjBtn_Login.Size = new System.Drawing.Size(202, 44);
+            this.rjBtn_Login.TabIndex = 58;
+            this.rjBtn_Login.Text = "Login";
+            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
+            this.rjBtn_Login.UseVisualStyleBackColor = false;
+            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CoffeeManagement.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(24, 193);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CoffeeManagement.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(24, 133);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox_visiblepass
+            // 
+            this.pictureBox_visiblepass.Image = global::CoffeeManagement.Properties.Resources.visiblepass;
+            this.pictureBox_visiblepass.Location = new System.Drawing.Point(387, 199);
+            this.pictureBox_visiblepass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox_visiblepass.Name = "pictureBox_visiblepass";
+            this.pictureBox_visiblepass.Size = new System.Drawing.Size(38, 24);
+            this.pictureBox_visiblepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_visiblepass.TabIndex = 18;
+            this.pictureBox_visiblepass.TabStop = false;
+            this.pictureBox_visiblepass.Visible = false;
+            this.pictureBox_visiblepass.Click += new System.EventHandler(this.pictureBox_visiblepass_Click);
+            // 
+            // pictureBox_hidepass
+            // 
+            this.pictureBox_hidepass.Image = global::CoffeeManagement.Properties.Resources.hidepass;
+            this.pictureBox_hidepass.Location = new System.Drawing.Point(387, 199);
+            this.pictureBox_hidepass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox_hidepass.Name = "pictureBox_hidepass";
+            this.pictureBox_hidepass.Size = new System.Drawing.Size(38, 24);
+            this.pictureBox_hidepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_hidepass.TabIndex = 17;
+            this.pictureBox_hidepass.TabStop = false;
+            this.pictureBox_hidepass.Click += new System.EventHandler(this.pictureBox_hidepass_Click);
             // 
             // label9
             // 
@@ -160,6 +253,51 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Login to your account";
             // 
+            // rjTextBoxPassword
+            // 
+            this.rjTextBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjTextBoxPassword.BorderColor = System.Drawing.Color.DeepPink;
+            this.rjTextBoxPassword.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.rjTextBoxPassword.BorderRadius = 0;
+            this.rjTextBoxPassword.BorderSize = 2;
+            this.rjTextBoxPassword.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBoxPassword.ForeColor = System.Drawing.Color.HotPink;
+            this.rjTextBoxPassword.Location = new System.Drawing.Point(105, 193);
+            this.rjTextBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjTextBoxPassword.Multiline = false;
+            this.rjTextBoxPassword.Name = "rjTextBoxPassword";
+            this.rjTextBoxPassword.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.rjTextBoxPassword.PasswordChar = true;
+            this.rjTextBoxPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBoxPassword.PlaceholderText = "Passoword";
+            this.rjTextBoxPassword.Size = new System.Drawing.Size(320, 40);
+            this.rjTextBoxPassword.TabIndex = 16;
+            this.rjTextBoxPassword.Texts = "";
+            this.rjTextBoxPassword.UnderlinedStyle = true;
+            // 
+            // rjTextBoxUsername
+            // 
+            this.rjTextBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjTextBoxUsername.BorderColor = System.Drawing.Color.DeepPink;
+            this.rjTextBoxUsername.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.rjTextBoxUsername.BorderRadius = 0;
+            this.rjTextBoxUsername.BorderSize = 2;
+            this.rjTextBoxUsername.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBoxUsername.ForeColor = System.Drawing.Color.HotPink;
+            this.rjTextBoxUsername.Location = new System.Drawing.Point(105, 133);
+            this.rjTextBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjTextBoxUsername.Multiline = false;
+            this.rjTextBoxUsername.Name = "rjTextBoxUsername";
+            this.rjTextBoxUsername.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.rjTextBoxUsername.PasswordChar = false;
+            this.rjTextBoxUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBoxUsername.PlaceholderText = "Username";
+            this.rjTextBoxUsername.Size = new System.Drawing.Size(320, 40);
+            this.rjTextBoxUsername.TabIndex = 15;
+            this.rjTextBoxUsername.Texts = "";
+            this.rjTextBoxUsername.UnderlinedStyle = true;
+            this.rjTextBoxUsername._TextChanged += new System.EventHandler(this.rjTextBoxUsername__TextChanged);
+            // 
             // btn_closed
             // 
             this.btn_closed.FlatAppearance.BorderSize = 0;
@@ -167,135 +305,13 @@
             this.btn_closed.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_closed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btn_closed.Location = new System.Drawing.Point(426, 0);
-            this.btn_closed.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_closed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_closed.Name = "btn_closed";
             this.btn_closed.Size = new System.Drawing.Size(41, 44);
             this.btn_closed.TabIndex = 4;
             this.btn_closed.Text = "X";
             this.btn_closed.UseVisualStyleBackColor = true;
             this.btn_closed.Click += new System.EventHandler(this.btn_closed_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CoffeeManagement.Properties.Resources.padlock;
-            this.pictureBox3.Location = new System.Drawing.Point(24, 193);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CoffeeManagement.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 133);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox_visiblepass
-            // 
-            this.pictureBox_visiblepass.Image = global::CoffeeManagement.Properties.Resources.visiblepass;
-            this.pictureBox_visiblepass.Location = new System.Drawing.Point(387, 199);
-            this.pictureBox_visiblepass.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox_visiblepass.Name = "pictureBox_visiblepass";
-            this.pictureBox_visiblepass.Size = new System.Drawing.Size(38, 24);
-            this.pictureBox_visiblepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_visiblepass.TabIndex = 18;
-            this.pictureBox_visiblepass.TabStop = false;
-            this.pictureBox_visiblepass.Visible = false;
-            this.pictureBox_visiblepass.Click += new System.EventHandler(this.pictureBox_visiblepass_Click);
-            // 
-            // pictureBox_hidepass
-            // 
-            this.pictureBox_hidepass.Image = global::CoffeeManagement.Properties.Resources.hidepass;
-            this.pictureBox_hidepass.Location = new System.Drawing.Point(387, 199);
-            this.pictureBox_hidepass.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox_hidepass.Name = "pictureBox_hidepass";
-            this.pictureBox_hidepass.Size = new System.Drawing.Size(38, 24);
-            this.pictureBox_hidepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_hidepass.TabIndex = 17;
-            this.pictureBox_hidepass.TabStop = false;
-            this.pictureBox_hidepass.Click += new System.EventHandler(this.pictureBox_hidepass_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CoffeeManagement.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // rjBtn_Login
-            // 
-            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderRadius = 20;
-            this.rjBtn_Login.BorderSize = 2;
-            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
-            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
-            this.rjBtn_Login.Location = new System.Drawing.Point(141, 279);
-            this.rjBtn_Login.Name = "rjBtn_Login";
-            this.rjBtn_Login.Size = new System.Drawing.Size(202, 44);
-            this.rjBtn_Login.TabIndex = 58;
-            this.rjBtn_Login.Text = "Login";
-            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
-            this.rjBtn_Login.UseVisualStyleBackColor = false;
-            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
-            // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.DeepPink;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.rjTextBox6.BorderRadius = 0;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.HotPink;
-            this.rjTextBox6.Location = new System.Drawing.Point(105, 193);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox6.PasswordChar = true;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "Passoword";
-            this.rjTextBox6.Size = new System.Drawing.Size(320, 40);
-            this.rjTextBox6.TabIndex = 16;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = true;
-            // 
-            // rjTextBox7
-            // 
-            this.rjTextBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.DeepPink;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.RoyalBlue;
-            this.rjTextBox7.BorderRadius = 0;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.HotPink;
-            this.rjTextBox7.Location = new System.Drawing.Point(105, 133);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "Username";
-            this.rjTextBox7.Size = new System.Drawing.Size(320, 40);
-            this.rjTextBox7.TabIndex = 15;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = true;
             // 
             // FormLogin
             // 
@@ -311,13 +327,13 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_visiblepass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hidepass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,14 +348,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_closed;
-        private CustomControls.RJControls.RJTextBox rjTextBox6;
-        private CustomControls.RJControls.RJTextBox rjTextBox7;
+        private CustomControls.RJControls.RJTextBox rjTextBoxPassword;
+        private CustomControls.RJControls.RJTextBox rjTextBoxUsername;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox_hidepass;
         private System.Windows.Forms.PictureBox pictureBox_visiblepass;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private CustomControls.RJControls.RJButton rjBtn_Login;
+        private System.Windows.Forms.Label lb_invalidInput;
     }
 }
 
