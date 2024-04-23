@@ -23,7 +23,6 @@ namespace CoffeeManagement
             
             InitializeComponent();
             LoadComboBox();
-        }
             loadData();
         }
 

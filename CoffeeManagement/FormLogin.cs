@@ -62,6 +62,7 @@ namespace CoffeeManagement
                 this.Hide();
                 formMainMenu.ShowDialog();
                 this.Show();
+                
             }
             //DataProvider.Instance.con.Close();
         }
