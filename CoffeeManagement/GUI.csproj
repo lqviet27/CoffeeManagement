@@ -202,5 +202,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-search-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1EF34B08-5767-411B-B04D-9369BF851521}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
