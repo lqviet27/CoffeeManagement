@@ -13,12 +13,19 @@ namespace DAL
     {
         public override void Create(DrinkType newElement)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("InsertDrinkType");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Id", SqlDbType.Int).Value = newElement.id;
+            cmd.Parameters.AddWithValue("Name", SqlDbType.NVarChar).Value = newElement.name;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
-        public override void Delete(int PKValue)
+        public override void Delete(int deleteDrinkTypeID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("DeleteDrinkType");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Id", SqlDbType.Int).Value = deleteDrinkTypeID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
         public override DataTable Read()
@@ -28,9 +35,14 @@ namespace DAL
             return DataProvider.Instance.ExecuteTable(cmd);
         }
 
-        public override void Update(DrinkType updateElement, int PKvalue)
+        public override void Update(DrinkType updateElement, int oldDrinkTypeID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("UpdateDrinkType");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("Id", SqlDbType.Int).Value = updateElement.id;
+            cmd.Parameters.AddWithValue("Name", SqlDbType.NVarChar).Value = updateElement.name;
+            cmd.Parameters.AddWithValue("OldId", SqlDbType.Int).Value = oldDrinkTypeID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
     }
 }

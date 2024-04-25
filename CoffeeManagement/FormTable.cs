@@ -27,7 +27,6 @@ namespace CoffeeManagement
         public FormTable()
         {
             InitializeComponent();
-            LoadComboBox();
             loadTable();
             
         }
@@ -144,16 +143,16 @@ namespace CoffeeManagement
 
             foreach (DrinkType dt in drinkTypes)
             {
-                comboBoxDrinkType.Items.Add(dt.name);
+                txt_Status.Text = "Online";
             }
 
        
         }
+
         private void FormTable_Load(object sender, EventArgs e)
         {
-            
-        }
 
+        }
         private void comboBoxDrinkType_SelectedIndexChanged(object sender, EventArgs e)
         {
             cb_drink.Items.Clear();
@@ -162,7 +161,7 @@ namespace CoffeeManagement
             NumUD_quantity.Value = 1;
             foreach (Drink dr in drinks)
             {
-                if (dr.type == NameType) 
+                if (dr.type == NameType)
                 {
                     cb_drink.Items.Add(dr.name);
                 }

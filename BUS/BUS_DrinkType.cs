@@ -1,11 +1,13 @@
 ﻿using DAL;
 using Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -13,26 +15,26 @@ namespace BUS
     {
         public override void Create(DrinkType model)
         {
-            throw new NotImplementedException();
+            DAL_DrinkType.Instance.Create(model);
         }
 
         public override void Delete(int data)
         {
-            throw new NotImplementedException();
+            DAL_DrinkType.Instance.Delete(data);
         }
 
         public override void getList(List<DrinkType> list)
         {
             list.Clear();
-            foreach(DataRow dt in Read().Rows) {
+            foreach (DataRow dr in Read().Rows)
+            {
                 list.Add(new DrinkType
                 {
-                    id = (int)dt["ID"],
-                    name = dt["Name"].ToString()
+                    id = Convert.ToInt32(dr["ID"]),
+                    name = dr["Name"].ToString()
                 });
             }
         }
-
         public override DataTable Read()
         {
            return DAL_DrinkType.Instance.Read();
@@ -40,7 +42,16 @@ namespace BUS
 
         public override void Update(DrinkType model, int data)
         {
-            throw new NotImplementedException();
+            DAL_DrinkType.Instance.Update(model, data);
+        }
+        // load drink type vao combobox
+        public void LoadDrinkTypeToComboBox(List<DrinkType> listType, ComboBox cbDrinkType)
+        {
+            cbDrinkType.Items.Clear();
+            for (int i = 0; i < listType.Count; i++)
+            {
+                cbDrinkType.Items.Add(listType[i].name);
+            }
         }
     }
 }

@@ -13,12 +13,21 @@ namespace DAL
     {
         public override void Create(Drink newElement)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("InsertDrink");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = newElement.id;
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = newElement.name;
+            cmd.Parameters.AddWithValue("@Type", SqlDbType.NVarChar).Value = newElement.type;
+            cmd.Parameters.AddWithValue("@Price", SqlDbType.Float).Value = newElement.price;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
-        public override void Delete(int PKValue)
+        public override void Delete(int deleteDrinkID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("DeleteDrink"); 
+            cmd.CommandType = CommandType.StoredProcedure; 
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = deleteDrinkID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
         public override DataTable Read()
@@ -28,9 +37,16 @@ namespace DAL
             return DataProvider.Instance.ExecuteTable(cmd);
         }
 
-        public override void Update(Drink updateElement, int PKvalue)
+        public override void Update(Drink updateElement, int oldDrinkID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("UpdateDrink");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = updateElement.id;
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = updateElement.name;
+            cmd.Parameters.AddWithValue("@Type", SqlDbType.NVarChar).Value = updateElement.type;
+            cmd.Parameters.AddWithValue("@Price", SqlDbType.Float).Value = updateElement.price;
+            cmd.Parameters.AddWithValue("@OldId", SqlDbType.Int).Value = oldDrinkID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
     }
 }

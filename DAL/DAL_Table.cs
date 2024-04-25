@@ -11,14 +11,22 @@ namespace DAL
 {
     public class DAL_Table : DAL<DAL_Table, Table, int>
     {
-        public override void Create(Table newElement)
+        public override void Create(Table newTable)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("InsertTable");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = newTable.id;
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = newTable.name;
+            cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = newTable.status;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
-        public override void Delete(int PKValue)
+        public override void Delete(int deleteTableID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("DeleteTable");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = deleteTableID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
         public override DataTable Read()
@@ -28,9 +36,15 @@ namespace DAL
             return DataProvider.Instance.ExecuteTable(cmd);
         }
 
-        public override void Update(Table updateElement, int PKvalue)
+        public override void Update(Table updateTable, int oldTableID)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("UpdateTable");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = updateTable.id;
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = updateTable.name;
+            cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = updateTable.status;
+            cmd.Parameters.AddWithValue("@OldId", SqlDbType.Int).Value = oldTableID;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
       

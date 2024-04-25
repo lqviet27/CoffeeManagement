@@ -33,17 +33,17 @@ namespace BUS
 
         public override void Create(Account model)
         {
-            
+            DAL_Account.Instance.Create(model);
         }
 
         public override void Delete(string data)
         {
-            
+            DAL_Account.Instance.Delete(data);
         }
 
         public override void Update(Account model, string data)
         {
-            
+            DAL_Account.Instance.Update(model, data);
         }
     }
 }

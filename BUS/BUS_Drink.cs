@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,28 +14,26 @@ namespace BUS
     {
         public override void Create(Drink model)
         {
-            throw new NotImplementedException();
+            DAL_Drink.Instance.Create(model);
         }
 
         public override void Delete(int data)
         {
-            throw new NotImplementedException();
+            DAL_Drink.Instance.Delete(data);
         }
 
         public override void getList(List<Drink> list)
         {
             list.Clear();
-            foreach (DataRow dt in Read().Rows)
+            foreach(DataRow dr in Read().Rows)
             {
-                list.Add(
-                    new Drink()
-                    {
-                        id = Convert.ToInt32(dt["ID"]),
-                        name = dt["Name"].ToString(),
-                        price = Convert.ToSingle(dt["Price"]),
-                        type = dt["Type"].ToString()
-                    }
-                );
+                list.Add(new Drink
+                {
+                    id = Convert.ToInt32(dr["ID"]),
+                    name = dr["Name"].ToString(),
+                    type = dr["Type"].ToString(),
+                    price = float.Parse(dr["Price"].ToString())
+                });
             }
         }
 
@@ -48,7 +47,7 @@ namespace BUS
 
         public override void Update(Drink model, int data)
         {
-            throw new NotImplementedException();
+            DAL_Drink.Instance.Update(model, data);
         }
     }
 }

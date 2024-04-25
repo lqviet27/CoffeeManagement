@@ -48,6 +48,8 @@
     <Compile Include="DAL_DrinkType.cs" />
     <Compile Include="DAL_OrderTable.cs" />
     <Compile Include="DAL_Table.cs" />
+    <Compile Include="DAL_Bill.cs" />
+    <Compile Include="DAL_BillDetail.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

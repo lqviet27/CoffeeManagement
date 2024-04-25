@@ -29,12 +29,12 @@ namespace BUS
 
         public override void Create(Table model)
         {
-            
+            DAL_Table.Instance.Create(model);
         }
 
         public override void Delete(int data)
         {
-            
+            DAL_Table.Instance.Delete(data);
         }
 
         public override DataTable Read()
@@ -44,7 +44,7 @@ namespace BUS
 
         public override void Update(Table model, int data)
         {
-            
+            DAL_Table.Instance.Update(model, data);
         }
     }
 }

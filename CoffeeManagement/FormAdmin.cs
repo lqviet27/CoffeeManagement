@@ -1,4 +1,6 @@
-﻿using DAL;
+﻿using BUS;
+using DAL;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,59 +21,15 @@ namespace CoffeeManagement
             InitializeComponent();
         }
 
-        private void nmDrinkPrice_ValueChanged(object sender, EventArgs e)
+        private void FormAdmin_Load(object sender, EventArgs e)
         {
-
+            
+            Display.FormatTable(dgv_Drink);
+            Display.FormatTable(dgv_DrinkType);
+            Display.FormatTable(dgv_Account);
+            Display.FormatTable(dgv_Table);
         }
-
-        private void panel18_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel16_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_ShowDrink_Click(object sender, EventArgs e)
-        {
-            string query = "Select * from Drink ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dgv_Drink.DataSource = dt;
-            ResizeDataGridViewColumns(dgv_Drink);
-
-
-        }
-
-        private void btn_Show_Drink_Type_Click(object sender, EventArgs e)
-        {
-            string query = "Select * from DrinkType ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dataGridView1.DataSource = dt;
-            ResizeDataGridViewColumns(dataGridView1);
-
-        }
-
-        private void btn_Show_Table_Click(object sender, EventArgs e)
-        {
-            string query = "Select * from [Table] ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dataGridView2.DataSource = dt;
-            ResizeDataGridViewColumns(dataGridView2);
-        }
-
-        private void btn_Show_Acc_Click(object sender, EventArgs e)
-        {
-            string query = "Select * from Account ";
-            SqlCommand cmd = new SqlCommand(query, DataProvider.Instance.con);
-            DataTable dt = DataProvider.Instance.ExecuteTable(cmd);
-            dataGridView3.DataSource = dt;
-            ResizeDataGridViewColumns(dataGridView3);
-        }
+        // -------------------------------------format size DataGridView-----------------------------------------
         private void ResizeDataGridViewColumns(DataGridView dataGridView)
         {
             int totalWidth = dataGridView.ClientSize.Width;
@@ -96,6 +54,285 @@ namespace CoffeeManagement
             int rowCount = dataGridView.DisplayedRowCount(false);
             dataGridView.Height = rowHeight * rowCount + dataGridView.ColumnHeadersHeight + 2; // 2 là margin
         }
+        // -----------------------------------------------------------------------------------------------------
+
+        // --------------------------------------Drink---------------------------------------------------------
+        private void LoadDrinkTypeToComboBox()
+        {
+            List<DrinkType> listType = new List<DrinkType>();
+            BUS_DrinkType.Instance.getList(listType);
+            BUS_DrinkType.Instance.LoadDrinkTypeToComboBox(listType, cb_DrinkType);
+        }
+
+        private void btn_ShowDrink_Click(object sender, EventArgs e)
+        {
+            BUS_Drink.Instance.ShowDGV(dgv_Drink);
+            LoadDrinkTypeToComboBox();
+            //enable cho cac button
+            btn_AddDrink.Enabled = true;
+            btn_EditDrink.Enabled = true;
+            btn_DeleteDrink.Enabled = true;
+        }
+        private void dgv_Drink_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_Drink.SelectedRows)
+            {
+                tb_DrinkID.Text = row.Cells[0].Value.ToString();
+                tb_DrinkName.Text = row.Cells[1].Value.ToString();
+                cb_DrinkType.Text = row.Cells[2].Value.ToString();
+                nm_DrinkPrice.Text = row.Cells[3].Value.ToString();
+            }
+        }
+        private void btn_AddDrink_Click(object sender, EventArgs e)
+        {
+            Drink newDrink = new Drink {
+                id = Convert.ToInt32(tb_DrinkID.Text),
+                name = tb_DrinkName.Text,
+                type = cb_DrinkType.Text,
+                price = float.Parse(nm_DrinkPrice.Value.ToString()),
+            };
+            // cap nhat database
+            BUS_Drink.Instance.Create(newDrink);
+            btn_ShowDrink.PerformClick();
+        }
+
+        private void btn_EditDrink_Click(object sender, EventArgs e)
+        {
+            int oldDrinkID = 0;
+            foreach(DataGridViewRow row in dgv_Drink.SelectedRows)
+            {
+                oldDrinkID = Convert.ToInt32(row.Cells[0].Value.ToString());
+            }
+            Drink newDrink = new Drink
+            {
+                id = Convert.ToInt32(tb_DrinkID.Text),
+                name = tb_DrinkName.Text,
+                type = cb_DrinkType.Text,
+                price = float.Parse(nm_DrinkPrice.Value.ToString()),
+            };
+            // cap nhat database
+            BUS_Drink.Instance.Update(newDrink, oldDrinkID);
+            btn_ShowDrink.PerformClick();
+        }
+
+        private void btn_DeleteDrink_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult dialogResult = MessageBox.Show("Confirm Delete ?", "Warning !", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int deleteDrinkID = 0;
+                foreach (DataGridViewRow row in dgv_Drink.SelectedRows)
+                {
+                    deleteDrinkID = Convert.ToInt32(row.Cells[0].Value.ToString());
+                }
+                //xoa trong database
+                BUS_Drink.Instance.Delete(deleteDrinkID);
+                btn_ShowDrink.PerformClick();
+            }
+        }
+        // -----------------------------------------------------------------------------------------------------
+
+        // --------------------------------------Drink Type-----------------------------------------------------
+        private void dgv_DrinkType_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_DrinkType.SelectedRows)
+            {
+                tb_DrinkTypeID.Text = row.Cells[0].Value.ToString();
+                tb_DrinkTypeName.Text = row.Cells[1].Value.ToString();
+            }
+        }
+        private void btn_Show_Drink_Type_Click(object sender, EventArgs e)
+        {
+            BUS_DrinkType.Instance.ShowDGV(dgv_DrinkType);
+            //enable cho cac button
+            btn_AddDrinkType.Enabled = true;
+            btn_EditDrinkType.Enabled = true;
+            btn_DeleteDrinkType.Enabled = true;
+        }
+
+        private void btn_AddDrinkType_Click(object sender, EventArgs e)
+        {
+            DrinkType newDrinkType = new DrinkType
+            {
+                id = Convert.ToInt32(tb_DrinkTypeID.Text),
+                name = tb_DrinkTypeName.Text
+            };
+            // cap nhat database
+            BUS_DrinkType.Instance.Create(newDrinkType);
+            btn_ShowDrinkType.PerformClick();
+        }
+
+        private void btn_EditDrinkType_Click(object sender, EventArgs e)
+        {
+            int odlDrinkTypeID = 0;
+            foreach(DataGridViewRow row in dgv_DrinkType.SelectedRows)
+            {
+                odlDrinkTypeID = Convert.ToInt32(row.Cells[0].Value.ToString());
+            }
+            DrinkType newDrinkType = new DrinkType
+            {
+                id = Convert.ToInt32(tb_DrinkTypeID.Text),
+                name = tb_DrinkTypeName.Text
+            };
+            // cap nhat database
+            BUS_DrinkType.Instance.Update(newDrinkType, odlDrinkTypeID);
+            btn_ShowDrinkType.PerformClick();
+        }
+
+        private void btn_DeleteDrinkType_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Confirm Delete ?", "Warning !", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int deleteDrinkTypeID = 0;
+                foreach (DataGridViewRow row in dgv_DrinkType.SelectedRows)
+                {
+                    deleteDrinkTypeID = Convert.ToInt32(row.Cells[0].Value.ToString());
+                }
+                //xoa trong database
+                BUS_DrinkType.Instance.Delete(deleteDrinkTypeID);
+                btn_ShowDrinkType.PerformClick();
+            }
+        }
+        // -----------------------------------------------------------------------------------------------------
+
+        // -------------------------------------------Table-----------------------------------------------------
+        private void dgv_Table_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_Table.SelectedRows)
+            {
+                tb_TableID.Text = row.Cells[0].Value.ToString();
+                tb_TableName.Text = row.Cells[1].Value.ToString();
+            }
+        }
+        private void btn_Show_Table_Click(object sender, EventArgs e)
+        {
+            BUS_Table.Instance.ShowDGV(dgv_Table);
+            dgv_Table.Columns["Status"].Visible = false;
+            //enable cho cac button
+            btn_AddTable.Enabled = true;
+            btn_EditTable.Enabled = true;
+            btn_DeleteTable.Enabled = true;
+        }
+        private void btn_AddTable_Click(object sender, EventArgs e)
+        {
+            Table newTable = new Table
+            {
+                id = Convert.ToInt32(tb_TableID.Text),
+                name = tb_TableName.Text,
+                status = "Empty"
+            };
+            // cap nhat database
+            BUS_Table.Instance.Create(newTable);
+            btn_ShowTable.PerformClick();
+        }
+        
+        private void btn_EditTable_Click(object sender, EventArgs e)
+        {
+            int oldTableID = 0;
+            foreach(DataGridViewRow row in dgv_Table.SelectedRows)
+            {
+                oldTableID = Convert.ToInt32(row.Cells[0].Value.ToString());
+            }
+            Table newTalbe = new Table
+            {
+                id = Convert.ToInt32(tb_TableID.Text),
+                name = tb_TableName.Text,
+                status = "Empty"
+            };
+            // cap nhat database
+            BUS_Table.Instance.Update(newTalbe, oldTableID);
+            btn_ShowTable.PerformClick();
+        }
+        private void btn_DeleteTable_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Confirm Delete ?", "Warning !", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int deleteTableID = 0;
+                foreach (DataGridViewRow row in dgv_Table.SelectedRows)
+                {
+                    deleteTableID = Convert.ToInt32(row.Cells[0].Value.ToString());
+                }
+                //xoa trong database
+                BUS_Table.Instance.Delete(deleteTableID);
+                btn_ShowTable.PerformClick();
+            }
+        }
+        // -----------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------Account----------------------------------------------------
+        private void dgv_Account_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow row in dgv_Account.SelectedRows)
+            {
+                tb_UserName.Text = row.Cells[0].Value.ToString();
+                tb_DisplayName.Text = row.Cells[1].Value.ToString();
+                tb_PassWord.Text = row.Cells[2].Value.ToString();
+                cb_TypeAccount.Text = row.Cells[3].Value.ToString();
+
+            }
+        }
+        private void btn_Show_Acc_Click(object sender, EventArgs e)
+        {
+            BUS_Account.Instance.ShowDGV(dgv_Account);
+            //enable cho cac button
+            btn_AddAccount.Enabled = true;
+            btn_EditAccount.Enabled = true;
+            btn_DeleteAccount.Enabled = true;
+        }
+        private void btn_AddAccount_Click(object sender, EventArgs e)
+        {
+            Account newAccount = new Account
+            {
+                userName = tb_UserName.Text,
+                displayName = tb_DisplayName.Text,
+                type = cb_TypeAccount.Text,
+                password = tb_PassWord.Text
+            };
+            // cap nhat database
+            BUS_Account.Instance.Create(newAccount);
+            btn_ShowAccount.PerformClick();
+        }
+        private void btn_EditAccount_Click(object sender, EventArgs e)
+        {
+            string oldUserName = "";
+            foreach(DataGridViewRow row in dgv_Account.SelectedRows)
+            {
+                oldUserName = row.Cells[0].Value.ToString();
+            }
+            Account newAccount = new Account
+            {
+                userName = tb_UserName.Text,
+                displayName = tb_DisplayName.Text,
+                type = cb_TypeAccount.Text,
+                password = tb_PassWord.Text
+            };
+            // cap nhat database
+            BUS_Account.Instance.Update(newAccount, oldUserName);
+            btn_ShowAccount.PerformClick();
+        }
+
+        private void btn_DeleteAccount_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Confirm Delete ?", "Warning !", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string deleteUserName = "";
+                foreach (DataGridViewRow row in dgv_Account.SelectedRows)
+                {
+                    deleteUserName = row.Cells[0].Value.ToString();
+                }
+                //xoa trong database
+                BUS_Account.Instance.Delete(deleteUserName);
+                btn_ShowAccount.PerformClick();
+            }
+        }
+
+
+        // -----------------------------------------------------------------------------------------------------
 
     }
 }
