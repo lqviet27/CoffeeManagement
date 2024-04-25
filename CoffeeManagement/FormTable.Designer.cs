@@ -39,8 +39,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.txt_Status = new System.Windows.Forms.Label();
+            this.txt_NameTable = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBoxDrink = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBoxTable = new System.Windows.Forms.TextBox();
+            this.tb_Table = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.comboBoxDrinkType = new System.Windows.Forms.ComboBox();
@@ -111,8 +111,8 @@
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.txtTotal);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.txt_Status);
+            this.groupBox4.Controls.Add(this.txt_NameTable);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox4.Location = new System.Drawing.Point(566, 15);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -193,25 +193,25 @@
             this.txtTotal.TabIndex = 19;
             this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label18
+            // txt_Status
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(149, 28);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 19);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Status";
+            this.txt_Status.AutoSize = true;
+            this.txt_Status.Location = new System.Drawing.Point(149, 28);
+            this.txt_Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_Status.Name = "txt_Status";
+            this.txt_Status.Size = new System.Drawing.Size(46, 19);
+            this.txt_Status.TabIndex = 1;
+            this.txt_Status.Text = "Status";
             // 
-            // label11
+            // txt_NameTable
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(39, 28);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 19);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Table";
+            this.txt_NameTable.AutoSize = true;
+            this.txt_NameTable.Location = new System.Drawing.Point(39, 28);
+            this.txt_NameTable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_NameTable.Name = "txt_NameTable";
+            this.txt_NameTable.Size = new System.Drawing.Size(42, 19);
+            this.txt_NameTable.TabIndex = 0;
+            this.txt_NameTable.Text = "Table";
             // 
             // groupBox3
             // 
@@ -286,7 +286,7 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.comboBoxDrink);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBoxTable);
+            this.groupBox2.Controls.Add(this.tb_Table);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.numericUpDownQuantity);
             this.groupBox2.Controls.Add(this.comboBoxDrinkType);
@@ -316,7 +316,7 @@
             this.comboBoxDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxDrink.FormattingEnabled = true;
             this.comboBoxDrink.Location = new System.Drawing.Point(95, 81);
-            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxDrink.Name = "comboBoxDrink";
             this.comboBoxDrink.Size = new System.Drawing.Size(134, 24);
             this.comboBoxDrink.TabIndex = 9;
@@ -332,13 +332,13 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Drink :";
             // 
-            // textBoxTable
+            // tb_Table
             // 
-            this.textBoxTable.Location = new System.Drawing.Point(95, 18);
-            this.textBoxTable.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTable.Name = "textBoxTable";
-            this.textBoxTable.Size = new System.Drawing.Size(134, 26);
-            this.textBoxTable.TabIndex = 7;
+            this.tb_Table.Location = new System.Drawing.Point(95, 18);
+            this.tb_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Table.Name = "tb_Table";
+            this.tb_Table.Size = new System.Drawing.Size(134, 26);
+            this.tb_Table.TabIndex = 7;
             // 
             // label14
             // 
@@ -355,7 +355,7 @@
             // 
             this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.numericUpDownQuantity.Location = new System.Drawing.Point(95, 109);
-            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownQuantity.Minimum = new decimal(new int[] {
             1,
             0,
@@ -380,7 +380,7 @@
             "Type3",
             "Type4"});
             this.comboBoxDrinkType.Location = new System.Drawing.Point(95, 50);
-            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxDrinkType.Name = "comboBoxDrinkType";
             this.comboBoxDrinkType.Size = new System.Drawing.Size(134, 24);
             this.comboBoxDrinkType.TabIndex = 2;
@@ -441,7 +441,6 @@
             this.Name = "FormTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTable";
-            this.Load += new System.EventHandler(this.FormTable_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -469,7 +468,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBoxTable;
+        private System.Windows.Forms.TextBox tb_Table;
         private System.Windows.Forms.ComboBox comboBoxDrink;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -479,8 +478,8 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label txt_Status;
+        private System.Windows.Forms.Label txt_NameTable;
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;

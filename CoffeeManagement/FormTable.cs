@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BUS;
+using DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -17,100 +18,125 @@ namespace CoffeeManagement
 {
     public partial class FormTable : Form
     {
+        private List<Table> tables = new List<Table>();
+        private Table currentTable;
+        private List<DrinkType> drinkTypes = new List<DrinkType>();
+        private List<Drink> drinks = new List<Drink>();
         
         public FormTable()
         {
             InitializeComponent();
-            LoadComboBox();
-            loadData();
+            loadTable();
         }
 
-        public void loadData()
+
+        public void loadTable()
         {
-            List<Table> tables = new List<Table>();
-            Point point = new Point(3, 30) ;
-            //3 111 224
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * From [Table]";
-            DataProvider.Instance.con.Open();
-            cmd.Connection = DataProvider.Instance.con;
+            //BUS_Table.Instance.getList(tables);
+            //Point point = new Point(3, 30) ;
 
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            //for(int i=0;i<tables.Count;i++)
+            //{
+            //    Button btn = new Button();
+            //    btn.Size = new Size(90, 40);
+            //    btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
+            //    if (tables[i].status == "Online")
+            //        btn.BackColor = System.Drawing.Color.Red;
+            //    btn.Text = tables[i].name;
+            //    if (point.X + 90 > pn_Table.Width)
+            //    {
+            //        point.X = 3; point.Y += 50;
+            //    }
+            //    btn.Location = point;
+            //    pn_Table.Controls.Add(btn);
+            //    point.X += 90 + 10;
+            //    btn.MouseClick += new MouseEventHandler(btnTable_MouseClick);
+            //}
+            try
             {
-                tables.Add(new Table(Int32.Parse(dr["ID"].ToString()), dr["Name"].ToString(), dr["Status"].ToString()));
-            }
-            dr.Close();
-
-            //pn_Table 
-            int j = 0;
-            for(int i=0;i<tables.Count;i++)
-            {
-                Button btn = new Button();
-                btn.Size=new Size(90, 40);
-                btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
-                if (tables[i].status=="Online")
-                    btn.BackColor = System.Drawing.Color.Red;
-                btn.Text = tables[i].name;
-                if(point.X + 90 > pn_Table.Width)
+                pn_Table.Controls.Clear();
+                BUS_Table.Instance.getList(tables);
+                int x = 10;
+                int y = 10;
+                for (int i = 0; i < tables.Count; i++)
                 {
-                    point.X = 3; point.Y += 50;
+                    Button btn = new Button()
+                    {
+                        Name = "btnTable" + (i + 1),
+                        Text = tables[i].name,
+                        Width = 100,
+                        Height = 50,
+                        Location = new Point(x, y),
+                    };
+                    if (tables[i].status == "Empty")
+                    {
+                        btn.BackColor = ColorTranslator.FromHtml("snow");
+                    }
+                    else if (tables[i].status == "Online")
+                    {
+                        btn.BackColor = ColorTranslator.FromHtml("red");
+                    }
+                    if (x < pn_Table.Width - 220)
+                    {
+                        x += 110;
+                    }
+                    else
+                    {
+                        x = 10;
+                        y += 60;
+                    }
+                    btn.MouseClick += new MouseEventHandler(btnTable_MouseClick);
+                    pn_Table.Controls.Add(btn);
                 }
-                btn.Location = point;
-                pn_Table.Controls.Add(btn);
-                point.X += 90 + 10;
-             
-            } 
-        }
-
-        private DataTable DrinkType;
-        private DataTable Drink;
-
-        private void LoadComboBox()
-        {
-            comboBoxDrinkType.Items.Clear();
-            string s = "Select * from DrinkType";
-            string s1 = "Select * from Drink";
-            SqlCommand cmd = new SqlCommand(s, DataProvider.Instance.con);
-            SqlCommand cmd1 = new SqlCommand(s1, DataProvider.Instance.con);
-            DrinkType = DataProvider.Instance.ExecuteTable(cmd);
-            Drink = DataProvider.Instance.ExecuteTable(cmd1);
-            foreach (DataRow dr in DrinkType.Rows)
-            {
-
-                comboBoxDrinkType.Items.Add(dr["Name"]);
-
-
             }
+            catch
+            {
+                MessageBox.Show("Database is not available ! ");
+            }
+
         }
+
+
+
+        private void btnTable_MouseClick(object sender, EventArgs e)
+        {
+            //tra ve trang thai ban theo mau sac cua btnTable
+            if (((Button)sender).BackColor.ToString() == "Color [Snow]")
+            {
+                txt_Status.Text = "Empty";
+            }
+            else if (((Button)sender).BackColor.ToString() == "Color [Red]")
+            {
+                txt_Status.Text = "Online";
+            }
+            //tra ve ten ban
+            tb_Table.Text = ((Button)sender).Text;
+            //Tra ve tong tien
+            //txtTotal.Text = ((Button)sender).Tag.ToString();
+            //LoadBill();
+        }
+
         private void FormTable_Load(object sender, EventArgs e)
         {
-            
-        }
 
+        }
         private void comboBoxDrinkType_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBoxDrink.Items.Clear();
             comboBoxDrink.Text = "";
             string NameType = comboBoxDrinkType.Text.ToString();
-            string IDType = "";
-            foreach (DataRow row in DrinkType.Rows)
+            foreach (Drink dr in drinks)
             {
-                if (row["Name"].ToString() == NameType) 
-                { 
-                    IDType = row["ID"].ToString();
-                    break;
-                }
-            }
-            foreach(DataRow row in Drink.Rows)
-            {
-                if (row["IDType"].ToString() ==  IDType)
+                if (dr.type == NameType)
                 {
-                    comboBoxDrink.Items.Add(row["Name"].ToString());
+                    comboBoxDrink.Items.Add(dr.name);
                 }
             }
         }
+
+
+
+
+
     }
 }

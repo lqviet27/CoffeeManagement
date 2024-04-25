@@ -204,11 +204,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{1ADCAF0A-A7A1-4B4B-B79F-35464B80C22C}</Project>
+      <Project>{1adcaf0a-a7a1-4b4b-b79f-35464b80c22c}</Project>
       <Name>BUS</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{5708CB4A-8390-4B2C-825F-E2852A05E3DB}</Project>
+      <Project>{5708cb4a-8390-4b2c-825f-e2852a05e3db}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">

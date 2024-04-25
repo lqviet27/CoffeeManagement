@@ -60,6 +60,7 @@ namespace CoffeeManagement
                 this.Hide();
                 mainMenu.ShowDialog();
                 this.Show();
+                
             }
             else
             {
