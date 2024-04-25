@@ -44,6 +44,8 @@ namespace BUS
             return DAL_Drink.Instance.Read();
         }
 
+     
+
         public override void Update(Drink model, int data)
         {
             throw new NotImplementedException();

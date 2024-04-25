@@ -46,6 +46,7 @@
     <Compile Include="BillDetail.cs" />
     <Compile Include="Drink.cs" />
     <Compile Include="DrinkType.cs" />
+    <Compile Include="OrderDrink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table.cs" />
   </ItemGroup>

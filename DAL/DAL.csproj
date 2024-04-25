@@ -46,6 +46,7 @@
     <Compile Include="DAL_Account.cs" />
     <Compile Include="DAL_Drink.cs" />
     <Compile Include="DAL_DrinkType.cs" />
+    <Compile Include="DAL_OrderTable.cs" />
     <Compile Include="DAL_Table.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

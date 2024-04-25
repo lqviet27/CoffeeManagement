@@ -19,53 +19,121 @@ namespace CoffeeManagement
     public partial class FormTable : Form
     {
         private List<Table> tables = new List<Table>();
-        private Table currentTable;
+        private Table currentTable = null;
         private List<DrinkType> drinkTypes = new List<DrinkType>();
         private List<Drink> drinks = new List<Drink>();
-        
+        private List<List<OrderDrink>> Order = new List<List<OrderDrink>>();
+        private float currentTotal = 0;
         public FormTable()
         {
             InitializeComponent();
             LoadComboBox();
             loadTable();
+            
         }
 
 
         public void loadTable()
         {
             BUS_Table.Instance.getList(tables);
-            Point point = new Point(3, 30) ;
-            
-            for(int i=0;i<tables.Count;i++)
+            Point point = new Point(3, 30);
+            Order = new List<List<OrderDrink>>(tables.Count);
+
+            for (int i = 0; i < tables.Count; i++)
             {
                 Button btn = new Button();
                 btn.MouseClick += Btn_MouseClick;
-                btn.Size=new Size(90, 40);
+                btn.Size = new Size(90, 40);
                 btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
-                if (tables[i].status=="Online")
+                if (tables[i].status == "Online")
                     btn.BackColor = System.Drawing.Color.Red;
                 btn.Text = tables[i].name;
-                if(point.X + 90 > pn_Table.Width)
+                if (point.X + 90 > pn_Table.Width)
                 {
                     point.X = 3; point.Y += 50;
                 }
                 btn.Location = point;
                 pn_Table.Controls.Add(btn);
                 point.X += 90 + 10;
-             
+                Order.Add(new List<OrderDrink>());
             }
-            
-             
+        }
+
+
+        private void loadOrder()
+        {
+            pn_order.Controls.Clear();
+            Point point = new Point(30, 10);
+            int currentTableId = currentTable.id;
+            currentTotal = 0;
+            lb_billTableName.Text = currentTable.name ;
+            for (int i = 0; i < Order[currentTableId].Count; i++)
+            {
+                currentTotal += Order[currentTableId][i].quantity * Order[currentTableId][i].price;
+
+                Panel panel = new Panel();
+       
+                pn_order.Controls.Add(panel);
+                panel.Size = new Size(421, 30);
+                panel.Location = point;
+
+                Label lb_orderId = new Label();
+                lb_orderId.Text = i+1 + "";
+                lb_orderId.Size = new Size(35, 80);
+                panel.Controls.Add(lb_orderId);
+
+
+                Label lb_orderName = new Label();
+                lb_orderName.Text = Order[currentTableId][i].name;
+                lb_orderName.Location = new Point(70, 0);
+                lb_orderName.Size = new Size(100, 80);
+                panel.Controls.Add(lb_orderName);
+
+                Label quantity = new Label();
+                
+                quantity.Text = Order[currentTableId][i].quantity+"";
+                quantity.Size = new Size(20, 80);
+                quantity.Location = new Point(200, 0);
+                panel.Controls.Add(quantity);
+
+                Button btn_down = new Button();
+                btn_down.Location = new Point(230, 0);
+                btn_down.Size = new Size(20, 20);
+                panel.Controls.Add(btn_down);
+
+                point.Y += 30;
+
+           
+            }
+            lb_orderTotal.Text = currentTotal.ToString();
+
+        }
+
+        private void quantityCheck()
+        {
+
         }
 
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
+            Button btn=  (Button) sender;
+            tx_Table.Text = btn.Text;
             
-              Button btn=  (Button) sender;
-                tx_Table.Text = btn.Text;
+            foreach (Table table in tables)
+            {
+                if(table.name.Equals(btn.Text))
+                {
+                    currentTable = table;
+                    lb_billTableName.Text = currentTable.name;
+                    pn_order.Controls.Clear();
+                    loadOrder();
+                    break;
+                }
+            }
+            
         }
 
-        private DataTable DT_Drink;
+
 
         private void LoadComboBox()
         {
@@ -78,6 +146,8 @@ namespace CoffeeManagement
             {
                 comboBoxDrinkType.Items.Add(dt.name);
             }
+
+       
         }
         private void FormTable_Load(object sender, EventArgs e)
         {
@@ -86,20 +156,59 @@ namespace CoffeeManagement
 
         private void comboBoxDrinkType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxDrink.Items.Clear();
-            comboBoxDrink.Text = "";
+            cb_drink.Items.Clear();
+            cb_drink.Text = "";
             string NameType = comboBoxDrinkType.Text.ToString();
+            NumUD_quantity.Value = 1;
             foreach (Drink dr in drinks)
             {
                 if (dr.type == NameType) 
                 {
-                    comboBoxDrink.Items.Add(dr.name);
+                    cb_drink.Items.Add(dr.name);
                 }
             }
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(tx_Table.Text!=null)
+            {
+                lb_billTableName.Text = currentTable.name;
+                int currentTableId = currentTable.id;
+                for(int i = 0; i < Order[currentTableId].Count();i++)
+                {
+                    if (Order[currentTableId][i].name==cb_drink.Text)
+                    {
+                        Order[currentTableId][i].quantity += (int) NumUD_quantity.Value;
+                        loadOrder();
+                        return;
+                    }
+                }
 
-        
+                
+
+                foreach(Drink dr in drinks)
+                {
+                    if(dr.name == cb_drink.Text)
+                    {
+                        Order[currentTableId].Add(new OrderDrink{
+                            id = dr.id,
+                            name = dr.name,
+                            quantity = (int)NumUD_quantity.Value,
+                            price = dr.price
+                        });
+                        loadOrder();
+                        return;
+                    }
+                }
+
+            }
+            else
+            {
+              
+            }
+        }
+
+      
     }
 }
