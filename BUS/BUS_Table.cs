@@ -46,5 +46,14 @@ namespace BUS
         {
             DAL_Table.Instance.Update(model, data);
         }
+        //-----------------------------------------------------
+        public void SetTableOnline(string TableName)
+        {
+            DAL_Table.Instance.SetTableOnline(TableName);
+        }
+        public void SetTableEmpty(string TableName)
+        {
+            DAL_Table.Instance.SetTableEmpty(TableName);
+        }
     }
 }

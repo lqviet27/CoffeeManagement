@@ -34,9 +34,11 @@ namespace CoffeeManagement
 
         public void loadTable()
         {
+            pn_Table.Controls.Clear();
             BUS_Table.Instance.getList(tables);
             Point point = new Point(3, 30);
-            Order = new List<List<OrderDrink>>(tables.Count+1);
+            Order = new List<List<OrderDrink>>(tables.Count + 1);
+            
 
             for (int i = 0; i < tables.Count; i++)
             {
@@ -44,8 +46,14 @@ namespace CoffeeManagement
                 btn.MouseClick += Btn_MouseClick;
                 btn.Size = new Size(90, 40);
                 btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
-                if (tables[i].status == "Online")
-                    btn.BackColor = System.Drawing.Color.Red;
+                if (tables[i].status == "Empty")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("snow");
+                }
+                else if (tables[i].status == "Online")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("red");
+                }
                 btn.Text = tables[i].name;
                 if (point.X + 90 > pn_Table.Width)
                 {
@@ -116,6 +124,15 @@ namespace CoffeeManagement
 
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
+            if (((Button)sender).BackColor.ToString() == "Color [Snow]")
+            {
+                txb_StatusTable.Text = "Empty";
+            }
+            else if (((Button)sender).BackColor.ToString() == "Color [Red]")
+            {
+                txb_StatusTable.Text = "Online";
+            }
+
             Button btn=  (Button) sender;
             tx_Table.Text = btn.Text;
             
@@ -169,8 +186,9 @@ namespace CoffeeManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(tx_Table.Text!=null)
+            if(tx_Table.Text!=null&&cb_drink.Text!=null&&comboBoxDrinkType.Text!=null)
             {
+               
                 lb_billTableName.Text = currentTable.name;
                 int currentTableId = currentTable.id;
                 for(int i = 0; i < Order[currentTableId].Count();i++)
@@ -183,9 +201,15 @@ namespace CoffeeManagement
                     }
                 }
 
-                
+                if (txb_StatusTable.Text == "Empty")
+                {
+                    BUS_Table.Instance.SetTableOnline(tx_Table.Text);
+                    txb_StatusTable.Text = "Online";
+                    loadTable();
+                }
 
-                foreach(Drink dr in drinks)
+                
+                foreach (Drink dr in drinks)
                 {
                     if(dr.name == cb_drink.Text)
                     {
@@ -195,18 +219,28 @@ namespace CoffeeManagement
                             quantity = (int)NumUD_quantity.Value,
                             price = dr.price
                         });
+
                         loadOrder();
                         return;
                     }
                 }
-
             }
             else
             {
               
             }
+
         }
 
-      
+        private void btn_purchase_Click(object sender, EventArgs e)
+        {
+         
+
+        }
+
+        private void FormTable_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

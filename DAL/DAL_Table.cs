@@ -46,7 +46,24 @@ namespace DAL
             cmd.Parameters.AddWithValue("@OldId", SqlDbType.Int).Value = oldTableID;
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
+        //-----------------------------------------------------
+        // dung khi them mon vao ban se chuyen sang online
+        public void SetTableOnline(string TableName)
+        {
+            SqlCommand cmd = new SqlCommand("SetTableOnline");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = TableName;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
+        }
+        // dung khi thanh toan se chuyen sang empty
+        public void SetTableEmpty(string TableName)
+        {
+            SqlCommand cmd = new SqlCommand("SetTableEmpty");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = TableName;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
+        }
 
-      
+
     }
 }

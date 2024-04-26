@@ -11,7 +11,6 @@ namespace Model
         private int _id;
         private string _tableName;
         private string _cashier;
-        private int _status;
         private int _totalPrice;
         public int id
         {
@@ -28,11 +27,6 @@ namespace Model
             get { return _cashier; }
             set { _cashier = value; }
         }
-        public int status
-        {
-            get { return _status; }
-            set { _status = value; }
-        }
         
         public int totalPrice
         {
@@ -40,14 +34,12 @@ namespace Model
             set { _totalPrice = value; }
         }
         public Bill() { }
-        public Bill(int id, string tableName, string cashier, int status,  int totalPrice)
+        public Bill(int id, string tableName, string cashier,  int totalPrice)
         {
             this._id = id;
             this._tableName = tableName;
             this._cashier = cashier;
-            this._status = status;
             this._totalPrice = totalPrice;
-
         }
     }
 }
