@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DataProvider
     {
-        private static string ConStr = @"Data Source=LAPTOP-DB0H1E2V\SQLEXPRESS;Initial Catalog=PBL3;Integrated Security=True";
+        private static string ConStr = @"Data Source=BIETTO\LQVIET;Initial Catalog=PBL3;Integrated Security=True";
         public SqlConnection con { get; set; }
         private static DataProvider _instance;
         private DataProvider()

@@ -36,7 +36,7 @@ namespace CoffeeManagement
         {
             BUS_Table.Instance.getList(tables);
             Point point = new Point(3, 30);
-            Order = new List<List<OrderDrink>>(tables.Count);
+            Order = new List<List<OrderDrink>>(tables.Count+1);
 
             for (int i = 0; i < tables.Count; i++)
             {
@@ -44,8 +44,14 @@ namespace CoffeeManagement
                 btn.MouseClick += Btn_MouseClick;
                 btn.Size = new Size(90, 40);
                 btn.Font = new System.Drawing.Font(button1.Font.FontFamily, 12);
-                if (tables[i].status == "Online")
-                    btn.BackColor = System.Drawing.Color.Red;
+                if (tables[i].status == "Empty")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("snow");
+                }
+                else if (tables[i].status == "Online")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("red");
+                }
                 btn.Text = tables[i].name;
                 if (point.X + 90 > pn_Table.Width)
                 {
@@ -56,6 +62,7 @@ namespace CoffeeManagement
                 point.X += 90 + 10;
                 Order.Add(new List<OrderDrink>());
             }
+            Order.Add(new List<OrderDrink>());
         }
 
 
@@ -115,6 +122,15 @@ namespace CoffeeManagement
 
         private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
+            if (((Button)sender).BackColor.ToString() == "Color [Snow]")
+            {
+                txb_StatusTable.Text = "Empty";
+            }
+            else if (((Button)sender).BackColor.ToString() == "Color [Red]")
+            {
+                txb_StatusTable.Text = "Online";
+            }
+
             Button btn=  (Button) sender;
             tx_Table.Text = btn.Text;
             
@@ -170,6 +186,10 @@ namespace CoffeeManagement
         {
             if(tx_Table.Text!=null)
             {
+                BUS_Table.Instance.SetTableOnline(tx_Table.Text);
+                MessageBox.Show("Table is online");
+                txb_StatusTable.Text = "Online";
+
                 lb_billTableName.Text = currentTable.name;
                 int currentTableId = currentTable.id;
                 for(int i = 0; i < Order[currentTableId].Count();i++)
@@ -198,12 +218,12 @@ namespace CoffeeManagement
                         return;
                     }
                 }
-
             }
             else
             {
               
             }
+
         }
 
       
