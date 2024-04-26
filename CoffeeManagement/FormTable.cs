@@ -28,7 +28,7 @@ namespace CoffeeManagement
         {
             InitializeComponent();
             loadTable();
-            
+            LoadComboBox();
         }
 
 
@@ -143,10 +143,8 @@ namespace CoffeeManagement
 
             foreach (DrinkType dt in drinkTypes)
             {
-                txt_Status.Text = "Online";
+                comboBoxDrinkType.Items.Add(dt.name);
             }
-
-       
         }
 
         private void FormTable_Load(object sender, EventArgs e)

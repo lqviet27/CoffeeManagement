@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -43,11 +44,19 @@ namespace BUS
             return DAL_Drink.Instance.Read();
         }
 
-     
 
         public override void Update(Drink model, int data)
         {
             DAL_Drink.Instance.Update(model, data);
         }
+
+        public void SearchByName(DataGridView dgv_Drink, string drinkName)
+        {
+            dgv_Drink.DataSource = null;
+            dgv_Drink.Rows.Clear();
+            dgv_Drink.DataSource = DAL_Drink.Instance.SearchDrink(drinkName);
+        }
+
+
     }
 }

@@ -48,5 +48,14 @@ namespace DAL
             cmd.Parameters.AddWithValue("@OldId", SqlDbType.Int).Value = oldDrinkID;
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
+
+        public DataTable SearchDrink(string drinkName)
+        {
+            SqlCommand cmd = new SqlCommand("SearchDrink");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@DrinkName", SqlDbType.NVarChar).Value = drinkName;
+            return DataProvider.Instance.ExecuteTable(cmd);
+        }
+
     }
 }
