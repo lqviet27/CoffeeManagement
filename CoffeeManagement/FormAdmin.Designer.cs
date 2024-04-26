@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pn_main = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -112,14 +108,13 @@
             this.btn_AddAccount = new CustomControls.RJControls.RJButton();
             this.btn_ShowAccount = new CustomControls.RJControls.RJButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgv_Revenue = new System.Windows.Forms.DataGridView();
             this.panel17 = new System.Windows.Forms.Panel();
             this.rjButton13 = new CustomControls.RJControls.RJButton();
             this.lb_to = new System.Windows.Forms.Label();
             this.lb_from = new System.Windows.Forms.Label();
-            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
@@ -160,7 +155,6 @@
             this.panel26.SuspendLayout();
             this.panel14.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Revenue)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel19.SuspendLayout();
@@ -170,9 +164,9 @@
             // 
             this.tabPage2.Controls.Add(this.pn_main);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Size = new System.Drawing.Size(896, 465);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Drink";
@@ -183,7 +177,7 @@
             this.pn_main.Controls.Add(this.panel4);
             this.pn_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_main.Location = new System.Drawing.Point(2, 2);
-            this.pn_main.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_main.Name = "pn_main";
             this.pn_main.Size = new System.Drawing.Size(892, 461);
             this.pn_main.TabIndex = 2;
@@ -195,7 +189,7 @@
             this.panel4.Controls.Add(this.pn_queryDrink);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(892, 461);
             this.panel4.TabIndex = 2;
@@ -210,7 +204,7 @@
             this.dgv_Drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Drink.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Drink.Location = new System.Drawing.Point(135, 0);
-            this.dgv_Drink.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Drink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Drink.Name = "dgv_Drink";
             this.dgv_Drink.ReadOnly = true;
             this.dgv_Drink.RowHeadersWidth = 51;
@@ -228,7 +222,7 @@
             this.panel1.Controls.Add(this.btn_ShowDrink);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 461);
             this.panel1.TabIndex = 1;
@@ -322,7 +316,7 @@
             this.pn_queryDrink.Controls.Add(this.panel18);
             this.pn_queryDrink.Dock = System.Windows.Forms.DockStyle.Right;
             this.pn_queryDrink.Location = new System.Drawing.Point(653, 0);
-            this.pn_queryDrink.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_queryDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_queryDrink.Name = "pn_queryDrink";
             this.pn_queryDrink.Size = new System.Drawing.Size(239, 461);
             this.pn_queryDrink.TabIndex = 3;
@@ -335,6 +329,7 @@
             this.tb_SearchDrinkName.Size = new System.Drawing.Size(160, 26);
             this.tb_SearchDrinkName.TabIndex = 2;
             this.tb_SearchDrinkName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_SearchDrinkName.TextChanged += new System.EventHandler(this.tb_SearchDrinkName_TextChanged);
             // 
             // btn_SearchDrink
             // 
@@ -478,7 +473,7 @@
             this.tab_drink.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tab_drink.Location = new System.Drawing.Point(0, 83);
-            this.tab_drink.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_drink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_drink.Name = "tab_drink";
             this.tab_drink.SelectedIndex = 0;
             this.tab_drink.Size = new System.Drawing.Size(904, 498);
@@ -488,9 +483,9 @@
             // 
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Size = new System.Drawing.Size(896, 465);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Drink Type";
@@ -502,7 +497,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(892, 461);
             this.panel2.TabIndex = 3;
@@ -513,7 +508,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(151, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(741, 461);
             this.panel5.TabIndex = 3;
@@ -528,7 +523,7 @@
             this.dgv_DrinkType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DrinkType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DrinkType.Location = new System.Drawing.Point(0, 70);
-            this.dgv_DrinkType.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_DrinkType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_DrinkType.Name = "dgv_DrinkType";
             this.dgv_DrinkType.ReadOnly = true;
             this.dgv_DrinkType.RowHeadersWidth = 51;
@@ -544,7 +539,7 @@
             this.panel6.Controls.Add(this.panel23);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(741, 70);
             this.panel6.TabIndex = 0;
@@ -615,7 +610,7 @@
             this.panel3.Controls.Add(this.btn_ShowDrinkType);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(151, 461);
             this.panel3.TabIndex = 2;
@@ -705,9 +700,9 @@
             this.tabPage3.Controls.Add(this.panel10);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Size = new System.Drawing.Size(896, 465);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Table";
@@ -719,7 +714,7 @@
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(147, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(747, 461);
             this.panel11.TabIndex = 4;
@@ -729,7 +724,7 @@
             this.panel13.Controls.Add(this.dgv_Table);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(0, 85);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(747, 376);
             this.panel13.TabIndex = 2;
@@ -744,7 +739,7 @@
             this.dgv_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Table.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Table.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Table.Name = "dgv_Table";
             this.dgv_Table.ReadOnly = true;
             this.dgv_Table.RowHeadersWidth = 51;
@@ -760,7 +755,7 @@
             this.panel12.Controls.Add(this.panel21);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(747, 85);
             this.panel12.TabIndex = 1;
@@ -829,7 +824,7 @@
             this.panel10.Controls.Add(this.btn_ShowTable);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(2, 2);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(145, 461);
             this.panel10.TabIndex = 3;
@@ -927,9 +922,9 @@
             this.tabPage4.Controls.Add(this.panel15);
             this.tabPage4.Controls.Add(this.panel14);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Size = new System.Drawing.Size(896, 465);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Account";
@@ -941,7 +936,7 @@
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(164, 2);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(730, 461);
             this.panel15.TabIndex = 5;
@@ -957,7 +952,7 @@
             this.dgv_Account.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Account.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_Account.Location = new System.Drawing.Point(0, 111);
-            this.dgv_Account.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Account.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Account.Name = "dgv_Account";
             this.dgv_Account.ReadOnly = true;
             this.dgv_Account.RowHeadersWidth = 51;
@@ -975,7 +970,7 @@
             this.panel16.Controls.Add(this.panel26);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(730, 111);
             this.panel16.TabIndex = 2;
@@ -1103,7 +1098,7 @@
             this.panel14.Controls.Add(this.btn_ShowAccount);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(2, 2);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(162, 461);
             this.panel14.TabIndex = 4;
@@ -1189,44 +1184,23 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.chart1);
             this.tabPage5.Controls.Add(this.dgv_Revenue);
             this.tabPage5.Controls.Add(this.panel17);
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Size = new System.Drawing.Size(896, 465);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Revenue";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(2, 76);
-            this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Revenue";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(892, 393);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "chart1";
-            title5.Name = "Revenue";
-            title5.Text = "Revenue";
-            this.chart1.Titles.Add(title5);
-            this.chart1.Visible = false;
             // 
             // dgv_Revenue
             // 
             this.dgv_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Revenue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Revenue.Location = new System.Drawing.Point(2, 76);
-            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Revenue.Name = "dgv_Revenue";
             this.dgv_Revenue.RowHeadersWidth = 51;
             this.dgv_Revenue.RowTemplate.Height = 24;
@@ -1238,11 +1212,11 @@
             this.panel17.Controls.Add(this.rjButton13);
             this.panel17.Controls.Add(this.lb_to);
             this.panel17.Controls.Add(this.lb_from);
-            this.panel17.Controls.Add(this.dateTimePickerStart);
-            this.panel17.Controls.Add(this.dateTimePickerEnd);
+            this.panel17.Controls.Add(this.dateTimePicker2);
+            this.panel17.Controls.Add(this.dateTimePicker1);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(2, 2);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(892, 74);
             this.panel17.TabIndex = 2;
@@ -1264,7 +1238,6 @@
             this.rjButton13.Text = "Submit";
             this.rjButton13.TextColor = System.Drawing.Color.Black;
             this.rjButton13.UseVisualStyleBackColor = false;
-            this.rjButton13.Click += new System.EventHandler(this.rjButton13_Click);
             // 
             // lb_to
             // 
@@ -1288,22 +1261,21 @@
             this.lb_from.TabIndex = 2;
             this.lb_from.Text = "From :";
             // 
-            // dateTimePickerStart
+            // dateTimePicker2
             // 
-            this.dateTimePickerStart.CustomFormat = "";
-            this.dateTimePickerStart.Location = new System.Drawing.Point(88, 22);
-            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(276, 26);
-            this.dateTimePickerStart.TabIndex = 1;
+            this.dateTimePicker2.Location = new System.Drawing.Point(88, 22);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(276, 26);
+            this.dateTimePicker2.TabIndex = 1;
             // 
-            // dateTimePickerEnd
+            // dateTimePicker1
             // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(446, 23);
-            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(288, 26);
-            this.dateTimePickerEnd.TabIndex = 0;
+            this.dateTimePicker1.Location = new System.Drawing.Point(446, 23);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(288, 26);
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // panel19
             // 
@@ -1333,7 +1305,7 @@
             this.ClientSize = new System.Drawing.Size(904, 581);
             this.Controls.Add(this.tab_drink);
             this.Controls.Add(this.panel19);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1390,7 +1362,6 @@
             this.panel26.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Revenue)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
@@ -1426,8 +1397,8 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label lb_from;
-        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
-        private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lb_to;
         private System.Windows.Forms.DataGridView dgv_Revenue;
         private System.Windows.Forms.Panel panel19;
@@ -1490,7 +1461,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel27;
         private CustomControls.RJControls.RJButton rjButton13;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

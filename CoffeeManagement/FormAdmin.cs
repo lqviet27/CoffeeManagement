@@ -133,6 +133,10 @@ namespace CoffeeManagement
                 btn_ShowDrink.PerformClick();
             }
         }
+        private void tb_SearchDrinkName_TextChanged(object sender, EventArgs e)
+        {
+            BUS_Drink.Instance.SearchByName(dgv_Drink, tb_SearchDrinkName.Text);
+        }
         // -----------------------------------------------------------------------------------------------------
 
         // --------------------------------------Drink Type-----------------------------------------------------
@@ -332,6 +336,8 @@ namespace CoffeeManagement
                 btn_ShowAccount.PerformClick();
             }
         }
+
+        
 
 
         // -----------------------------------------------------------------------------------------------------

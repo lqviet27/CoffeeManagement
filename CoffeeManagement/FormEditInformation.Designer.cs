@@ -31,26 +31,32 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelEditInfo = new System.Windows.Forms.Label();
             this.groupBoxEditInfo = new System.Windows.Forms.GroupBox();
+            this.btn_CancelChangeName = new CustomControls.RJControls.RJButton();
+            this.btn_ChangeName = new CustomControls.RJControls.RJButton();
+            this.tb_DisplayName = new CustomControls.RJControls.RJTextBox();
+            this.tb_UserName = new CustomControls.RJControls.RJTextBox();
             this.labelDisplayName = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
             this.groupBoxChangePass = new System.Windows.Forms.GroupBox();
+            this.btn_CancelChangePassword = new CustomControls.RJControls.RJButton();
+            this.btn_ChangePassword = new CustomControls.RJControls.RJButton();
+            this.tb_ComfirmPassword = new CustomControls.RJControls.RJTextBox();
+            this.tb_NewPasword = new CustomControls.RJControls.RJTextBox();
+            this.tb_OldPassword = new CustomControls.RJControls.RJTextBox();
             this.lb_OldPass = new System.Windows.Forms.Label();
             this.labelConfirmPass = new System.Windows.Forms.Label();
             this.labelNewPass = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.rjButton8 = new CustomControls.RJControls.RJButton();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_DisplayName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_UserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBoxEditInfo.SuspendLayout();
             this.groupBoxChangePass.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,19 +84,103 @@
             // groupBoxEditInfo
             // 
             this.groupBoxEditInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxEditInfo.Controls.Add(this.rjButton1);
-            this.groupBoxEditInfo.Controls.Add(this.rjButton8);
-            this.groupBoxEditInfo.Controls.Add(this.rjTextBox2);
-            this.groupBoxEditInfo.Controls.Add(this.rjTextBox1);
+            this.groupBoxEditInfo.Controls.Add(this.btn_CancelChangeName);
+            this.groupBoxEditInfo.Controls.Add(this.btn_ChangeName);
+            this.groupBoxEditInfo.Controls.Add(this.tb_DisplayName);
+            this.groupBoxEditInfo.Controls.Add(this.tb_UserName);
             this.groupBoxEditInfo.Controls.Add(this.labelDisplayName);
             this.groupBoxEditInfo.Controls.Add(this.labelUserName);
             this.groupBoxEditInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBoxEditInfo.Location = new System.Drawing.Point(34, 71);
+            this.groupBoxEditInfo.Location = new System.Drawing.Point(65, 108);
             this.groupBoxEditInfo.Name = "groupBoxEditInfo";
             this.groupBoxEditInfo.Size = new System.Drawing.Size(352, 347);
             this.groupBoxEditInfo.TabIndex = 2;
             this.groupBoxEditInfo.TabStop = false;
             this.groupBoxEditInfo.Text = "THAY ĐỔI THÔNG TIN";
+            // 
+            // btn_CancelChangeName
+            // 
+            this.btn_CancelChangeName.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_CancelChangeName.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.btn_CancelChangeName.BorderColor = System.Drawing.Color.Aqua;
+            this.btn_CancelChangeName.BorderRadius = 15;
+            this.btn_CancelChangeName.BorderSize = 2;
+            this.btn_CancelChangeName.FlatAppearance.BorderSize = 0;
+            this.btn_CancelChangeName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CancelChangeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_CancelChangeName.ForeColor = System.Drawing.Color.Black;
+            this.btn_CancelChangeName.Location = new System.Drawing.Point(214, 224);
+            this.btn_CancelChangeName.Name = "btn_CancelChangeName";
+            this.btn_CancelChangeName.Size = new System.Drawing.Size(96, 31);
+            this.btn_CancelChangeName.TabIndex = 59;
+            this.btn_CancelChangeName.Text = "Hủy";
+            this.btn_CancelChangeName.TextColor = System.Drawing.Color.Black;
+            this.btn_CancelChangeName.UseVisualStyleBackColor = false;
+            this.btn_CancelChangeName.Click += new System.EventHandler(this.btn_CancelChangeName_Click);
+            // 
+            // btn_ChangeName
+            // 
+            this.btn_ChangeName.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_ChangeName.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.btn_ChangeName.BorderColor = System.Drawing.Color.Aqua;
+            this.btn_ChangeName.BorderRadius = 15;
+            this.btn_ChangeName.BorderSize = 2;
+            this.btn_ChangeName.FlatAppearance.BorderSize = 0;
+            this.btn_ChangeName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_ChangeName.ForeColor = System.Drawing.Color.Black;
+            this.btn_ChangeName.Location = new System.Drawing.Point(29, 224);
+            this.btn_ChangeName.Name = "btn_ChangeName";
+            this.btn_ChangeName.Size = new System.Drawing.Size(96, 31);
+            this.btn_ChangeName.TabIndex = 58;
+            this.btn_ChangeName.Text = "Xác nhận";
+            this.btn_ChangeName.TextColor = System.Drawing.Color.Black;
+            this.btn_ChangeName.UseVisualStyleBackColor = false;
+            this.btn_ChangeName.Click += new System.EventHandler(this.btn_ChangeName_Click);
+            // 
+            // tb_DisplayName
+            // 
+            this.tb_DisplayName.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_DisplayName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_DisplayName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tb_DisplayName.BorderRadius = 0;
+            this.tb_DisplayName.BorderSize = 2;
+            this.tb_DisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_DisplayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_DisplayName.Location = new System.Drawing.Point(60, 134);
+            this.tb_DisplayName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_DisplayName.Multiline = false;
+            this.tb_DisplayName.Name = "tb_DisplayName";
+            this.tb_DisplayName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tb_DisplayName.PasswordChar = false;
+            this.tb_DisplayName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tb_DisplayName.PlaceholderText = "Display Name";
+            this.tb_DisplayName.Size = new System.Drawing.Size(250, 31);
+            this.tb_DisplayName.TabIndex = 4;
+            this.tb_DisplayName.Texts = "";
+            this.tb_DisplayName.UnderlinedStyle = false;
+            // 
+            // tb_UserName
+            // 
+            this.tb_UserName.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_UserName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_UserName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tb_UserName.BorderRadius = 0;
+            this.tb_UserName.BorderSize = 2;
+            this.tb_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_UserName.Location = new System.Drawing.Point(60, 65);
+            this.tb_UserName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_UserName.Multiline = false;
+            this.tb_UserName.Name = "tb_UserName";
+            this.tb_UserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tb_UserName.PasswordChar = false;
+            this.tb_UserName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tb_UserName.PlaceholderText = "User Name";
+            this.tb_UserName.Size = new System.Drawing.Size(250, 31);
+            this.tb_UserName.TabIndex = 3;
+            this.tb_UserName.Texts = "";
+            this.tb_UserName.UnderlinedStyle = false;
             // 
             // labelDisplayName
             // 
@@ -115,21 +205,127 @@
             // groupBoxChangePass
             // 
             this.groupBoxChangePass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxChangePass.Controls.Add(this.rjButton3);
-            this.groupBoxChangePass.Controls.Add(this.rjButton2);
-            this.groupBoxChangePass.Controls.Add(this.rjTextBox7);
-            this.groupBoxChangePass.Controls.Add(this.rjTextBox6);
-            this.groupBoxChangePass.Controls.Add(this.rjTextBox4);
+            this.groupBoxChangePass.Controls.Add(this.btn_CancelChangePassword);
+            this.groupBoxChangePass.Controls.Add(this.btn_ChangePassword);
+            this.groupBoxChangePass.Controls.Add(this.tb_ComfirmPassword);
+            this.groupBoxChangePass.Controls.Add(this.tb_NewPasword);
+            this.groupBoxChangePass.Controls.Add(this.tb_OldPassword);
             this.groupBoxChangePass.Controls.Add(this.lb_OldPass);
             this.groupBoxChangePass.Controls.Add(this.labelConfirmPass);
             this.groupBoxChangePass.Controls.Add(this.labelNewPass);
             this.groupBoxChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBoxChangePass.Location = new System.Drawing.Point(516, 71);
+            this.groupBoxChangePass.Location = new System.Drawing.Point(518, 108);
             this.groupBoxChangePass.Name = "groupBoxChangePass";
             this.groupBoxChangePass.Size = new System.Drawing.Size(337, 347);
             this.groupBoxChangePass.TabIndex = 2;
             this.groupBoxChangePass.TabStop = false;
             this.groupBoxChangePass.Text = "THAY ĐỔI MẬT KHẨU";
+            // 
+            // btn_CancelChangePassword
+            // 
+            this.btn_CancelChangePassword.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_CancelChangePassword.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.btn_CancelChangePassword.BorderColor = System.Drawing.Color.Aqua;
+            this.btn_CancelChangePassword.BorderRadius = 15;
+            this.btn_CancelChangePassword.BorderSize = 2;
+            this.btn_CancelChangePassword.FlatAppearance.BorderSize = 0;
+            this.btn_CancelChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CancelChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_CancelChangePassword.ForeColor = System.Drawing.Color.Black;
+            this.btn_CancelChangePassword.Location = new System.Drawing.Point(212, 274);
+            this.btn_CancelChangePassword.Name = "btn_CancelChangePassword";
+            this.btn_CancelChangePassword.Size = new System.Drawing.Size(96, 31);
+            this.btn_CancelChangePassword.TabIndex = 60;
+            this.btn_CancelChangePassword.Text = "Hủy";
+            this.btn_CancelChangePassword.TextColor = System.Drawing.Color.Black;
+            this.btn_CancelChangePassword.UseVisualStyleBackColor = false;
+            this.btn_CancelChangePassword.Click += new System.EventHandler(this.btn_CancelChangePassword_Click);
+            // 
+            // btn_ChangePassword
+            // 
+            this.btn_ChangePassword.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_ChangePassword.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.btn_ChangePassword.BorderColor = System.Drawing.Color.Aqua;
+            this.btn_ChangePassword.BorderRadius = 15;
+            this.btn_ChangePassword.BorderSize = 2;
+            this.btn_ChangePassword.FlatAppearance.BorderSize = 0;
+            this.btn_ChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_ChangePassword.ForeColor = System.Drawing.Color.Black;
+            this.btn_ChangePassword.Location = new System.Drawing.Point(25, 274);
+            this.btn_ChangePassword.Name = "btn_ChangePassword";
+            this.btn_ChangePassword.Size = new System.Drawing.Size(96, 31);
+            this.btn_ChangePassword.TabIndex = 59;
+            this.btn_ChangePassword.Text = "Xác nhận";
+            this.btn_ChangePassword.TextColor = System.Drawing.Color.Black;
+            this.btn_ChangePassword.UseVisualStyleBackColor = false;
+            this.btn_ChangePassword.Click += new System.EventHandler(this.btn_ChangePassword_Click);
+            // 
+            // tb_ComfirmPassword
+            // 
+            this.tb_ComfirmPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_ComfirmPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_ComfirmPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tb_ComfirmPassword.BorderRadius = 0;
+            this.tb_ComfirmPassword.BorderSize = 2;
+            this.tb_ComfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ComfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_ComfirmPassword.Location = new System.Drawing.Point(58, 211);
+            this.tb_ComfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ComfirmPassword.Multiline = false;
+            this.tb_ComfirmPassword.Name = "tb_ComfirmPassword";
+            this.tb_ComfirmPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tb_ComfirmPassword.PasswordChar = false;
+            this.tb_ComfirmPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tb_ComfirmPassword.PlaceholderText = "Confirm Password";
+            this.tb_ComfirmPassword.Size = new System.Drawing.Size(250, 31);
+            this.tb_ComfirmPassword.TabIndex = 7;
+            this.tb_ComfirmPassword.Texts = "";
+            this.tb_ComfirmPassword.UnderlinedStyle = false;
+            // 
+            // tb_NewPasword
+            // 
+            this.tb_NewPasword.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_NewPasword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_NewPasword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tb_NewPasword.BorderRadius = 0;
+            this.tb_NewPasword.BorderSize = 2;
+            this.tb_NewPasword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_NewPasword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_NewPasword.Location = new System.Drawing.Point(58, 134);
+            this.tb_NewPasword.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_NewPasword.Multiline = false;
+            this.tb_NewPasword.Name = "tb_NewPasword";
+            this.tb_NewPasword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tb_NewPasword.PasswordChar = false;
+            this.tb_NewPasword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tb_NewPasword.PlaceholderText = "New Password";
+            this.tb_NewPasword.Size = new System.Drawing.Size(250, 31);
+            this.tb_NewPasword.TabIndex = 6;
+            this.tb_NewPasword.Texts = "";
+            this.tb_NewPasword.UnderlinedStyle = false;
+            // 
+            // tb_OldPassword
+            // 
+            this.tb_OldPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_OldPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_OldPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tb_OldPassword.BorderRadius = 0;
+            this.tb_OldPassword.BorderSize = 2;
+            this.tb_OldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_OldPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_OldPassword.Location = new System.Drawing.Point(58, 65);
+            this.tb_OldPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_OldPassword.Multiline = false;
+            this.tb_OldPassword.Name = "tb_OldPassword";
+            this.tb_OldPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tb_OldPassword.PasswordChar = false;
+            this.tb_OldPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tb_OldPassword.PlaceholderText = "Password";
+            this.tb_OldPassword.Size = new System.Drawing.Size(250, 31);
+            this.tb_OldPassword.TabIndex = 5;
+            this.tb_OldPassword.Texts = "";
+            this.tb_OldPassword.UnderlinedStyle = false;
             // 
             // lb_OldPass
             // 
@@ -163,6 +359,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.groupBoxChangePass);
             this.panel3.Controls.Add(this.groupBoxEditInfo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -172,191 +369,54 @@
             this.panel3.Size = new System.Drawing.Size(904, 503);
             this.panel3.TabIndex = 3;
             // 
-            // rjButton3
+            // panel2
             // 
-            this.rjButton3.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton3.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton3.BorderColor = System.Drawing.Color.Aqua;
-            this.rjButton3.BorderRadius = 15;
-            this.rjButton3.BorderSize = 2;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rjButton3.ForeColor = System.Drawing.Color.Black;
-            this.rjButton3.Location = new System.Drawing.Point(212, 274);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(96, 31);
-            this.rjButton3.TabIndex = 60;
-            this.rjButton3.Text = "Hủy";
-            this.rjButton3.TextColor = System.Drawing.Color.Black;
-            this.rjButton3.UseVisualStyleBackColor = false;
+            this.panel2.Controls.Add(this.txt_DisplayName);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txt_UserName);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(65, 22);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(790, 51);
+            this.panel2.TabIndex = 3;
             // 
-            // rjButton2
+            // txt_DisplayName
             // 
-            this.rjButton2.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton2.BorderColor = System.Drawing.Color.Aqua;
-            this.rjButton2.BorderRadius = 15;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rjButton2.ForeColor = System.Drawing.Color.Black;
-            this.rjButton2.Location = new System.Drawing.Point(25, 274);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(96, 31);
-            this.rjButton2.TabIndex = 59;
-            this.rjButton2.Text = "Xác nhận";
-            this.rjButton2.TextColor = System.Drawing.Color.Black;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.txt_DisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_DisplayName.Location = new System.Drawing.Point(544, 14);
+            this.txt_DisplayName.Name = "txt_DisplayName";
+            this.txt_DisplayName.ReadOnly = true;
+            this.txt_DisplayName.Size = new System.Drawing.Size(149, 29);
+            this.txt_DisplayName.TabIndex = 3;
             // 
-            // rjTextBox7
+            // label2
             // 
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox7.BorderRadius = 0;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox7.Location = new System.Drawing.Point(58, 211);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "Confirm Password";
-            this.rjTextBox7.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox7.TabIndex = 7;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(402, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Display Name: ";
             // 
-            // rjTextBox6
+            // txt_UserName
             // 
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox6.BorderRadius = 0;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox6.Location = new System.Drawing.Point(58, 134);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "New Password";
-            this.rjTextBox6.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox6.TabIndex = 6;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
+            this.txt_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_UserName.Location = new System.Drawing.Point(142, 14);
+            this.txt_UserName.Name = "txt_UserName";
+            this.txt_UserName.ReadOnly = true;
+            this.txt_UserName.Size = new System.Drawing.Size(149, 29);
+            this.txt_UserName.TabIndex = 1;
             // 
-            // rjTextBox4
+            // label1
             // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(58, 65);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "Password";
-            this.rjTextBox4.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox4.TabIndex = 5;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton1.BorderColor = System.Drawing.Color.Aqua;
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(214, 224);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(96, 31);
-            this.rjButton1.TabIndex = 59;
-            this.rjButton1.Text = "Hủy";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton8
-            // 
-            this.rjButton8.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton8.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton8.BorderColor = System.Drawing.Color.Aqua;
-            this.rjButton8.BorderRadius = 15;
-            this.rjButton8.BorderSize = 2;
-            this.rjButton8.FlatAppearance.BorderSize = 0;
-            this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rjButton8.ForeColor = System.Drawing.Color.Black;
-            this.rjButton8.Location = new System.Drawing.Point(29, 224);
-            this.rjButton8.Name = "rjButton8";
-            this.rjButton8.Size = new System.Drawing.Size(96, 31);
-            this.rjButton8.TabIndex = 58;
-            this.rjButton8.Text = "Xác nhận";
-            this.rjButton8.TextColor = System.Drawing.Color.Black;
-            this.rjButton8.UseVisualStyleBackColor = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(60, 134);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "Display Name";
-            this.rjTextBox2.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox2.TabIndex = 4;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(60, 65);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "User Name";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox1.TabIndex = 3;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(26, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Name:";
             // 
             // FormEditInformation
             // 
@@ -367,7 +427,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormEditInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditInformation_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBoxEditInfo.ResumeLayout(false);
@@ -375,6 +434,8 @@
             this.groupBoxChangePass.ResumeLayout(false);
             this.groupBoxChangePass.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,14 +452,19 @@
         private System.Windows.Forms.Label labelConfirmPass;
         private System.Windows.Forms.Label labelNewPass;
         private System.Windows.Forms.Panel panel3;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJTextBox rjTextBox7;
-        private CustomControls.RJControls.RJTextBox rjTextBox6;
-        private CustomControls.RJControls.RJTextBox rjTextBox4;
-        private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton rjButton8;
-        private CustomControls.RJControls.RJButton rjButton3;
-        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJTextBox tb_DisplayName;
+        private CustomControls.RJControls.RJTextBox tb_UserName;
+        private CustomControls.RJControls.RJTextBox tb_ComfirmPassword;
+        private CustomControls.RJControls.RJTextBox tb_NewPasword;
+        private CustomControls.RJControls.RJTextBox tb_OldPassword;
+        private CustomControls.RJControls.RJButton btn_CancelChangeName;
+        private CustomControls.RJControls.RJButton btn_ChangeName;
+        private CustomControls.RJControls.RJButton btn_CancelChangePassword;
+        private CustomControls.RJControls.RJButton btn_ChangePassword;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_DisplayName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_UserName;
+        private System.Windows.Forms.Label label1;
     }
 }

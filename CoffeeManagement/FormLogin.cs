@@ -21,6 +21,7 @@ namespace CoffeeManagement
         private List<Account> listAccount = new List<Account>();
         public static string Type;
         public static string Cashier;
+        public static string UserNameCashier;
         //******
         public FormLogin()
         {
@@ -35,6 +36,7 @@ namespace CoffeeManagement
                 {
                     Type = i.type;
                     Cashier = i.displayName;
+                    UserNameCashier = i.userName;
                     return true;
                 }
             }
