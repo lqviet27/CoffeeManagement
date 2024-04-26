@@ -11,9 +11,15 @@ namespace DAL
 {
     public class DAL_Bill : DAL<DAL_Bill, Bill, int>
     {
-        public override void Create(Bill newElement)
+        public override void Create(Bill newBill)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("InsertBill");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@IdTable", SqlDbType.Int).Value = newBill.idTable;
+            cmd.Parameters.Add("@Day", SqlDbType.DateTime).Value = newBill.Date;
+            cmd.Parameters.Add("@Cashier", SqlDbType.NVarChar).Value = newBill.cashier;
+            cmd.Parameters.Add("@TotalPrice", SqlDbType.Float).Value = newBill.totalPrice;
+            DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
         public override void Delete(int PKValue)
