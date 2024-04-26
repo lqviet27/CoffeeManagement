@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace CoffeeManagement
 {
@@ -23,7 +24,8 @@ namespace CoffeeManagement
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            
+            dateTimePickerStart.Format = DateTimePickerFormat.Short;
+            dateTimePickerEnd.Format = DateTimePickerFormat.Short;
             Display.FormatTable(dgv_Drink);
             Display.FormatTable(dgv_DrinkType);
             Display.FormatTable(dgv_Account);
@@ -335,10 +337,33 @@ namespace CoffeeManagement
             }
         }
 
-        
-
-
         // -----------------------------------------------------------------------------------------------------
 
+
+        // -------------------------------------------Revenue----------------------------------------------------
+        private void rjButton13_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt.Rows.Clear();
+
+            TimeSpan numberDays = dateTimePickerEnd.Value.Date.Subtract(dateTimePickerStart.Value.Date);
+            int numDays = numberDays.Days;
+
+            if (numDays >= 7 && numDays < 30)
+                chart1.Series["Revenue"].ChartType = SeriesChartType.Line;
+            else
+                chart1.Series["Revenue"].ChartType = SeriesChartType.Column;
+            dt = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
+
+            chart1.DataSource = dt;
+            chart1.Series["Revenue"].Points.Clear();
+            chart1.Series["Revenue"].XValueMember = "Day";
+            chart1.Series["Revenue"].YValueMembers = "Revenue";
+            chart1.ChartAreas[0].AxisX.Interval = 1;
+            chart1.Series["Revenue"].IsValueShownAsLabel = true;
+            chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+            chart1.Visible = true;
+        }
     }
 }
