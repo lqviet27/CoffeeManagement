@@ -337,9 +337,6 @@ namespace CoffeeManagement
             }
         }
 
-        
-
-
         // -----------------------------------------------------------------------------------------------------
 
 
@@ -354,7 +351,8 @@ namespace CoffeeManagement
 
             if (numDays >= 7 && numDays < 30)
                 chart1.Series["Revenue"].ChartType = SeriesChartType.Line;
-
+            else
+                chart1.Series["Revenue"].ChartType = SeriesChartType.Column;
             dt = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
 
             chart1.DataSource = dt;
@@ -366,7 +364,6 @@ namespace CoffeeManagement
             chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
             chart1.Visible = true;
-
         }
     }
 }
