@@ -113,7 +113,7 @@ namespace CoffeeManagement
 
            
             }
-            lb_orderTotal.Text = currentTotal.ToString();
+            lb_Total.Text = currentTotal.ToString();
 
         }
 
@@ -234,7 +234,9 @@ namespace CoffeeManagement
 
         private void btn_purchase_Click(object sender, EventArgs e)
         {
-         
+            Bill bill = new Bill(currentTable.id, FormLogin.Cashier, DateTime.Now.Date, currentTotal);
+            BUS_Bill.Instance.Create(bill);
+            MessageBox.Show("Pay Successfully!");
 
         }
 

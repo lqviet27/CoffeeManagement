@@ -13,7 +13,7 @@ namespace BUS
     {
         public override void Create(Bill model)
         {
-            throw new NotImplementedException();
+            DAL_Bill.Instance.Create(model);
         }
 
         public override void Delete(int data)
