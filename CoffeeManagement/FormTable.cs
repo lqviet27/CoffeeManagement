@@ -36,7 +36,7 @@ namespace CoffeeManagement
         {
             BUS_Table.Instance.getList(tables);
             Point point = new Point(3, 30);
-            Order = new List<List<OrderDrink>>(tables.Count);
+            Order = new List<List<OrderDrink>>(tables.Count+1);
 
             for (int i = 0; i < tables.Count; i++)
             {
@@ -56,6 +56,7 @@ namespace CoffeeManagement
                 point.X += 90 + 10;
                 Order.Add(new List<OrderDrink>());
             }
+            Order.Add(new List<OrderDrink>());
         }
 
 

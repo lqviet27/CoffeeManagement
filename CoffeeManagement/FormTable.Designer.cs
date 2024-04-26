@@ -31,14 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pn_order = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lb_orderTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_billTableName = new System.Windows.Forms.Label();
             this.gb_order = new System.Windows.Forms.GroupBox();
+            this.pn_order = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -79,7 +78,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 715);
+            this.panel1.Size = new System.Drawing.Size(1205, 708);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -89,12 +88,11 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1205, 715);
+            this.panel3.Size = new System.Drawing.Size(1205, 708);
             this.panel3.TabIndex = 2;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.groupBox4);
             this.panel5.Controls.Add(this.groupBox3);
             this.panel5.Controls.Add(this.groupBox2);
@@ -103,26 +101,8 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1205, 715);
+            this.panel5.Size = new System.Drawing.Size(1205, 708);
             this.panel5.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(576, 660);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "label2";
-            // 
-            // pn_order
-            // 
-            this.pn_order.Location = new System.Drawing.Point(8, 31);
-            this.pn_order.Margin = new System.Windows.Forms.Padding(4);
-            this.pn_order.Name = "pn_order";
-            this.pn_order.Size = new System.Drawing.Size(420, 492);
-            this.pn_order.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -195,6 +175,14 @@
             this.gb_order.Size = new System.Drawing.Size(436, 591);
             this.gb_order.TabIndex = 30;
             this.gb_order.TabStop = false;
+            // 
+            // pn_order
+            // 
+            this.pn_order.Location = new System.Drawing.Point(8, 31);
+            this.pn_order.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_order.Name = "pn_order";
+            this.pn_order.Size = new System.Drawing.Size(420, 492);
+            this.pn_order.TabIndex = 0;
             // 
             // label21
             // 
@@ -323,7 +311,7 @@
             // 
             // tx_Table
             // 
-            this.tx_Table.Location = new System.Drawing.Point(127, 29);
+            this.tx_Table.Location = new System.Drawing.Point(127, 23);
             this.tx_Table.Name = "tx_Table";
             this.tx_Table.Size = new System.Drawing.Size(177, 30);
             this.tx_Table.TabIndex = 11;
@@ -451,7 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 715);
+            this.ClientSize = new System.Drawing.Size(1205, 708);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTable";
@@ -460,7 +448,6 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.gb_order.ResumeLayout(false);
@@ -505,7 +492,6 @@
         private System.Windows.Forms.GroupBox gb_order;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pn_order;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_orderTotal;
         private System.Windows.Forms.TextBox tx_Table;
     }
