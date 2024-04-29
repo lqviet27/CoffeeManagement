@@ -48,19 +48,23 @@ namespace DAL
         }
         //-----------------------------------------------------
         // dung khi them mon vao ban se chuyen sang online
-        public void SetTableOnline(string TableName)
+        public void SetTableOnline(int idTable)
         {
-            SqlCommand cmd = new SqlCommand("SetTableOnline");
+            SqlCommand cmd = new SqlCommand("UpdateTableStatus");
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = TableName;
+            cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = idTable;
+            cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Online";
+
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
         // dung khi thanh toan se chuyen sang empty
-        public void SetTableEmpty(string TableName)
+        public void SetTableEmpty(int idTable)
         {
-            SqlCommand cmd = new SqlCommand("SetTableEmpty");
+            SqlCommand cmd = new SqlCommand("UpdateTableStatus");
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = TableName;
+            cmd.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = idTable;
+            cmd.Parameters.AddWithValue("@Status", SqlDbType.NVarChar).Value = "Empty";
+
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 

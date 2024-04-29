@@ -203,7 +203,7 @@ namespace CoffeeManagement
 
                 if (txb_StatusTable.Text == "Empty")
                 {
-                    BUS_Table.Instance.SetTableOnline(tx_Table.Text);
+                    BUS_Table.Instance.SetTableOnline(currentTableId);
                     txb_StatusTable.Text = "Online";
                     loadTable();
                 }
@@ -234,10 +234,14 @@ namespace CoffeeManagement
 
         private void btn_purchase_Click(object sender, EventArgs e)
         {
-            Bill bill = new Bill(currentTable.id, FormLogin.Cashier, DateTime.Now.Date, currentTotal);
+            Bill bill = new Bill(currentTable.id, FormLogin.Cashier, DateTime.Now.Date, (int)currentTotal);
+            BUS_Table.Instance.SetTableEmpty(currentTable.id);
+            Order[currentTable.id] = new List<OrderDrink> ();
+            pn_order.Controls.Clear ();
+            txb_StatusTable.Text = "Empty"; 
             BUS_Bill.Instance.Create(bill);
             MessageBox.Show("Pay Successfully!");
-
+            loadTable();
         }
 
         private void FormTable_FormClosed(object sender, FormClosedEventArgs e)
