@@ -67,7 +67,7 @@ namespace CoffeeManagement
                         x = 10;
                         y += 60;
                     }
-                    btn.MouseClick += new MouseEventHandler(btnTable_MouseClick);
+                    btn.MouseClick += new MouseEventHandler(Btn_MouseClick);
                     pn_Table.Controls.Add(btn);
                 }
             }
@@ -75,9 +75,10 @@ namespace CoffeeManagement
             {
                 MessageBox.Show("Database is not available tai day ");
             }
+            
 
         }
-        private void btnTable_MouseClick(object sender, EventArgs e)
+        private void Btn_MouseClick(object sender, MouseEventArgs e)
         {
             // an di groupbox chuyen ban
             grb_SwitchTable.Visible = false;
@@ -377,7 +378,5 @@ namespace CoffeeManagement
                 MessageBox.Show("Switch Table Fail !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
     }
 }
