@@ -8,8 +8,8 @@ namespace Model
 {
     public class Bill
     {
-        private int _idTable;
-        private DateTime _date;
+        private int _id;
+        private string _tableName;
         private string _cashier;
         private int _status;
         private DateTime _day;
@@ -29,17 +29,10 @@ namespace Model
             get { return _cashier; }
             set { _cashier = value; }
         }
-
-        public float totalPrice
+        public int status
         {
-            get { return _totalPrice; }
-            set { _totalPrice = value; }
-        }
-
-        public int idTable
-        {
-            get { return _idTable; }
-            set { _idTable = value; }
+            get { return _status; }
+            set { _status = value; }
         }
         public DateTime day
         {
@@ -48,14 +41,14 @@ namespace Model
         }
         public float totalPrice
         {
-            get { return _date; }
-            set { _date = value; }
+            get { return _totalPrice; }
+            set { _totalPrice = value; }
         }
-
         public Bill() { }
         public Bill(int id, string tableName, string cashier, int status, DateTime day, float totalPrice)
         {
-            this._idTable = idTable;
+            this._id = id;
+            this._tableName = tableName;
             this._cashier = cashier;
             this._status = status;
             this._day = day;
