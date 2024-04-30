@@ -56,7 +56,39 @@ namespace BUS
             dgv_Drink.Rows.Clear();
             dgv_Drink.DataSource = DAL_Drink.Instance.SearchDrink(drinkName);
         }
-
+        // them mon vao combobox do uong co kieu la type
+        public void AddDrinkToComboBoxFromType(List<Drink> list, ComboBox cb, string type)
+        {
+            cb.Items.Clear();
+            cb.Text = "";
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].type == type)
+                    cb.Items.Add(list[i].name);
+            }
+        }
+        // lay gia tien cua do uong
+        public float getPrice(List<Drink> list, string drinkName)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].name == drinkName)
+                    return list[i].price;
+            }
+            return 0;
+        }
+        // tao ra list cac do uong co type mong muon
+        public void getListDrinkWithManyType(List<Drink> list, List<Drink> chooseDrink, List<string> Type)
+        {
+            chooseDrink.Clear();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (Type.Contains(list[i].type))
+                {
+                    chooseDrink.Add(list[i]);
+                }
+            }
+        }
 
     }
 }

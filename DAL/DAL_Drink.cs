@@ -11,14 +11,14 @@ namespace DAL
 {
     public class DAL_Drink : DAL<DAL_Drink, Drink, int>
     {
-        public override void Create(Drink newElement)
+        public override void Create(Drink drink)
         {
             SqlCommand cmd = new SqlCommand("InsertDrink");
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = newElement.id;
-            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = newElement.name;
-            cmd.Parameters.AddWithValue("@Type", SqlDbType.NVarChar).Value = newElement.type;
-            cmd.Parameters.AddWithValue("@Price", SqlDbType.Float).Value = newElement.price;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = drink.id;
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = drink.name;
+            cmd.Parameters.AddWithValue("@Type", SqlDbType.NVarChar).Value = drink.type;
+            cmd.Parameters.AddWithValue("@Price", SqlDbType.Float).Value = drink.price;
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
 
@@ -56,6 +56,7 @@ namespace DAL
             cmd.Parameters.AddWithValue("@DrinkName", SqlDbType.NVarChar).Value = drinkName;
             return DataProvider.Instance.ExecuteTable(cmd);
         }
+
 
     }
 }

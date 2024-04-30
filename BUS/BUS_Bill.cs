@@ -13,7 +13,7 @@ namespace BUS
     {
         public override void Create(Bill model)
         {
-            throw new NotImplementedException();
+            DAL_Bill.Instance.Create(model);
         }
 
         public override void Delete(int data)
@@ -30,15 +30,43 @@ namespace BUS
         {
             throw new NotImplementedException();
         }
-
+        public override void Update(Bill model, int data)
+        {
+            throw new NotImplementedException();
+        }
+        //--------------------------------------------------------
+        public int getBillID(string tableName)
+        {
+            return DAL_Bill.Instance.getBillID(tableName);
+        }
         public DataTable Revenue(DateTime StartDay, DateTime EndDay, int numDays)
         {
             return DAL_Bill.Instance.Revenue(StartDay, EndDay, numDays);
         }
-
-        public override void Update(Bill model, int data)
+        // cap nhat tong tien cua hoa don khi them mon
+        public void setTotal(string tableName, float drinkTotal)
         {
-            throw new NotImplementedException();
+            DAL_Bill.Instance.setTotal(tableName, drinkTotal);
+        }
+        //lay ra tong tien cua hoa don
+        public float getTotal(string tableName)
+        {
+               return DAL_Bill.Instance.getTotal(tableName);
+        }
+        // lay ra ten nhan vien
+        public string getCashier(string tableName)
+        {
+            return DAL_Bill.Instance.getCashier(tableName);
+        }
+        // chuyen sang trang thai bill la 1: da thanh toan
+        public void setPurchase(string tableName)
+        {
+            DAL_Bill.Instance.setPurchase(tableName);
+        }
+
+        public void UpdateTableInBill(string tableFrom, string tableTo)
+        {
+            DAL_Bill.Instance.UpdateTableInBill(tableFrom, tableTo);
         }
     }
 }

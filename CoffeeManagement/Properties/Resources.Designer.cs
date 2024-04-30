@@ -123,6 +123,16 @@ namespace CoffeeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_coffee_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-coffee-32", resourceCulture);
@@ -186,6 +196,16 @@ namespace CoffeeManagement.Properties {
         internal static System.Drawing.Bitmap icons8_switch_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-switch-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_switch_32_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-switch-32_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

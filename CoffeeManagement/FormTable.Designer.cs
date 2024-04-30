@@ -31,39 +31,42 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_SwitchTable = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pn_Bill = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtTotal = new System.Windows.Forms.Label();
+            this.btn_Print = new System.Windows.Forms.Button();
+            this.btn_Purchase = new System.Windows.Forms.Button();
+            this.txt_Total = new System.Windows.Forms.Label();
             this.txt_Status = new System.Windows.Forms.Label();
             this.txt_NameTable = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.grb_SwitchTable = new System.Windows.Forms.GroupBox();
+            this.txt_FromTable = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btn_AcceptSwitch = new System.Windows.Forms.Button();
+            this.cb_ToTable = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxDrink = new System.Windows.Forms.ComboBox();
+            this.btn_AddDrink = new System.Windows.Forms.Button();
+            this.cb_Drink = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.tb_Table = new System.Windows.Forms.TextBox();
+            this.txt_NameTableAdd = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxDrinkType = new System.Windows.Forms.ComboBox();
+            this.cb_DrinkType = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pn_Table = new System.Windows.Forms.Panel();
+            this.printDialogBill = new System.Windows.Forms.PrintDialog();
+            this.printDocumentBill = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grb_SwitchTable.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,7 +77,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(904, 581);
             this.panel1.TabIndex = 2;
@@ -84,40 +87,55 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(904, 581);
             this.panel3.TabIndex = 2;
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btn_SwitchTable);
             this.panel5.Controls.Add(this.groupBox4);
-            this.panel5.Controls.Add(this.groupBox3);
+            this.panel5.Controls.Add(this.grb_SwitchTable);
             this.panel5.Controls.Add(this.groupBox2);
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(904, 581);
             this.panel5.TabIndex = 1;
             // 
+            // btn_SwitchTable
+            // 
+            this.btn_SwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SwitchTable.Image = global::CoffeeManagement.Properties.Resources.icons8_switch_32_2;
+            this.btn_SwitchTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SwitchTable.Location = new System.Drawing.Point(282, 246);
+            this.btn_SwitchTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SwitchTable.Name = "btn_SwitchTable";
+            this.btn_SwitchTable.Size = new System.Drawing.Size(178, 44);
+            this.btn_SwitchTable.TabIndex = 8;
+            this.btn_SwitchTable.Text = "      Switch Table";
+            this.btn_SwitchTable.UseVisualStyleBackColor = true;
+            this.btn_SwitchTable.Click += new System.EventHandler(this.btn_SwitchTable_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.panel4);
+            this.groupBox4.Controls.Add(this.pn_Bill);
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.txtTotal);
+            this.groupBox4.Controls.Add(this.btn_Print);
+            this.groupBox4.Controls.Add(this.btn_Purchase);
+            this.groupBox4.Controls.Add(this.txt_Total);
             this.groupBox4.Controls.Add(this.txt_Status);
             this.groupBox4.Controls.Add(this.txt_NameTable);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox4.Location = new System.Drawing.Point(566, 15);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(327, 522);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
@@ -133,14 +151,14 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "ID              Drink            Quantity";
             // 
-            // panel4
+            // pn_Bill
             // 
-            this.panel4.AutoScroll = true;
-            this.panel4.Location = new System.Drawing.Point(7, 85);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(316, 370);
-            this.panel4.TabIndex = 26;
+            this.pn_Bill.AutoScroll = true;
+            this.pn_Bill.Location = new System.Drawing.Point(7, 85);
+            this.pn_Bill.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_Bill.Name = "pn_Bill";
+            this.pn_Bill.Size = new System.Drawing.Size(316, 370);
+            this.pn_Bill.TabIndex = 26;
             // 
             // label21
             // 
@@ -162,36 +180,38 @@
             this.label19.TabIndex = 23;
             this.label19.Text = "Price : ";
             // 
-            // button5
+            // btn_Print
             // 
-            this.button5.Image = global::CoffeeManagement.Properties.Resources.icons8_print_32;
-            this.button5.Location = new System.Drawing.Point(276, 7);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(51, 40);
-            this.button5.TabIndex = 22;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_Print.Image = global::CoffeeManagement.Properties.Resources.icons8_print_32;
+            this.btn_Print.Location = new System.Drawing.Point(276, 7);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(51, 40);
+            this.btn_Print.TabIndex = 22;
+            this.btn_Print.UseVisualStyleBackColor = true;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
             // 
-            // button4
+            // btn_Purchase
             // 
-            this.button4.Image = global::CoffeeManagement.Properties.Resources.icons8_purchase_32;
-            this.button4.Location = new System.Drawing.Point(251, 476);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 40);
-            this.button4.TabIndex = 21;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Purchase.Image = global::CoffeeManagement.Properties.Resources.icons8_purchase_32;
+            this.btn_Purchase.Location = new System.Drawing.Point(251, 471);
+            this.btn_Purchase.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Purchase.Name = "btn_Purchase";
+            this.btn_Purchase.Size = new System.Drawing.Size(72, 40);
+            this.btn_Purchase.TabIndex = 21;
+            this.btn_Purchase.UseVisualStyleBackColor = true;
+            this.btn_Purchase.Click += new System.EventHandler(this.btn_Purchase_Click);
             // 
-            // txtTotal
+            // txt_Total
             // 
-            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotal.Font = new System.Drawing.Font("Lucida Sans Unicode", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(80, 482);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(120, 29);
-            this.txtTotal.TabIndex = 19;
-            this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txt_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Total.Font = new System.Drawing.Font("Lucida Sans Unicode", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total.Location = new System.Drawing.Point(80, 482);
+            this.txt_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_Total.Name = "txt_Total";
+            this.txt_Total.Size = new System.Drawing.Size(120, 29);
+            this.txt_Total.TabIndex = 19;
+            this.txt_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_Status
             // 
@@ -213,30 +233,31 @@
             this.txt_NameTable.TabIndex = 0;
             this.txt_NameTable.Text = "Table";
             // 
-            // groupBox3
+            // grb_SwitchTable
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox3.Location = new System.Drawing.Point(282, 233);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(256, 133);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Switch Table";
+            this.grb_SwitchTable.Controls.Add(this.txt_FromTable);
+            this.grb_SwitchTable.Controls.Add(this.label16);
+            this.grb_SwitchTable.Controls.Add(this.btn_AcceptSwitch);
+            this.grb_SwitchTable.Controls.Add(this.cb_ToTable);
+            this.grb_SwitchTable.Controls.Add(this.label17);
+            this.grb_SwitchTable.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grb_SwitchTable.Location = new System.Drawing.Point(282, 303);
+            this.grb_SwitchTable.Margin = new System.Windows.Forms.Padding(2);
+            this.grb_SwitchTable.Name = "grb_SwitchTable";
+            this.grb_SwitchTable.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_SwitchTable.Size = new System.Drawing.Size(256, 133);
+            this.grb_SwitchTable.TabIndex = 13;
+            this.grb_SwitchTable.TabStop = false;
+            this.grb_SwitchTable.Text = "Switch Table";
+            this.grb_SwitchTable.Visible = false;
             // 
-            // textBox2
+            // txt_FromTable
             // 
-            this.textBox2.Location = new System.Drawing.Point(56, 28);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 26);
-            this.textBox2.TabIndex = 7;
+            this.txt_FromTable.Location = new System.Drawing.Point(56, 28);
+            this.txt_FromTable.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_FromTable.Name = "txt_FromTable";
+            this.txt_FromTable.Size = new System.Drawing.Size(122, 26);
+            this.txt_FromTable.TabIndex = 7;
             // 
             // label16
             // 
@@ -249,26 +270,27 @@
             this.label16.TabIndex = 6;
             this.label16.Text = "From: ";
             // 
-            // button2
+            // btn_AcceptSwitch
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CoffeeManagement.Properties.Resources.icons8_switch_32;
-            this.button2.Location = new System.Drawing.Point(192, 28);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 67);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_AcceptSwitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AcceptSwitch.Image = global::CoffeeManagement.Properties.Resources.icons8_arrow_32;
+            this.btn_AcceptSwitch.Location = new System.Drawing.Point(192, 28);
+            this.btn_AcceptSwitch.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AcceptSwitch.Name = "btn_AcceptSwitch";
+            this.btn_AcceptSwitch.Size = new System.Drawing.Size(51, 67);
+            this.btn_AcceptSwitch.TabIndex = 5;
+            this.btn_AcceptSwitch.UseVisualStyleBackColor = true;
+            this.btn_AcceptSwitch.Click += new System.EventHandler(this.btn_AcceptSwitch_Click);
             // 
-            // comboBox4
+            // cb_ToTable
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(56, 71);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(122, 24);
-            this.comboBox4.TabIndex = 2;
+            this.cb_ToTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_ToTable.FormattingEnabled = true;
+            this.cb_ToTable.Location = new System.Drawing.Point(56, 71);
+            this.cb_ToTable.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_ToTable.Name = "cb_ToTable";
+            this.cb_ToTable.Size = new System.Drawing.Size(122, 24);
+            this.cb_ToTable.TabIndex = 2;
             // 
             // label17
             // 
@@ -283,43 +305,44 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.comboBoxDrink);
+            this.groupBox2.Controls.Add(this.btn_AddDrink);
+            this.groupBox2.Controls.Add(this.cb_Drink);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.tb_Table);
+            this.groupBox2.Controls.Add(this.txt_NameTableAdd);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.numericUpDownQuantity);
-            this.groupBox2.Controls.Add(this.comboBoxDrinkType);
+            this.groupBox2.Controls.Add(this.cb_DrinkType);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.Location = new System.Drawing.Point(282, 19);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(256, 183);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Drink";
             // 
-            // button1
+            // btn_AddDrink
             // 
-            this.button1.Image = global::CoffeeManagement.Properties.Resources.icons8_add_32;
-            this.button1.Location = new System.Drawing.Point(78, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AddDrink.Image = global::CoffeeManagement.Properties.Resources.icons8_add_32;
+            this.btn_AddDrink.Location = new System.Drawing.Point(78, 139);
+            this.btn_AddDrink.Name = "btn_AddDrink";
+            this.btn_AddDrink.Size = new System.Drawing.Size(100, 33);
+            this.btn_AddDrink.TabIndex = 10;
+            this.btn_AddDrink.UseVisualStyleBackColor = true;
+            this.btn_AddDrink.Click += new System.EventHandler(this.btn_AddDrink_Click);
             // 
-            // comboBoxDrink
+            // cb_Drink
             // 
-            this.comboBoxDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBoxDrink.FormattingEnabled = true;
-            this.comboBoxDrink.Location = new System.Drawing.Point(95, 81);
-            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxDrink.Name = "comboBoxDrink";
-            this.comboBoxDrink.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxDrink.TabIndex = 9;
+            this.cb_Drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_Drink.FormattingEnabled = true;
+            this.cb_Drink.Location = new System.Drawing.Point(95, 81);
+            this.cb_Drink.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Drink.Name = "cb_Drink";
+            this.cb_Drink.Size = new System.Drawing.Size(134, 24);
+            this.cb_Drink.TabIndex = 9;
             // 
             // label15
             // 
@@ -332,13 +355,13 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Drink :";
             // 
-            // tb_Table
+            // txt_NameTableAdd
             // 
-            this.tb_Table.Location = new System.Drawing.Point(95, 18);
-            this.tb_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tb_Table.Name = "tb_Table";
-            this.tb_Table.Size = new System.Drawing.Size(134, 26);
-            this.tb_Table.TabIndex = 7;
+            this.txt_NameTableAdd.Location = new System.Drawing.Point(95, 18);
+            this.txt_NameTableAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NameTableAdd.Name = "txt_NameTableAdd";
+            this.txt_NameTableAdd.Size = new System.Drawing.Size(134, 26);
+            this.txt_NameTableAdd.TabIndex = 7;
             // 
             // label14
             // 
@@ -355,7 +378,7 @@
             // 
             this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.numericUpDownQuantity.Location = new System.Drawing.Point(95, 109);
-            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownQuantity.Minimum = new decimal(new int[] {
             1,
             0,
@@ -370,21 +393,21 @@
             0,
             0});
             // 
-            // comboBoxDrinkType
+            // cb_DrinkType
             // 
-            this.comboBoxDrinkType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBoxDrinkType.FormattingEnabled = true;
-            this.comboBoxDrinkType.Items.AddRange(new object[] {
+            this.cb_DrinkType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_DrinkType.FormattingEnabled = true;
+            this.cb_DrinkType.Items.AddRange(new object[] {
             "Type1",
             "Type2",
             "Type3",
             "Type4"});
-            this.comboBoxDrinkType.Location = new System.Drawing.Point(95, 50);
-            this.comboBoxDrinkType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxDrinkType.Name = "comboBoxDrinkType";
-            this.comboBoxDrinkType.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxDrinkType.TabIndex = 2;
-            this.comboBoxDrinkType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrinkType_SelectedIndexChanged);
+            this.cb_DrinkType.Location = new System.Drawing.Point(95, 50);
+            this.cb_DrinkType.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_DrinkType.Name = "cb_DrinkType";
+            this.cb_DrinkType.Size = new System.Drawing.Size(134, 24);
+            this.cb_DrinkType.TabIndex = 2;
+            this.cb_DrinkType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrinkType_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -413,9 +436,9 @@
             this.groupBox1.Controls.Add(this.pn_Table);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(251, 537);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -426,10 +449,18 @@
             this.pn_Table.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pn_Table.AutoScroll = true;
             this.pn_Table.Location = new System.Drawing.Point(9, 30);
-            this.pn_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_Table.Margin = new System.Windows.Forms.Padding(2);
             this.pn_Table.Name = "pn_Table";
             this.pn_Table.Size = new System.Drawing.Size(238, 501);
             this.pn_Table.TabIndex = 1;
+            // 
+            // printDialogBill
+            // 
+            this.printDialogBill.UseEXDialog = true;
+            // 
+            // printDocumentBill
+            // 
+            this.printDocumentBill.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentBill_PrintPage);
             // 
             // FormTable
             // 
@@ -437,7 +468,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 581);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTable";
@@ -446,8 +477,8 @@
             this.panel5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grb_SwitchTable.ResumeLayout(false);
+            this.grb_SwitchTable.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
@@ -463,30 +494,33 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBoxDrinkType;
+        private System.Windows.Forms.ComboBox cb_DrinkType;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tb_Table;
-        private System.Windows.Forms.ComboBox comboBoxDrink;
+        private System.Windows.Forms.TextBox txt_NameTableAdd;
+        private System.Windows.Forms.ComboBox cb_Drink;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox grb_SwitchTable;
+        private System.Windows.Forms.TextBox txt_FromTable;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btn_AcceptSwitch;
+        private System.Windows.Forms.ComboBox cb_ToTable;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label txt_Status;
         private System.Windows.Forms.Label txt_NameTable;
-        private System.Windows.Forms.Label txtTotal;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label txt_Total;
+        private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.Button btn_Purchase;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pn_Bill;
+        private System.Windows.Forms.Button btn_AddDrink;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_SwitchTable;
+        private System.Windows.Forms.PrintDialog printDialogBill;
+        private System.Drawing.Printing.PrintDocument printDocumentBill;
     }
 }

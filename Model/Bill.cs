@@ -12,7 +12,8 @@ namespace Model
         private string _tableName;
         private string _cashier;
         private int _status;
-        private int _totalPrice;
+        private DateTime _day;
+        private float _totalPrice;
         public int id
         {
             get { return _id; }
@@ -33,21 +34,25 @@ namespace Model
             get { return _status; }
             set { _status = value; }
         }
-        
-        public int totalPrice
+        public DateTime day
+        {
+            get { return _day; }
+            set { _day = value; }
+        }
+        public float totalPrice
         {
             get { return _totalPrice; }
             set { _totalPrice = value; }
         }
         public Bill() { }
-        public Bill(int id, string tableName, string cashier, int status,  int totalPrice)
+        public Bill(int id, string tableName, string cashier, int status, DateTime day, float totalPrice)
         {
             this._id = id;
             this._tableName = tableName;
             this._cashier = cashier;
             this._status = status;
+            this._day = day;
             this._totalPrice = totalPrice;
-
         }
     }
 }

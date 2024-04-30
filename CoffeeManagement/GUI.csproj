@@ -217,5 +217,11 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-switch-32_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

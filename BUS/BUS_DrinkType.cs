@@ -44,6 +44,7 @@ namespace BUS
         {
             DAL_DrinkType.Instance.Update(model, data);
         }
+        //-------------------------------------------------------
         // load drink type vao combobox
         public void LoadDrinkTypeToComboBox(List<DrinkType> listType, ComboBox cbDrinkType)
         {

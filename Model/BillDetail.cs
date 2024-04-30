@@ -10,7 +10,7 @@ namespace Model
     {
         private int _id;
         private int _billId;
-        private int _drinkId;
+        private string _drinkName;
         private int _quantity;
         public int id
         {
@@ -22,10 +22,10 @@ namespace Model
             get { return _billId; }
             set { _billId = value; }
         }
-        public int drinkId
+        public string drinkName
         {
-            get { return _drinkId; }
-            set { _drinkId = value; }
+            get { return _drinkName; }
+            set { _drinkName = value; }
         }
         public int quantity
         {
@@ -34,11 +34,11 @@ namespace Model
         }
 
         public BillDetail() { }
-        public BillDetail(int id, int billId, int drinkId, int quantity)
+        public BillDetail(int id, int billId, string drinkName, int quantity)
         {
             this._id = id;
             this._billId = billId;
-            this._drinkId = drinkId;
+            this._drinkName = drinkName;
             this._quantity = quantity;
         }
     }
