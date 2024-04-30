@@ -345,18 +345,19 @@ namespace CoffeeManagement
         {
             DataTable dt = new DataTable();
             dt.Rows.Clear();
+            chart1.Series.Clear();
 
             TimeSpan numberDays = dateTimePickerEnd.Value.Date.Subtract(dateTimePickerStart.Value.Date);
             int numDays = numberDays.Days;
+            chart1.Series.Add("Revenue");           
 
-            if (numDays >= 7 && numDays < 30)
+            /*if (numDays >= 14 && numDays < 30)
                 chart1.Series["Revenue"].ChartType = SeriesChartType.Line;
-            else
+            else*/
                 chart1.Series["Revenue"].ChartType = SeriesChartType.Column;
             dt = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
 
             chart1.DataSource = dt;
-            chart1.Series["Revenue"].Points.Clear();
             chart1.Series["Revenue"].XValueMember = "Day";
             chart1.Series["Revenue"].YValueMembers = "Revenue";
             chart1.ChartAreas[0].AxisX.Interval = 1;
