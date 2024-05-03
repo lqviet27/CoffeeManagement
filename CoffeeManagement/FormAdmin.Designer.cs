@@ -37,6 +37,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_Drink = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_DeleteDrink = new CustomControls.RJControls.RJButton();
+            this.btn_EditDrink = new CustomControls.RJControls.RJButton();
+            this.btn_AddDrink = new CustomControls.RJControls.RJButton();
+            this.btn_ShowDrink = new CustomControls.RJControls.RJButton();
             this.pn_queryDrink = new System.Windows.Forms.Panel();
             this.tb_SearchDrinkName = new System.Windows.Forms.TextBox();
             this.btn_SearchDrink = new System.Windows.Forms.Button();
@@ -65,6 +69,10 @@
             this.tb_DrinkTypeID = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_DeleteDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_EditDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_AddDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_ShowDrinkType = new CustomControls.RJControls.RJButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -77,6 +85,10 @@
             this.tb_TableID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btn_DeleteTable = new CustomControls.RJControls.RJButton();
+            this.btn_EditTable = new CustomControls.RJControls.RJButton();
+            this.btn_AddTable = new CustomControls.RJControls.RJButton();
+            this.btn_ShowTable = new CustomControls.RJControls.RJButton();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -95,33 +107,21 @@
             this.tb_UserName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btn_DeleteAccount = new CustomControls.RJControls.RJButton();
+            this.btn_EditAccount = new CustomControls.RJControls.RJButton();
+            this.btn_AddAccount = new CustomControls.RJControls.RJButton();
+            this.btn_ShowAccount = new CustomControls.RJControls.RJButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgv_Revenue = new System.Windows.Forms.DataGridView();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.rjButton13 = new CustomControls.RJControls.RJButton();
             this.lb_to = new System.Windows.Forms.Label();
             this.lb_from = new System.Windows.Forms.Label();
             this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.btn_DeleteDrink = new CustomControls.RJControls.RJButton();
-            this.btn_EditDrink = new CustomControls.RJControls.RJButton();
-            this.btn_AddDrink = new CustomControls.RJControls.RJButton();
-            this.btn_ShowDrink = new CustomControls.RJControls.RJButton();
-            this.btn_DeleteDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_EditDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_AddDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_ShowDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_DeleteTable = new CustomControls.RJControls.RJButton();
-            this.btn_EditTable = new CustomControls.RJControls.RJButton();
-            this.btn_AddTable = new CustomControls.RJControls.RJButton();
-            this.btn_ShowTable = new CustomControls.RJControls.RJButton();
-            this.btn_DeleteAccount = new CustomControls.RJControls.RJButton();
-            this.btn_EditAccount = new CustomControls.RJControls.RJButton();
-            this.btn_AddAccount = new CustomControls.RJControls.RJButton();
-            this.btn_ShowAccount = new CustomControls.RJControls.RJButton();
-            this.rjButton13 = new CustomControls.RJControls.RJButton();
             this.tabPage2.SuspendLayout();
             this.pn_main.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -232,6 +232,85 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 461);
             this.panel1.TabIndex = 1;
+            // 
+            // btn_DeleteDrink
+            // 
+            this.btn_DeleteDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.BorderRadius = 10;
+            this.btn_DeleteDrink.BorderSize = 1;
+            this.btn_DeleteDrink.Enabled = false;
+            this.btn_DeleteDrink.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.Location = new System.Drawing.Point(12, 253);
+            this.btn_DeleteDrink.Name = "btn_DeleteDrink";
+            this.btn_DeleteDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_DeleteDrink.TabIndex = 7;
+            this.btn_DeleteDrink.Text = "Delete";
+            this.btn_DeleteDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.UseVisualStyleBackColor = false;
+            this.btn_DeleteDrink.Click += new System.EventHandler(this.btn_DeleteDrink_Click);
+            // 
+            // btn_EditDrink
+            // 
+            this.btn_EditDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.BorderRadius = 10;
+            this.btn_EditDrink.BorderSize = 1;
+            this.btn_EditDrink.Enabled = false;
+            this.btn_EditDrink.FlatAppearance.BorderSize = 0;
+            this.btn_EditDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.Location = new System.Drawing.Point(12, 193);
+            this.btn_EditDrink.Name = "btn_EditDrink";
+            this.btn_EditDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_EditDrink.TabIndex = 6;
+            this.btn_EditDrink.Text = "Edit";
+            this.btn_EditDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.UseVisualStyleBackColor = false;
+            this.btn_EditDrink.Click += new System.EventHandler(this.btn_EditDrink_Click);
+            // 
+            // btn_AddDrink
+            // 
+            this.btn_AddDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.BorderRadius = 10;
+            this.btn_AddDrink.BorderSize = 1;
+            this.btn_AddDrink.Enabled = false;
+            this.btn_AddDrink.FlatAppearance.BorderSize = 0;
+            this.btn_AddDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.Location = new System.Drawing.Point(12, 127);
+            this.btn_AddDrink.Name = "btn_AddDrink";
+            this.btn_AddDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_AddDrink.TabIndex = 5;
+            this.btn_AddDrink.Text = "Add";
+            this.btn_AddDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.UseVisualStyleBackColor = false;
+            this.btn_AddDrink.Click += new System.EventHandler(this.btn_AddDrink_Click);
+            // 
+            // btn_ShowDrink
+            // 
+            this.btn_ShowDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.BorderRadius = 10;
+            this.btn_ShowDrink.BorderSize = 1;
+            this.btn_ShowDrink.FlatAppearance.BorderSize = 0;
+            this.btn_ShowDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.Location = new System.Drawing.Point(12, 64);
+            this.btn_ShowDrink.Name = "btn_ShowDrink";
+            this.btn_ShowDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_ShowDrink.TabIndex = 4;
+            this.btn_ShowDrink.Text = "Show";
+            this.btn_ShowDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.UseVisualStyleBackColor = false;
+            this.btn_ShowDrink.Click += new System.EventHandler(this.btn_ShowDrink_Click);
             // 
             // pn_queryDrink
             // 
@@ -542,6 +621,85 @@
             this.panel3.Size = new System.Drawing.Size(151, 461);
             this.panel3.TabIndex = 2;
             // 
+            // btn_DeleteDrinkType
+            // 
+            this.btn_DeleteDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrinkType.BorderRadius = 10;
+            this.btn_DeleteDrinkType.BorderSize = 1;
+            this.btn_DeleteDrinkType.Enabled = false;
+            this.btn_DeleteDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrinkType.Location = new System.Drawing.Point(16, 245);
+            this.btn_DeleteDrinkType.Name = "btn_DeleteDrinkType";
+            this.btn_DeleteDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_DeleteDrinkType.TabIndex = 11;
+            this.btn_DeleteDrinkType.Text = "Delete";
+            this.btn_DeleteDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrinkType.UseVisualStyleBackColor = false;
+            this.btn_DeleteDrinkType.Click += new System.EventHandler(this.btn_DeleteDrinkType_Click);
+            // 
+            // btn_EditDrinkType
+            // 
+            this.btn_EditDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_EditDrinkType.BorderRadius = 10;
+            this.btn_EditDrinkType.BorderSize = 1;
+            this.btn_EditDrinkType.Enabled = false;
+            this.btn_EditDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_EditDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditDrinkType.Location = new System.Drawing.Point(16, 185);
+            this.btn_EditDrinkType.Name = "btn_EditDrinkType";
+            this.btn_EditDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_EditDrinkType.TabIndex = 10;
+            this.btn_EditDrinkType.Text = "Edit";
+            this.btn_EditDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_EditDrinkType.UseVisualStyleBackColor = false;
+            this.btn_EditDrinkType.Click += new System.EventHandler(this.btn_EditDrinkType_Click);
+            // 
+            // btn_AddDrinkType
+            // 
+            this.btn_AddDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_AddDrinkType.BorderRadius = 10;
+            this.btn_AddDrinkType.BorderSize = 1;
+            this.btn_AddDrinkType.Enabled = false;
+            this.btn_AddDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_AddDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddDrinkType.Location = new System.Drawing.Point(16, 119);
+            this.btn_AddDrinkType.Name = "btn_AddDrinkType";
+            this.btn_AddDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_AddDrinkType.TabIndex = 9;
+            this.btn_AddDrinkType.Text = "Add";
+            this.btn_AddDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_AddDrinkType.UseVisualStyleBackColor = false;
+            this.btn_AddDrinkType.Click += new System.EventHandler(this.btn_AddDrinkType_Click);
+            // 
+            // btn_ShowDrinkType
+            // 
+            this.btn_ShowDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_ShowDrinkType.BorderRadius = 10;
+            this.btn_ShowDrinkType.BorderSize = 1;
+            this.btn_ShowDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_ShowDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_ShowDrinkType.Location = new System.Drawing.Point(16, 56);
+            this.btn_ShowDrinkType.Name = "btn_ShowDrinkType";
+            this.btn_ShowDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_ShowDrinkType.TabIndex = 8;
+            this.btn_ShowDrinkType.Text = "Show";
+            this.btn_ShowDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_ShowDrinkType.UseVisualStyleBackColor = false;
+            this.btn_ShowDrinkType.Click += new System.EventHandler(this.btn_Show_Drink_Type_Click);
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel11);
@@ -676,6 +834,85 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(145, 461);
             this.panel10.TabIndex = 3;
+            // 
+            // btn_DeleteTable
+            // 
+            this.btn_DeleteTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteTable.BorderColor = System.Drawing.Color.Black;
+            this.btn_DeleteTable.BorderRadius = 10;
+            this.btn_DeleteTable.BorderSize = 1;
+            this.btn_DeleteTable.Enabled = false;
+            this.btn_DeleteTable.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteTable.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteTable.Location = new System.Drawing.Point(17, 251);
+            this.btn_DeleteTable.Name = "btn_DeleteTable";
+            this.btn_DeleteTable.Size = new System.Drawing.Size(109, 40);
+            this.btn_DeleteTable.TabIndex = 11;
+            this.btn_DeleteTable.Text = "Delete";
+            this.btn_DeleteTable.TextColor = System.Drawing.Color.Black;
+            this.btn_DeleteTable.UseVisualStyleBackColor = false;
+            this.btn_DeleteTable.Click += new System.EventHandler(this.btn_DeleteTable_Click);
+            // 
+            // btn_EditTable
+            // 
+            this.btn_EditTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditTable.BorderColor = System.Drawing.Color.Black;
+            this.btn_EditTable.BorderRadius = 10;
+            this.btn_EditTable.BorderSize = 1;
+            this.btn_EditTable.Enabled = false;
+            this.btn_EditTable.FlatAppearance.BorderSize = 0;
+            this.btn_EditTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditTable.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditTable.Location = new System.Drawing.Point(17, 191);
+            this.btn_EditTable.Name = "btn_EditTable";
+            this.btn_EditTable.Size = new System.Drawing.Size(109, 40);
+            this.btn_EditTable.TabIndex = 10;
+            this.btn_EditTable.Text = "Edit";
+            this.btn_EditTable.TextColor = System.Drawing.Color.Black;
+            this.btn_EditTable.UseVisualStyleBackColor = false;
+            this.btn_EditTable.Click += new System.EventHandler(this.btn_EditTable_Click);
+            // 
+            // btn_AddTable
+            // 
+            this.btn_AddTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddTable.BorderColor = System.Drawing.Color.Black;
+            this.btn_AddTable.BorderRadius = 10;
+            this.btn_AddTable.BorderSize = 1;
+            this.btn_AddTable.Enabled = false;
+            this.btn_AddTable.FlatAppearance.BorderSize = 0;
+            this.btn_AddTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddTable.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddTable.Location = new System.Drawing.Point(17, 125);
+            this.btn_AddTable.Name = "btn_AddTable";
+            this.btn_AddTable.Size = new System.Drawing.Size(109, 40);
+            this.btn_AddTable.TabIndex = 9;
+            this.btn_AddTable.Text = "Add";
+            this.btn_AddTable.TextColor = System.Drawing.Color.Black;
+            this.btn_AddTable.UseVisualStyleBackColor = false;
+            this.btn_AddTable.Click += new System.EventHandler(this.btn_AddTable_Click);
+            // 
+            // btn_ShowTable
+            // 
+            this.btn_ShowTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowTable.BorderColor = System.Drawing.Color.Black;
+            this.btn_ShowTable.BorderRadius = 10;
+            this.btn_ShowTable.BorderSize = 1;
+            this.btn_ShowTable.FlatAppearance.BorderSize = 0;
+            this.btn_ShowTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowTable.ForeColor = System.Drawing.Color.Black;
+            this.btn_ShowTable.Location = new System.Drawing.Point(17, 62);
+            this.btn_ShowTable.Name = "btn_ShowTable";
+            this.btn_ShowTable.Size = new System.Drawing.Size(109, 40);
+            this.btn_ShowTable.TabIndex = 8;
+            this.btn_ShowTable.Text = "Show";
+            this.btn_ShowTable.TextColor = System.Drawing.Color.Black;
+            this.btn_ShowTable.UseVisualStyleBackColor = false;
+            this.btn_ShowTable.Click += new System.EventHandler(this.btn_Show_Table_Click);
             // 
             // label4
             // 
@@ -872,362 +1109,6 @@
             this.panel14.Size = new System.Drawing.Size(162, 461);
             this.panel14.TabIndex = 4;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.chart1);
-            this.tabPage5.Controls.Add(this.dgv_Revenue);
-            this.tabPage5.Controls.Add(this.panel17);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(896, 465);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "Revenue";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(2, 76);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Revenue";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(894, 389);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "Revenue";
-            title1.Name = "Revenue";
-            title1.Text = "Revenue";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Visible = false;
-            // 
-            // dgv_Revenue
-            // 
-            this.dgv_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Revenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Revenue.Location = new System.Drawing.Point(2, 76);
-            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Revenue.Name = "dgv_Revenue";
-            this.dgv_Revenue.RowHeadersWidth = 51;
-            this.dgv_Revenue.RowTemplate.Height = 24;
-            this.dgv_Revenue.Size = new System.Drawing.Size(892, 387);
-            this.dgv_Revenue.TabIndex = 6;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.rjButton13);
-            this.panel17.Controls.Add(this.lb_to);
-            this.panel17.Controls.Add(this.lb_from);
-            this.panel17.Controls.Add(this.dateTimePickerStart);
-            this.panel17.Controls.Add(this.dateTimePickerEnd);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(2, 2);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(892, 74);
-            this.panel17.TabIndex = 2;
-            // 
-            // lb_to
-            // 
-            this.lb_to.AutoSize = true;
-            this.lb_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_to.Location = new System.Drawing.Point(389, 23);
-            this.lb_to.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_to.Name = "lb_to";
-            this.lb_to.Size = new System.Drawing.Size(53, 25);
-            this.lb_to.TabIndex = 3;
-            this.lb_to.Text = "To :";
-            // 
-            // lb_from
-            // 
-            this.lb_from.AutoSize = true;
-            this.lb_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_from.Location = new System.Drawing.Point(5, 23);
-            this.lb_from.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_from.Name = "lb_from";
-            this.lb_from.Size = new System.Drawing.Size(79, 25);
-            this.lb_from.TabIndex = 2;
-            this.lb_from.Text = "From :";
-            // 
-            // dateTimePickerStart
-            // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(88, 22);
-            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(276, 26);
-            this.dateTimePickerStart.TabIndex = 1;
-            // 
-            // dateTimePickerEnd
-            // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(446, 23);
-            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(288, 26);
-            this.dateTimePickerEnd.TabIndex = 0;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel19.Controls.Add(this.label11);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Location = new System.Drawing.Point(0, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(904, 83);
-            this.panel19.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Freestyle Script", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(343, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(229, 71);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "A D M I N";
-            // 
-            // btn_DeleteDrink
-            // 
-            this.btn_DeleteDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.BorderRadius = 10;
-            this.btn_DeleteDrink.BorderSize = 1;
-            this.btn_DeleteDrink.Enabled = false;
-            this.btn_DeleteDrink.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.Location = new System.Drawing.Point(12, 253);
-            this.btn_DeleteDrink.Name = "btn_DeleteDrink";
-            this.btn_DeleteDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_DeleteDrink.TabIndex = 7;
-            this.btn_DeleteDrink.Text = "Delete";
-            this.btn_DeleteDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.UseVisualStyleBackColor = false;
-            this.btn_DeleteDrink.Click += new System.EventHandler(this.btn_DeleteDrink_Click);
-            // 
-            // btn_EditDrink
-            // 
-            this.btn_EditDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.BorderRadius = 10;
-            this.btn_EditDrink.BorderSize = 1;
-            this.btn_EditDrink.Enabled = false;
-            this.btn_EditDrink.FlatAppearance.BorderSize = 0;
-            this.btn_EditDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.Location = new System.Drawing.Point(12, 193);
-            this.btn_EditDrink.Name = "btn_EditDrink";
-            this.btn_EditDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_EditDrink.TabIndex = 6;
-            this.btn_EditDrink.Text = "Edit";
-            this.btn_EditDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.UseVisualStyleBackColor = false;
-            this.btn_EditDrink.Click += new System.EventHandler(this.btn_EditDrink_Click);
-            // 
-            // btn_AddDrink
-            // 
-            this.btn_AddDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.BorderRadius = 10;
-            this.btn_AddDrink.BorderSize = 1;
-            this.btn_AddDrink.Enabled = false;
-            this.btn_AddDrink.FlatAppearance.BorderSize = 0;
-            this.btn_AddDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.Location = new System.Drawing.Point(12, 127);
-            this.btn_AddDrink.Name = "btn_AddDrink";
-            this.btn_AddDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_AddDrink.TabIndex = 5;
-            this.btn_AddDrink.Text = "Add";
-            this.btn_AddDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.UseVisualStyleBackColor = false;
-            this.btn_AddDrink.Click += new System.EventHandler(this.btn_AddDrink_Click);
-            // 
-            // btn_ShowDrink
-            // 
-            this.btn_ShowDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.BorderRadius = 10;
-            this.btn_ShowDrink.BorderSize = 1;
-            this.btn_ShowDrink.FlatAppearance.BorderSize = 0;
-            this.btn_ShowDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.Location = new System.Drawing.Point(12, 64);
-            this.btn_ShowDrink.Name = "btn_ShowDrink";
-            this.btn_ShowDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_ShowDrink.TabIndex = 4;
-            this.btn_ShowDrink.Text = "Show";
-            this.btn_ShowDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.UseVisualStyleBackColor = false;
-            this.btn_ShowDrink.Click += new System.EventHandler(this.btn_ShowDrink_Click);
-            // 
-            // btn_DeleteDrinkType
-            // 
-            this.btn_DeleteDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrinkType.BorderColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrinkType.BorderRadius = 10;
-            this.btn_DeleteDrinkType.BorderSize = 1;
-            this.btn_DeleteDrinkType.Enabled = false;
-            this.btn_DeleteDrinkType.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteDrinkType.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrinkType.Location = new System.Drawing.Point(16, 245);
-            this.btn_DeleteDrinkType.Name = "btn_DeleteDrinkType";
-            this.btn_DeleteDrinkType.Size = new System.Drawing.Size(109, 40);
-            this.btn_DeleteDrinkType.TabIndex = 11;
-            this.btn_DeleteDrinkType.Text = "Delete";
-            this.btn_DeleteDrinkType.TextColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrinkType.UseVisualStyleBackColor = false;
-            this.btn_DeleteDrinkType.Click += new System.EventHandler(this.btn_DeleteDrinkType_Click);
-            // 
-            // btn_EditDrinkType
-            // 
-            this.btn_EditDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrinkType.BorderColor = System.Drawing.Color.Black;
-            this.btn_EditDrinkType.BorderRadius = 10;
-            this.btn_EditDrinkType.BorderSize = 1;
-            this.btn_EditDrinkType.Enabled = false;
-            this.btn_EditDrinkType.FlatAppearance.BorderSize = 0;
-            this.btn_EditDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditDrinkType.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditDrinkType.Location = new System.Drawing.Point(16, 185);
-            this.btn_EditDrinkType.Name = "btn_EditDrinkType";
-            this.btn_EditDrinkType.Size = new System.Drawing.Size(109, 40);
-            this.btn_EditDrinkType.TabIndex = 10;
-            this.btn_EditDrinkType.Text = "Edit";
-            this.btn_EditDrinkType.TextColor = System.Drawing.Color.Black;
-            this.btn_EditDrinkType.UseVisualStyleBackColor = false;
-            this.btn_EditDrinkType.Click += new System.EventHandler(this.btn_EditDrinkType_Click);
-            // 
-            // btn_AddDrinkType
-            // 
-            this.btn_AddDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrinkType.BorderColor = System.Drawing.Color.Black;
-            this.btn_AddDrinkType.BorderRadius = 10;
-            this.btn_AddDrinkType.BorderSize = 1;
-            this.btn_AddDrinkType.Enabled = false;
-            this.btn_AddDrinkType.FlatAppearance.BorderSize = 0;
-            this.btn_AddDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddDrinkType.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddDrinkType.Location = new System.Drawing.Point(16, 119);
-            this.btn_AddDrinkType.Name = "btn_AddDrinkType";
-            this.btn_AddDrinkType.Size = new System.Drawing.Size(109, 40);
-            this.btn_AddDrinkType.TabIndex = 9;
-            this.btn_AddDrinkType.Text = "Add";
-            this.btn_AddDrinkType.TextColor = System.Drawing.Color.Black;
-            this.btn_AddDrinkType.UseVisualStyleBackColor = false;
-            this.btn_AddDrinkType.Click += new System.EventHandler(this.btn_AddDrinkType_Click);
-            // 
-            // btn_ShowDrinkType
-            // 
-            this.btn_ShowDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrinkType.BorderColor = System.Drawing.Color.Black;
-            this.btn_ShowDrinkType.BorderRadius = 10;
-            this.btn_ShowDrinkType.BorderSize = 1;
-            this.btn_ShowDrinkType.FlatAppearance.BorderSize = 0;
-            this.btn_ShowDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowDrinkType.ForeColor = System.Drawing.Color.Black;
-            this.btn_ShowDrinkType.Location = new System.Drawing.Point(16, 56);
-            this.btn_ShowDrinkType.Name = "btn_ShowDrinkType";
-            this.btn_ShowDrinkType.Size = new System.Drawing.Size(109, 40);
-            this.btn_ShowDrinkType.TabIndex = 8;
-            this.btn_ShowDrinkType.Text = "Show";
-            this.btn_ShowDrinkType.TextColor = System.Drawing.Color.Black;
-            this.btn_ShowDrinkType.UseVisualStyleBackColor = false;
-            this.btn_ShowDrinkType.Click += new System.EventHandler(this.btn_Show_Drink_Type_Click);
-            // 
-            // btn_DeleteTable
-            // 
-            this.btn_DeleteTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteTable.BorderColor = System.Drawing.Color.Black;
-            this.btn_DeleteTable.BorderRadius = 10;
-            this.btn_DeleteTable.BorderSize = 1;
-            this.btn_DeleteTable.Enabled = false;
-            this.btn_DeleteTable.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteTable.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteTable.Location = new System.Drawing.Point(17, 251);
-            this.btn_DeleteTable.Name = "btn_DeleteTable";
-            this.btn_DeleteTable.Size = new System.Drawing.Size(109, 40);
-            this.btn_DeleteTable.TabIndex = 11;
-            this.btn_DeleteTable.Text = "Delete";
-            this.btn_DeleteTable.TextColor = System.Drawing.Color.Black;
-            this.btn_DeleteTable.UseVisualStyleBackColor = false;
-            this.btn_DeleteTable.Click += new System.EventHandler(this.btn_DeleteTable_Click);
-            // 
-            // btn_EditTable
-            // 
-            this.btn_EditTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditTable.BorderColor = System.Drawing.Color.Black;
-            this.btn_EditTable.BorderRadius = 10;
-            this.btn_EditTable.BorderSize = 1;
-            this.btn_EditTable.Enabled = false;
-            this.btn_EditTable.FlatAppearance.BorderSize = 0;
-            this.btn_EditTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditTable.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditTable.Location = new System.Drawing.Point(17, 191);
-            this.btn_EditTable.Name = "btn_EditTable";
-            this.btn_EditTable.Size = new System.Drawing.Size(109, 40);
-            this.btn_EditTable.TabIndex = 10;
-            this.btn_EditTable.Text = "Edit";
-            this.btn_EditTable.TextColor = System.Drawing.Color.Black;
-            this.btn_EditTable.UseVisualStyleBackColor = false;
-            this.btn_EditTable.Click += new System.EventHandler(this.btn_EditTable_Click);
-            // 
-            // btn_AddTable
-            // 
-            this.btn_AddTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddTable.BorderColor = System.Drawing.Color.Black;
-            this.btn_AddTable.BorderRadius = 10;
-            this.btn_AddTable.BorderSize = 1;
-            this.btn_AddTable.Enabled = false;
-            this.btn_AddTable.FlatAppearance.BorderSize = 0;
-            this.btn_AddTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddTable.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddTable.Location = new System.Drawing.Point(17, 125);
-            this.btn_AddTable.Name = "btn_AddTable";
-            this.btn_AddTable.Size = new System.Drawing.Size(109, 40);
-            this.btn_AddTable.TabIndex = 9;
-            this.btn_AddTable.Text = "Add";
-            this.btn_AddTable.TextColor = System.Drawing.Color.Black;
-            this.btn_AddTable.UseVisualStyleBackColor = false;
-            this.btn_AddTable.Click += new System.EventHandler(this.btn_AddTable_Click);
-            // 
-            // btn_ShowTable
-            // 
-            this.btn_ShowTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowTable.BorderColor = System.Drawing.Color.Black;
-            this.btn_ShowTable.BorderRadius = 10;
-            this.btn_ShowTable.BorderSize = 1;
-            this.btn_ShowTable.FlatAppearance.BorderSize = 0;
-            this.btn_ShowTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowTable.ForeColor = System.Drawing.Color.Black;
-            this.btn_ShowTable.Location = new System.Drawing.Point(17, 62);
-            this.btn_ShowTable.Name = "btn_ShowTable";
-            this.btn_ShowTable.Size = new System.Drawing.Size(109, 40);
-            this.btn_ShowTable.TabIndex = 8;
-            this.btn_ShowTable.Text = "Show";
-            this.btn_ShowTable.TextColor = System.Drawing.Color.Black;
-            this.btn_ShowTable.UseVisualStyleBackColor = false;
-            this.btn_ShowTable.Click += new System.EventHandler(this.btn_Show_Table_Click);
-            // 
             // btn_DeleteAccount
             // 
             this.btn_DeleteAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1307,6 +1188,66 @@
             this.btn_ShowAccount.UseVisualStyleBackColor = false;
             this.btn_ShowAccount.Click += new System.EventHandler(this.btn_Show_Acc_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.chart1);
+            this.tabPage5.Controls.Add(this.dgv_Revenue);
+            this.tabPage5.Controls.Add(this.panel17);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Size = new System.Drawing.Size(896, 465);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Revenue";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(2, 76);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Revenue";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(894, 389);
+            this.chart1.TabIndex = 7;
+            this.chart1.Text = "Revenue";
+            title1.Name = "Revenue";
+            title1.Text = "Revenue";
+            this.chart1.Titles.Add(title1);
+            this.chart1.Visible = false;
+            // 
+            // dgv_Revenue
+            // 
+            this.dgv_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Revenue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Revenue.Location = new System.Drawing.Point(2, 76);
+            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Revenue.Name = "dgv_Revenue";
+            this.dgv_Revenue.RowHeadersWidth = 51;
+            this.dgv_Revenue.RowTemplate.Height = 24;
+            this.dgv_Revenue.Size = new System.Drawing.Size(892, 387);
+            this.dgv_Revenue.TabIndex = 6;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.rjButton13);
+            this.panel17.Controls.Add(this.lb_to);
+            this.panel17.Controls.Add(this.lb_from);
+            this.panel17.Controls.Add(this.dateTimePickerStart);
+            this.panel17.Controls.Add(this.dateTimePickerEnd);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(892, 74);
+            this.panel17.TabIndex = 2;
+            // 
             // rjButton13
             // 
             this.rjButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1325,6 +1266,65 @@
             this.rjButton13.TextColor = System.Drawing.Color.Black;
             this.rjButton13.UseVisualStyleBackColor = false;
             this.rjButton13.Click += new System.EventHandler(this.rjButton13_Click);
+            // 
+            // lb_to
+            // 
+            this.lb_to.AutoSize = true;
+            this.lb_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_to.Location = new System.Drawing.Point(389, 23);
+            this.lb_to.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_to.Name = "lb_to";
+            this.lb_to.Size = new System.Drawing.Size(53, 25);
+            this.lb_to.TabIndex = 3;
+            this.lb_to.Text = "To :";
+            // 
+            // lb_from
+            // 
+            this.lb_from.AutoSize = true;
+            this.lb_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_from.Location = new System.Drawing.Point(5, 23);
+            this.lb_from.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_from.Name = "lb_from";
+            this.lb_from.Size = new System.Drawing.Size(79, 25);
+            this.lb_from.TabIndex = 2;
+            this.lb_from.Text = "From :";
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Location = new System.Drawing.Point(88, 22);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(276, 26);
+            this.dateTimePickerStart.TabIndex = 1;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(446, 23);
+            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(288, 26);
+            this.dateTimePickerEnd.TabIndex = 0;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel19.Controls.Add(this.label11);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(904, 83);
+            this.panel19.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Freestyle Script", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(343, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(229, 71);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "A D M I N";
             // 
             // FormAdmin
             // 
