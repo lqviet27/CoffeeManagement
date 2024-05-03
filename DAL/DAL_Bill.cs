@@ -82,12 +82,12 @@ namespace DAL
 
         public string getCashier(string tableName)
         {
-            SqlCommand cmd = new SqlCommand("getBillByTableName");
+            SqlCommand cmd = new SqlCommand("getCashier");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@TableName", SqlDbType.NVarChar).Value = tableName;
             cmd.Parameters.Add("Status", SqlDbType.Int).Value = 0;
             DataTable dataTable = DataProvider.Instance.ExecuteTable(cmd);
-            return dataTable.Rows[0]["Cashier"].ToString();
+            return dataTable.Rows[0][0].ToString();
         }
         // cap nhat trang thai cua hoa don la 1: da thanh toan
         public void setPurchase(string tableName)

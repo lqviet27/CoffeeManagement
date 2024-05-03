@@ -94,5 +94,7 @@ namespace CoffeeManagement
         {
             lb_invalidInput.Visible = false;
         }
+
+
     }
 }

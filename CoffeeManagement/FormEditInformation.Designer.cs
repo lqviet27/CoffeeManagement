@@ -96,7 +96,7 @@
             this.groupBoxEditInfo.Size = new System.Drawing.Size(352, 347);
             this.groupBoxEditInfo.TabIndex = 2;
             this.groupBoxEditInfo.TabStop = false;
-            this.groupBoxEditInfo.Text = "THAY ĐỔI THÔNG TIN";
+            this.groupBoxEditInfo.Text = "CHANGE NAME";
             // 
             // btn_CancelChangeName
             // 
@@ -113,7 +113,7 @@
             this.btn_CancelChangeName.Name = "btn_CancelChangeName";
             this.btn_CancelChangeName.Size = new System.Drawing.Size(96, 31);
             this.btn_CancelChangeName.TabIndex = 59;
-            this.btn_CancelChangeName.Text = "Hủy";
+            this.btn_CancelChangeName.Text = "Cancel";
             this.btn_CancelChangeName.TextColor = System.Drawing.Color.Black;
             this.btn_CancelChangeName.UseVisualStyleBackColor = false;
             this.btn_CancelChangeName.Click += new System.EventHandler(this.btn_CancelChangeName_Click);
@@ -133,7 +133,7 @@
             this.btn_ChangeName.Name = "btn_ChangeName";
             this.btn_ChangeName.Size = new System.Drawing.Size(96, 31);
             this.btn_ChangeName.TabIndex = 58;
-            this.btn_ChangeName.Text = "Xác nhận";
+            this.btn_ChangeName.Text = "OK";
             this.btn_ChangeName.TextColor = System.Drawing.Color.Black;
             this.btn_ChangeName.UseVisualStyleBackColor = false;
             this.btn_ChangeName.Click += new System.EventHandler(this.btn_ChangeName_Click);
@@ -154,7 +154,7 @@
             this.tb_DisplayName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tb_DisplayName.PasswordChar = false;
             this.tb_DisplayName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tb_DisplayName.PlaceholderText = "Display Name";
+            this.tb_DisplayName.PlaceholderText = "Enter Display Name";
             this.tb_DisplayName.Size = new System.Drawing.Size(250, 31);
             this.tb_DisplayName.TabIndex = 4;
             this.tb_DisplayName.Texts = "";
@@ -176,7 +176,7 @@
             this.tb_UserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tb_UserName.PasswordChar = false;
             this.tb_UserName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tb_UserName.PlaceholderText = "User Name";
+            this.tb_UserName.PlaceholderText = "Enter User Name";
             this.tb_UserName.Size = new System.Drawing.Size(250, 31);
             this.tb_UserName.TabIndex = 3;
             this.tb_UserName.Texts = "";
@@ -188,9 +188,9 @@
             this.labelDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelDisplayName.Location = new System.Drawing.Point(25, 104);
             this.labelDisplayName.Name = "labelDisplayName";
-            this.labelDisplayName.Size = new System.Drawing.Size(113, 20);
+            this.labelDisplayName.Size = new System.Drawing.Size(128, 20);
             this.labelDisplayName.TabIndex = 0;
-            this.labelDisplayName.Text = "TÊN HIỂN THỊ";
+            this.labelDisplayName.Text = "DISPLAY NAME";
             // 
             // labelUserName
             // 
@@ -198,9 +198,9 @@
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelUserName.Location = new System.Drawing.Point(25, 37);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(139, 20);
+            this.labelUserName.Size = new System.Drawing.Size(105, 20);
             this.labelUserName.TabIndex = 0;
-            this.labelUserName.Text = "TÊN ĐĂNG NHẬP";
+            this.labelUserName.Text = "USER NAME";
             // 
             // groupBoxChangePass
             // 
@@ -219,7 +219,7 @@
             this.groupBoxChangePass.Size = new System.Drawing.Size(337, 347);
             this.groupBoxChangePass.TabIndex = 2;
             this.groupBoxChangePass.TabStop = false;
-            this.groupBoxChangePass.Text = "THAY ĐỔI MẬT KHẨU";
+            this.groupBoxChangePass.Text = "CHANGE PASSWORD";
             // 
             // btn_CancelChangePassword
             // 
@@ -236,7 +236,7 @@
             this.btn_CancelChangePassword.Name = "btn_CancelChangePassword";
             this.btn_CancelChangePassword.Size = new System.Drawing.Size(96, 31);
             this.btn_CancelChangePassword.TabIndex = 60;
-            this.btn_CancelChangePassword.Text = "Hủy";
+            this.btn_CancelChangePassword.Text = "Cancel";
             this.btn_CancelChangePassword.TextColor = System.Drawing.Color.Black;
             this.btn_CancelChangePassword.UseVisualStyleBackColor = false;
             this.btn_CancelChangePassword.Click += new System.EventHandler(this.btn_CancelChangePassword_Click);
@@ -256,7 +256,7 @@
             this.btn_ChangePassword.Name = "btn_ChangePassword";
             this.btn_ChangePassword.Size = new System.Drawing.Size(96, 31);
             this.btn_ChangePassword.TabIndex = 59;
-            this.btn_ChangePassword.Text = "Xác nhận";
+            this.btn_ChangePassword.Text = "OK";
             this.btn_ChangePassword.TextColor = System.Drawing.Color.Black;
             this.btn_ChangePassword.UseVisualStyleBackColor = false;
             this.btn_ChangePassword.Click += new System.EventHandler(this.btn_ChangePassword_Click);
@@ -277,7 +277,7 @@
             this.tb_ComfirmPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tb_ComfirmPassword.PasswordChar = false;
             this.tb_ComfirmPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tb_ComfirmPassword.PlaceholderText = "Confirm Password";
+            this.tb_ComfirmPassword.PlaceholderText = "Enter Confirm Password";
             this.tb_ComfirmPassword.Size = new System.Drawing.Size(250, 31);
             this.tb_ComfirmPassword.TabIndex = 7;
             this.tb_ComfirmPassword.Texts = "";
@@ -299,7 +299,7 @@
             this.tb_NewPasword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tb_NewPasword.PasswordChar = false;
             this.tb_NewPasword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tb_NewPasword.PlaceholderText = "New Password";
+            this.tb_NewPasword.PlaceholderText = "Enter New Password";
             this.tb_NewPasword.Size = new System.Drawing.Size(250, 31);
             this.tb_NewPasword.TabIndex = 6;
             this.tb_NewPasword.Texts = "";
@@ -321,7 +321,7 @@
             this.tb_OldPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.tb_OldPassword.PasswordChar = false;
             this.tb_OldPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tb_OldPassword.PlaceholderText = "Password";
+            this.tb_OldPassword.PlaceholderText = "Enter Password";
             this.tb_OldPassword.Size = new System.Drawing.Size(250, 31);
             this.tb_OldPassword.TabIndex = 5;
             this.tb_OldPassword.Texts = "";
@@ -333,9 +333,9 @@
             this.lb_OldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_OldPass.Location = new System.Drawing.Point(21, 37);
             this.lb_OldPass.Name = "lb_OldPass";
-            this.lb_OldPass.Size = new System.Drawing.Size(118, 20);
+            this.lb_OldPass.Size = new System.Drawing.Size(103, 20);
             this.lb_OldPass.TabIndex = 0;
-            this.lb_OldPass.Text = "MẬT KHẨU CŨ";
+            this.lb_OldPass.Text = "PASSWORD";
             // 
             // labelConfirmPass
             // 
@@ -343,9 +343,9 @@
             this.labelConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelConfirmPass.Location = new System.Drawing.Point(18, 176);
             this.labelConfirmPass.Name = "labelConfirmPass";
-            this.labelConfirmPass.Size = new System.Drawing.Size(177, 20);
+            this.labelConfirmPass.Size = new System.Drawing.Size(181, 20);
             this.labelConfirmPass.TabIndex = 0;
-            this.labelConfirmPass.Text = "XÁC NHẬN MẬT KHẨU";
+            this.labelConfirmPass.Text = "CONFIRM PASSWORD";
             // 
             // labelNewPass
             // 
@@ -353,9 +353,9 @@
             this.labelNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelNewPass.Location = new System.Drawing.Point(21, 104);
             this.labelNewPass.Name = "labelNewPass";
-            this.labelNewPass.Size = new System.Drawing.Size(125, 20);
+            this.labelNewPass.Size = new System.Drawing.Size(144, 20);
             this.labelNewPass.TabIndex = 0;
-            this.labelNewPass.Text = "MẬT KHẨU MỚI";
+            this.labelNewPass.Text = "NEW PASSWORD";
             // 
             // panel3
             // 

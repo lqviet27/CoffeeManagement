@@ -45,10 +45,11 @@ namespace CoffeeManagement
                     {
                         Name = "btnTable" + (i + 1),
                         Text = listTable[i].name,
-                        //Tag = BUS_Bill.Instance.getTotal(listTable[i].name), // cai nay dang bi ngu vi neu nhu ban chua co bill thi se bi loi
+                        //Tag = BUS_Bill.Instance.getTotal(listTable[i].name), 
                         Width = 100,
                         Height = 50,
                         Location = new Point(x, y),
+                        Font = new Font("Arial", 14, FontStyle.Bold)
                     };
                     if (listTable[i].status == "Empty")
                     {
@@ -280,10 +281,11 @@ namespace CoffeeManagement
                         txt_Status.Text = "Empty";
                         txt_Total.Text = "0";
                         MessageBox.Show("Purchase success !  " + txt_NameTable.Text, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadTable();
+                        //LoadBill();
+                        pn_Bill.Controls.Clear();
                     }
-                    LoadTable();
-                    //LoadBill();
-                    pn_Bill.Controls.Clear();
+                    
                 }
                 else if (txt_Status.Text == "Empty")
                 {
@@ -368,7 +370,7 @@ namespace CoffeeManagement
                 {
                     MoveTable();
                     LoadTable();
-                    LoadBill();
+                    //LoadBill();
                     pn_Bill.Controls.Clear();
                     MessageBox.Show("Switch Table Successfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
