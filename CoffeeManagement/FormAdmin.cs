@@ -361,6 +361,7 @@ namespace CoffeeManagement
                 if (dt.Rows.Count >= 7)
                 {
                     chart1.Series["Revenue"].ChartType = SeriesChartType.Line;
+                    chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -90;
                 }
 
                 chart1.DataSource = dt;
