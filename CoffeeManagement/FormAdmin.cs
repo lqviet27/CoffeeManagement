@@ -364,6 +364,12 @@ namespace CoffeeManagement
                     chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -90;
                 }
 
+                else
+                {
+                    chart1.Series["Revenue"].ChartType = SeriesChartType.Column;
+                    chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
+                }
+
                 chart1.DataSource = dt;
                 chart1.Series["Revenue"].XValueMember = "Day";
                 chart1.Series["Revenue"].YValueMembers = "Revenue";
