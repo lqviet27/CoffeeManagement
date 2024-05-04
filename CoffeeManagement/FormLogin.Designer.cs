@@ -37,15 +37,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_invalidInput = new System.Windows.Forms.Label();
+            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_visiblepass = new System.Windows.Forms.PictureBox();
             this.pictureBox_hidepass = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_closed = new System.Windows.Forms.Button();
-            this.rjBtn_Login = new CustomControls.RJControls.RJButton();
             this.rjTextBoxPassword = new CustomControls.RJControls.RJTextBox();
             this.rjTextBoxUsername = new CustomControls.RJControls.RJTextBox();
+            this.btn_closed = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -174,6 +174,26 @@
             this.lb_invalidInput.Text = "Incorrect username or password";
             this.lb_invalidInput.Visible = false;
             // 
+            // rjBtn_Login
+            // 
+            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.rjBtn_Login.BorderRadius = 20;
+            this.rjBtn_Login.BorderSize = 2;
+            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
+            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
+            this.rjBtn_Login.Location = new System.Drawing.Point(105, 316);
+            this.rjBtn_Login.Name = "rjBtn_Login";
+            this.rjBtn_Login.Size = new System.Drawing.Size(202, 44);
+            this.rjBtn_Login.TabIndex = 58;
+            this.rjBtn_Login.Text = "Login";
+            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
+            this.rjBtn_Login.UseVisualStyleBackColor = false;
+            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CoffeeManagement.Properties.Resources.padlock;
@@ -233,41 +253,6 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Login to your account";
             // 
-            // btn_closed
-            // 
-            this.btn_closed.FlatAppearance.BorderSize = 0;
-            this.btn_closed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_closed.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_closed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_closed.Location = new System.Drawing.Point(426, 0);
-            this.btn_closed.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_closed.Name = "btn_closed";
-            this.btn_closed.Size = new System.Drawing.Size(41, 44);
-            this.btn_closed.TabIndex = 4;
-            this.btn_closed.Text = "X";
-            this.btn_closed.UseVisualStyleBackColor = true;
-            this.btn_closed.Click += new System.EventHandler(this.btn_closed_Click);
-            // 
-            // rjBtn_Login
-            // 
-            this.rjBtn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rjBtn_Login.BorderRadius = 20;
-            this.rjBtn_Login.BorderSize = 2;
-            this.rjBtn_Login.FlatAppearance.BorderSize = 0;
-            this.rjBtn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjBtn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjBtn_Login.ForeColor = System.Drawing.Color.White;
-            this.rjBtn_Login.Location = new System.Drawing.Point(105, 316);
-            this.rjBtn_Login.Name = "rjBtn_Login";
-            this.rjBtn_Login.Size = new System.Drawing.Size(202, 44);
-            this.rjBtn_Login.TabIndex = 58;
-            this.rjBtn_Login.Text = "Login";
-            this.rjBtn_Login.TextColor = System.Drawing.Color.White;
-            this.rjBtn_Login.UseVisualStyleBackColor = false;
-            this.rjBtn_Login.Click += new System.EventHandler(this.rjBtn_Login_Click);
-            // 
             // rjTextBoxPassword
             // 
             this.rjTextBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -284,7 +269,7 @@
             this.rjTextBoxPassword.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBoxPassword.PasswordChar = true;
             this.rjTextBoxPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBoxPassword.PlaceholderText = "Passoword";
+            this.rjTextBoxPassword.PlaceholderText = "Password";
             this.rjTextBoxPassword.Size = new System.Drawing.Size(320, 40);
             this.rjTextBoxPassword.TabIndex = 16;
             this.rjTextBoxPassword.Texts = "";
@@ -312,6 +297,21 @@
             this.rjTextBoxUsername.Texts = "";
             this.rjTextBoxUsername.UnderlinedStyle = true;
             this.rjTextBoxUsername._TextChanged += new System.EventHandler(this.rjTextBoxUsername__TextChanged);
+            // 
+            // btn_closed
+            // 
+            this.btn_closed.FlatAppearance.BorderSize = 0;
+            this.btn_closed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_closed.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_closed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_closed.Location = new System.Drawing.Point(426, 0);
+            this.btn_closed.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_closed.Name = "btn_closed";
+            this.btn_closed.Size = new System.Drawing.Size(41, 44);
+            this.btn_closed.TabIndex = 4;
+            this.btn_closed.Text = "X";
+            this.btn_closed.UseVisualStyleBackColor = true;
+            this.btn_closed.Click += new System.EventHandler(this.btn_closed_Click);
             // 
             // FormLogin
             // 
