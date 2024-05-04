@@ -121,14 +121,23 @@ namespace CoffeeManagement
                     Label lbl = new Label()
                     {
                         Name = "btnFB" + i,
-                        Text = "         " + (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString(),
-                        Width = pn_Bill.Width - 20,
+                        Text = "        " + (i + 1) + ".     " + listBillDetail[i].drinkName,// + "  X  " + listBillDetail[i].quantity.ToString(),
+                        Width = 240,
                         Height = 20,
-                        Location = new Point(5, y)
+                        Location = new Point(2, y)
+                    };
+                    Label lbl1 = new Label()
+                    {
+                        Name = "btnQuantity" + i,
+                        Text = "  " + listBillDetail[i].quantity.ToString(),
+                        //Width = pn_Bill.Width - 20,
+                        Height = 20,
+                        Location = new Point(244, y)
                     };
                     y += 25;
                     strCashier = BUS_Bill.Instance.getCashier(txt_NameTable.Text); // viet mot storded procedure de lay cashier co DAL_BILL (truyen vao table name va trang thai la 0 : chua thanh toan)
                     pn_Bill.Controls.Add(lbl);
+                    pn_Bill.Controls.Add(lbl1);
                     // in tonng tien ra man hinh
                     BUS_Drink.Instance.getList(listDrink);
                     totalPrice += (BUS_Drink.Instance.getPrice(listDrink, listBillDetail[i].drinkName) * float.Parse(listBillDetail[i].quantity.ToString()));
@@ -359,7 +368,6 @@ namespace CoffeeManagement
             BUS_Table.Instance.MoveTable(TableFrom, TableTo);
         }
 
-        
 
         private void btn_AcceptSwitch_Click(object sender, EventArgs e)
         {
