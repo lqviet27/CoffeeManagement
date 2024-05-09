@@ -121,7 +121,7 @@ namespace CoffeeManagement
 					DataTable tb_drink = BUS_Drink.Instance.searchDrink(listBillDetail[i].drinkName);
 
 					DataRow dt_row = tb_drink.Rows[0];
-					strBill += (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString() + dt_row["Price"].ToString() + "         " + (Convert.ToDouble(dt_row["Price"]) * listBillDetail[i].quantity + "\n");
+					strBill += (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString() +"       "+ dt_row["Price"].ToString() + "         " + (Convert.ToDouble(dt_row["Price"]) * listBillDetail[i].quantity + "\n");
                     Panel pn_rowBill = new Panel();
 
                     pn_Bill.Controls.Add(pn_rowBill);
@@ -400,26 +400,46 @@ namespace CoffeeManagement
 
 		private void printDocumentBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            DateTimePicker datetime = new DateTimePicker();
-            string HoaDon = "";
-            HoaDon += "\n" + "IT Coffee Shop" + "\n";
-            HoaDon += "\n" + "Address : DUT" + "\n\n\n";
-            HoaDon += "\n" + "Bill " + txt_NameTable.Text + "        \n\n\n";
-            HoaDon += strBill;
-            HoaDon += "\n\n\nTime: " + datetime.Value.ToShortTimeString() + ". " + datetime.Value.ToShortDateString() + "\n";
-            HoaDon += "Cashier : " + strCashier + "\n";
-            HoaDon += "\nTotal Price : " + txt_Total.Text + " VNĐ\n";
-            e.Graphics.DrawString(HoaDon, new Font("Arial", 15, FontStyle.Bold), Brushes.Black, 100, 200);
+           
+            Font titleFont = new Font("Arial", 20, FontStyle.Bold);
+            Font contentFont = new Font("Arial", 12);
+            Brush brush = Brushes.Black;
+
+            string currentDate = DateTime.Now.ToShortDateString();
+            string currentTime = DateTime.Now.ToShortTimeString();
+
+            e.Graphics.DrawString("IT Coffee Shop", titleFont, brush, new PointF(100, 100));
+
+            e.Graphics.DrawString("Address: DUT", contentFont, brush, new PointF(100, 140));
+
+            e.Graphics.DrawLine(new Pen(brush), new Point(100, 170), new Point(500, 170));
+
+            string tableName = txt_NameTable.Text;
+            e.Graphics.DrawString($"Bill {tableName}", titleFont, brush, new PointF(100, 180));
+            e.Graphics.DrawString(strBill, contentFont, brush, new PointF(100, 220));
+
+            e.Graphics.DrawLine(new Pen(brush), new Point(100, 390), new Point(500, 390));
+
+            e.Graphics.DrawString($"Time: {currentTime}. {currentDate}", contentFont, brush, new PointF(100, 400));
+            e.Graphics.DrawString($"Cashier: {strCashier}", contentFont, brush, new PointF(100, 420));
+
+            string totalPrice = txt_Total.Text + " VNĐ";
+            e.Graphics.DrawString($"Total Price: {totalPrice}", titleFont, brush, new PointF(100, 460));
+
+            e.Graphics.DrawLine(new Pen(brush), new Point(100, 500), new Point(500, 500));
         }
         private void btn_Print_Click(object sender, EventArgs e)
         {
             try
             {
-                printDialogBill.Document = printDocumentBill;
-                if (printDialogBill.ShowDialog() == DialogResult.OK)
-                {
-                    printDocumentBill.Print();
-                }
+                //printDialogBill.Document = printDocumentBill;
+                printPreviewDialog1.Document = printDocumentBill;
+                printPreviewDialog1.ShowDialog();
+                
+                //if (printDialogBill.ShowDialog() == DialogResult.OK)
+                //{
+                //    printDocumentBill.Print();
+                //}
             }
             catch
             {
