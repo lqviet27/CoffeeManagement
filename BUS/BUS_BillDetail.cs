@@ -21,9 +21,18 @@ namespace BUS
             DAL_BillDetail.Instance.Delete(data);
         }
 
+		public void QuantityDes(int BillId,string DrinkName, int count)
+        {
+            DAL_BillDetail.Instance.QuantityDes(BillId, DrinkName, count);
+        }
+
+		public void DeleteDrinkBill(int BillID, string nameDrink)
+        {
+            DAL_BillDetail.Instance.DeleteDrinkBill(BillID, nameDrink);
+        }
 
 
-        public void getList(List<BillDetail> list, int billID)
+		public void getList(List<BillDetail> list, int billID)
         {
             list.Clear();
             foreach (DataRow row in Read(billID).Rows)

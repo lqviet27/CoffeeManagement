@@ -25,8 +25,11 @@ namespace DAL
 
         public override void Delete(int PKValue)
         {
-            throw new NotImplementedException();
-        }
+			SqlCommand cmd = new SqlCommand("DeleteBill");
+			cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = PKValue;
+			DataProvider.Instance.ExecuteNonQuery(cmd);
+		}
         public override void Update(Bill updateElement, int PKvalue)
         {
             throw new NotImplementedException();

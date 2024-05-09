@@ -18,7 +18,7 @@ namespace BUS
 
         public override void Delete(int data)
         {
-            throw new NotImplementedException();
+            DAL_Bill.Instance.Delete(data);
         }
 
         public override void getList(List<Bill> list)
