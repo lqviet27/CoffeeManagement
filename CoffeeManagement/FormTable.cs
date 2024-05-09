@@ -115,22 +115,86 @@ namespace CoffeeManagement
                 BUS_BillDetail.Instance.getList(listBillDetail, idBill);
                 float totalPrice = 0;
                 int y = 10;
-                for (int i = 0; i < listBillDetail.Count; i++)
+               
+				for (int i = 0; i < listBillDetail.Count; i++)
                 {
-                    strBill += (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString() + "\n";
+					DataTable tb_drink = BUS_Drink.Instance.searchDrink(listBillDetail[i].drinkName);
+
+					DataRow dt_row = tb_drink.Rows[0];
+					strBill += (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString() + dt_row["Price"].ToString() + "         " + (Convert.ToDouble(dt_row["Price"]) * listBillDetail[i].quantity + "\n");
+                    Panel pn_rowBill = new Panel();
+
+                    pn_Bill.Controls.Add(pn_rowBill);
+                    pn_rowBill.Size = new Size(606, 25);
+                    pn_rowBill.Location = new Point(0, y);
                     Label lbl = new Label()
                     {
                         Name = "btnFB" + i,
-                        Text = "         " + (i + 1) + ".     " + listBillDetail[i].drinkName + "  X  " + listBillDetail[i].quantity.ToString(),
-                        Width = pn_Bill.Width - 20,
+                        Text = " " + (i + 1) + ".    " + listBillDetail[i].drinkName,
+                        Width =200,
                         Height = 20,
-                        Location = new Point(5, y)
+                        Location = new Point(2, 0)
                     };
-                    y += 25;
+                    Label lbl1 = new Label()
+                    {
+                        Name = "btnQuantity" + i,
+                        Text = "  " + listBillDetail[i].quantity.ToString(),
+                        Width = 40,
+                        Height = 20,
+                        Location = new Point(200, 0)
+                    };
+
+					Button btn_QuantityDown = new Button();
+					btn_QuantityDown.FlatStyle = FlatStyle.Flat; // Loại bỏ viền và nền của nút
+					btn_QuantityDown.FlatAppearance.BorderSize = 0; // Xóa viền của nút
+					btn_QuantityDown.BackColor = Color.Transparent; // Đặt màu nền của nút là trong suốt
+
+					btn_QuantityDown.Width = 20; // Thiết lập kích thước nút
+					btn_QuantityDown.Height = 20; // Thiết lập kích thước nút
+					btn_QuantityDown.Location = new Point(245, 0); // Đặt vị trí nút
+
+					// Thiết lập hình ảnh cho nút
+					btn_QuantityDown.BackgroundImage = global::CoffeeManagement.Properties.Resources.icons8minus32;
+					btn_QuantityDown.BackgroundImageLayout = ImageLayout.Stretch; // Đảm bảo hình ảnh được vẽ đúng tỷ lệ
+
+					// Xử lý sự kiện khi nhấp chuột vào nút
+					btn_QuantityDown.MouseClick += new MouseEventHandler(QuantityDown_mouseClick);
+
+
+
+					Label lbl2 = new Label()
+					{
+						Name = "lb_price" + i,
+						Text = dt_row["Price"].ToString() + "         ",
+						Width = 90,
+						Height = 20,
+						Location = new Point(270, 0)
+					};
+					Label lbl3 = new Label()
+					{
+						Name = "lb_totalprice" + i,
+						Text = Convert.ToDouble(dt_row["Price"]) * listBillDetail[i].quantity+"",
+						Width = 90,
+						Height = 20,
+						Location = new Point(360, 0)
+					};
+
+
+
+
+					y += 25;
                     strCashier = BUS_Bill.Instance.getCashier(txt_NameTable.Text); // viet mot storded procedure de lay cashier co DAL_BILL (truyen vao table name va trang thai la 0 : chua thanh toan)
-                    pn_Bill.Controls.Add(lbl);
-                    // in tonng tien ra man hinh
-                    BUS_Drink.Instance.getList(listDrink);
+					pn_rowBill.Controls.Add(lbl);
+					pn_rowBill.Controls.Add(lbl1);
+					pn_rowBill.Controls.Add(btn_QuantityDown);
+					pn_rowBill.Controls.Add(lbl2);
+					pn_rowBill.Controls.Add(lbl3);
+					pn_rowBill.Name = pn_rowBill.Name + i;
+                    
+                   
+
+					// in tonng tien ra man hinh
+					BUS_Drink.Instance.getList(listDrink);
                     totalPrice += (BUS_Drink.Instance.getPrice(listDrink, listBillDetail[i].drinkName) * float.Parse(listBillDetail[i].quantity.ToString()));
                 }
                 txt_Total.Text = totalPrice.ToString();
@@ -139,6 +203,31 @@ namespace CoffeeManagement
             {
                 MessageBox.Show("This Bill is not available");
             }
+        }
+        
+        private void QuantityDown_mouseClick(object sender, MouseEventArgs e)
+        {
+            Button btn = sender as Button;
+            int index = Int32.Parse(btn.Parent.Name);
+			int quantity = Int32.Parse(btn.Parent.Controls[1].Text.Trim());
+            quantity--;
+            double price = Convert.ToDouble(btn.Parent.Controls[3].Text.Trim());
+            double total =  Convert.ToDouble( btn.Parent.Controls[4].Text.Trim());
+			BUS_Bill.Instance.setTotal(txt_NameTable.Text, (float)(-price));
+			if (quantity == 0)
+			{
+				BUS_BillDetail.Instance.DeleteDrinkBill(listBillDetail[index].billId, listBillDetail[index].drinkName);
+				LoadBill();
+			}
+			else
+			{
+				txt_Total.Text = (Convert.ToDouble(txt_Total.Text) - price) + "";
+				btn.Parent.Controls[1].Text = quantity + "";
+				btn.Parent.Controls[4].Text = (quantity * price) + "";
+				BUS_BillDetail.Instance.QuantityDes(listBillDetail[index].billId, listBillDetail[index].drinkName, 1);
+			}
+
+					
         }
 
         //-----------------------------------------add drink ----------------------------------------
@@ -295,8 +384,21 @@ namespace CoffeeManagement
             catch { }
         }
 
-        //------------------------------------PRINT BILL-----------------------------------------------
-        private void printDocumentBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+		//------------------------------------PRINT BILL-----------------------------------------------
+
+		private void btn_deleteBill_Click(object sender, EventArgs e)
+		{
+            BUS_Table.Instance.SetTableEmpty(txt_NameTable.Text);
+            txt_Status.Text = "Empty"; 
+            int bilID = BUS_Bill.Instance.getBillID(txt_NameTable.Text);
+            BUS_BillDetail.Instance.Delete(bilID);
+            BUS_Bill.Instance.Delete(bilID);
+            txt_Total.Text = "0";
+            LoadTable();
+            pn_Bill.Controls.Clear();
+		}
+
+		private void printDocumentBill_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             DateTimePicker datetime = new DateTimePicker();
             string HoaDon = "";
@@ -359,9 +461,9 @@ namespace CoffeeManagement
             BUS_Table.Instance.MoveTable(TableFrom, TableTo);
         }
 
-        
+		
 
-        private void btn_AcceptSwitch_Click(object sender, EventArgs e)
+		private void btn_AcceptSwitch_Click(object sender, EventArgs e)
         {
             try
             {

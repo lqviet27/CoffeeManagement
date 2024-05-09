@@ -89,6 +89,10 @@ namespace BUS
                 }
             }
         }
+        public DataTable searchDrink(string nameDrink)
+        {
+            return DAL_Drink.Instance.SearchDrink(nameDrink);
+        }
 
     }
 }
