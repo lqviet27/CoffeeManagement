@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -45,5 +46,21 @@ namespace BUS
         {
             DAL_Account.Instance.Update(model, data);
         }
+        public void ShowDGV(DataGridView dgv)
+        {
+            dgv.DataSource = null;
+            dgv.Rows.Clear();
+            dgv.DataSource = ReadNotPassord();
+        }
+        public DataTable ReadNotPassord()
+        {
+            return DAL_Account.Instance.ReadNotPassword();
+        }
+        //public void ShowDGV(DataGridView dgv)
+        //{
+        //    dgv.DataSource = null;
+        //    dgv.Rows.Clear();
+        //    dgv.DataSource = this.Read();
+        //}
     }
 }

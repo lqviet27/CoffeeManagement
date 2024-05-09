@@ -37,6 +37,12 @@ namespace Model
             this._password = password;
             this._type = type;
         }
+        public Account(string userName, string displayName, string type)
+        {
+            this._userName = userName;
+            this._displayName = displayName;
+            this._type = type;
+        }
 
     }
 }

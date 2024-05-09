@@ -38,6 +38,13 @@ namespace DAL
             return DataProvider.Instance.ExecuteTable(cmd);
         }
 
+        public DataTable ReadNotPassword()
+        {
+            SqlCommand cmd = new SqlCommand("SelectAllAccountNotPassword");
+            cmd.CommandType = CommandType.StoredProcedure;
+            return DataProvider.Instance.ExecuteTable(cmd);
+        }
+
         public override void Update(Account updateAccount, string oldUserName)
         {
             SqlCommand cmd = new SqlCommand("UpdateAccount");

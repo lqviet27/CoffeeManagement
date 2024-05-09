@@ -42,6 +42,7 @@
             this.btn_AddDrink = new CustomControls.RJControls.RJButton();
             this.btn_ShowDrink = new CustomControls.RJControls.RJButton();
             this.pn_queryDrink = new System.Windows.Forms.Panel();
+            this.btn_SaveDrink = new CustomControls.RJControls.RJButton();
             this.tb_SearchDrinkName = new System.Windows.Forms.TextBox();
             this.btn_SearchDrink = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -62,6 +63,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_DrinkType = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_SaveDrinkType = new CustomControls.RJControls.RJButton();
             this.panel22 = new System.Windows.Forms.Panel();
             this.tb_DrinkTypeName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -78,6 +80,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.dgv_Table = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_SaveTable = new CustomControls.RJControls.RJButton();
             this.panel20 = new System.Windows.Forms.Panel();
             this.tb_TableName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -94,9 +97,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.dgv_Account = new System.Windows.Forms.DataGridView();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.tb_PassWord = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btn_SaveAccount = new CustomControls.RJControls.RJButton();
             this.panel24 = new System.Windows.Forms.Panel();
             this.cb_TypeAccount = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -154,7 +155,6 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).BeginInit();
             this.panel16.SuspendLayout();
-            this.panel27.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
@@ -314,6 +314,7 @@
             // 
             // pn_queryDrink
             // 
+            this.pn_queryDrink.Controls.Add(this.btn_SaveDrink);
             this.pn_queryDrink.Controls.Add(this.tb_SearchDrinkName);
             this.pn_queryDrink.Controls.Add(this.btn_SearchDrink);
             this.pn_queryDrink.Controls.Add(this.panel8);
@@ -326,6 +327,25 @@
             this.pn_queryDrink.Name = "pn_queryDrink";
             this.pn_queryDrink.Size = new System.Drawing.Size(239, 461);
             this.pn_queryDrink.TabIndex = 3;
+            // 
+            // btn_SaveDrink
+            // 
+            this.btn_SaveDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.BorderRadius = 10;
+            this.btn_SaveDrink.BorderSize = 1;
+            this.btn_SaveDrink.FlatAppearance.BorderSize = 0;
+            this.btn_SaveDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.Location = new System.Drawing.Point(63, 395);
+            this.btn_SaveDrink.Name = "btn_SaveDrink";
+            this.btn_SaveDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveDrink.TabIndex = 8;
+            this.btn_SaveDrink.Text = "Save";
+            this.btn_SaveDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.UseVisualStyleBackColor = false;
+            this.btn_SaveDrink.Click += new System.EventHandler(this.btn_SavaDrink_Click);
             // 
             // tb_SearchDrinkName
             // 
@@ -528,44 +548,64 @@
             this.dgv_DrinkType.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DrinkType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DrinkType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DrinkType.Location = new System.Drawing.Point(0, 70);
+            this.dgv_DrinkType.Location = new System.Drawing.Point(0, 115);
             this.dgv_DrinkType.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_DrinkType.Name = "dgv_DrinkType";
             this.dgv_DrinkType.ReadOnly = true;
             this.dgv_DrinkType.RowHeadersWidth = 51;
             this.dgv_DrinkType.RowTemplate.Height = 24;
             this.dgv_DrinkType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DrinkType.Size = new System.Drawing.Size(741, 391);
+            this.dgv_DrinkType.Size = new System.Drawing.Size(741, 346);
             this.dgv_DrinkType.TabIndex = 3;
             this.dgv_DrinkType.SelectionChanged += new System.EventHandler(this.dgv_DrinkType_SelectionChanged);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btn_SaveDrinkType);
             this.panel6.Controls.Add(this.panel22);
             this.panel6.Controls.Add(this.panel23);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(741, 70);
+            this.panel6.Size = new System.Drawing.Size(741, 115);
             this.panel6.TabIndex = 0;
+            // 
+            // btn_SaveDrinkType
+            // 
+            this.btn_SaveDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.BorderRadius = 10;
+            this.btn_SaveDrinkType.BorderSize = 1;
+            this.btn_SaveDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_SaveDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.Location = new System.Drawing.Point(282, 70);
+            this.btn_SaveDrinkType.Name = "btn_SaveDrinkType";
+            this.btn_SaveDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveDrinkType.TabIndex = 9;
+            this.btn_SaveDrinkType.Text = "Save";
+            this.btn_SaveDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.UseVisualStyleBackColor = false;
+            this.btn_SaveDrinkType.Click += new System.EventHandler(this.btn_SaveDrinkType_Click);
             // 
             // panel22
             // 
             this.panel22.Controls.Add(this.tb_DrinkTypeName);
             this.panel22.Controls.Add(this.label13);
-            this.panel22.Location = new System.Drawing.Point(327, 12);
+            this.panel22.Location = new System.Drawing.Point(366, 12);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(397, 46);
+            this.panel22.Size = new System.Drawing.Size(369, 46);
             this.panel22.TabIndex = 3;
             // 
             // tb_DrinkTypeName
             // 
             this.tb_DrinkTypeName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tb_DrinkTypeName.Font = new System.Drawing.Font("Cambria", 12F);
-            this.tb_DrinkTypeName.Location = new System.Drawing.Point(155, 9);
+            this.tb_DrinkTypeName.Location = new System.Drawing.Point(105, 9);
             this.tb_DrinkTypeName.Name = "tb_DrinkTypeName";
-            this.tb_DrinkTypeName.Size = new System.Drawing.Size(235, 26);
+            this.tb_DrinkTypeName.Size = new System.Drawing.Size(248, 26);
             this.tb_DrinkTypeName.TabIndex = 5;
             this.tb_DrinkTypeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -573,7 +613,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 10);
+            this.label13.Location = new System.Drawing.Point(15, 10);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 25);
             this.label13.TabIndex = 0;
@@ -585,16 +625,16 @@
             this.panel23.Controls.Add(this.label14);
             this.panel23.Location = new System.Drawing.Point(16, 12);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(284, 46);
+            this.panel23.Size = new System.Drawing.Size(301, 46);
             this.panel23.TabIndex = 2;
             // 
             // tb_DrinkTypeID
             // 
             this.tb_DrinkTypeID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tb_DrinkTypeID.Font = new System.Drawing.Font("Cambria", 12F);
-            this.tb_DrinkTypeID.Location = new System.Drawing.Point(42, 9);
+            this.tb_DrinkTypeID.Location = new System.Drawing.Point(107, 9);
             this.tb_DrinkTypeID.Name = "tb_DrinkTypeID";
-            this.tb_DrinkTypeID.Size = new System.Drawing.Size(235, 26);
+            this.tb_DrinkTypeID.Size = new System.Drawing.Size(166, 26);
             this.tb_DrinkTypeID.TabIndex = 4;
             this.tb_DrinkTypeID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -602,7 +642,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 9);
+            this.label14.Location = new System.Drawing.Point(17, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(33, 25);
             this.label14.TabIndex = 0;
@@ -757,6 +797,7 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.btn_SaveTable);
             this.panel12.Controls.Add(this.panel20);
             this.panel12.Controls.Add(this.panel21);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
@@ -766,11 +807,30 @@
             this.panel12.Size = new System.Drawing.Size(747, 85);
             this.panel12.TabIndex = 1;
             // 
+            // btn_SaveTable
+            // 
+            this.btn_SaveTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveTable.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveTable.BorderRadius = 10;
+            this.btn_SaveTable.BorderSize = 1;
+            this.btn_SaveTable.FlatAppearance.BorderSize = 0;
+            this.btn_SaveTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveTable.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveTable.Location = new System.Drawing.Point(615, 26);
+            this.btn_SaveTable.Name = "btn_SaveTable";
+            this.btn_SaveTable.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveTable.TabIndex = 9;
+            this.btn_SaveTable.Text = "Save";
+            this.btn_SaveTable.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveTable.UseVisualStyleBackColor = false;
+            this.btn_SaveTable.Click += new System.EventHandler(this.btn_SaveTable_Click);
+            // 
             // panel20
             // 
             this.panel20.Controls.Add(this.tb_TableName);
             this.panel20.Controls.Add(this.label5);
-            this.panel20.Location = new System.Drawing.Point(333, 19);
+            this.panel20.Location = new System.Drawing.Point(254, 22);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(318, 46);
             this.panel20.TabIndex = 3;
@@ -798,7 +858,7 @@
             // 
             this.panel21.Controls.Add(this.tb_TableID);
             this.panel21.Controls.Add(this.label6);
-            this.panel21.Location = new System.Drawing.Point(95, 19);
+            this.panel21.Location = new System.Drawing.Point(16, 22);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(213, 46);
             this.panel21.TabIndex = 2;
@@ -970,7 +1030,7 @@
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.panel27);
+            this.panel16.Controls.Add(this.btn_SaveAccount);
             this.panel16.Controls.Add(this.panel24);
             this.panel16.Controls.Add(this.panel25);
             this.panel16.Controls.Add(this.panel26);
@@ -981,39 +1041,30 @@
             this.panel16.Size = new System.Drawing.Size(730, 111);
             this.panel16.TabIndex = 2;
             // 
-            // panel27
+            // btn_SaveAccount
             // 
-            this.panel27.Controls.Add(this.tb_PassWord);
-            this.panel27.Controls.Add(this.label7);
-            this.panel27.Location = new System.Drawing.Point(363, 58);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(276, 50);
-            this.panel27.TabIndex = 11;
-            // 
-            // tb_PassWord
-            // 
-            this.tb_PassWord.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_PassWord.Location = new System.Drawing.Point(101, 13);
-            this.tb_PassWord.Name = "tb_PassWord";
-            this.tb_PassWord.Size = new System.Drawing.Size(159, 26);
-            this.tb_PassWord.TabIndex = 12;
-            this.tb_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 22);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "PassWord";
+            this.btn_SaveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveAccount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveAccount.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveAccount.BorderRadius = 10;
+            this.btn_SaveAccount.BorderSize = 1;
+            this.btn_SaveAccount.FlatAppearance.BorderSize = 0;
+            this.btn_SaveAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveAccount.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveAccount.Location = new System.Drawing.Point(615, 37);
+            this.btn_SaveAccount.Name = "btn_SaveAccount";
+            this.btn_SaveAccount.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveAccount.TabIndex = 12;
+            this.btn_SaveAccount.Text = "Save";
+            this.btn_SaveAccount.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveAccount.UseVisualStyleBackColor = false;
+            this.btn_SaveAccount.Click += new System.EventHandler(this.btn_SaveAccount_Click);
             // 
             // panel24
             // 
             this.panel24.Controls.Add(this.cb_TypeAccount);
             this.panel24.Controls.Add(this.label8);
-            this.panel24.Location = new System.Drawing.Point(363, 3);
+            this.panel24.Location = new System.Drawing.Point(312, 32);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(276, 50);
             this.panel24.TabIndex = 11;
@@ -1044,7 +1095,7 @@
             // 
             this.panel25.Controls.Add(this.tb_DisplayName);
             this.panel25.Controls.Add(this.label9);
-            this.panel25.Location = new System.Drawing.Point(53, 58);
+            this.panel25.Location = new System.Drawing.Point(17, 58);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(276, 50);
             this.panel25.TabIndex = 10;
@@ -1072,7 +1123,7 @@
             // 
             this.panel26.Controls.Add(this.tb_UserName);
             this.panel26.Controls.Add(this.label10);
-            this.panel26.Location = new System.Drawing.Point(53, 3);
+            this.panel26.Location = new System.Drawing.Point(17, 3);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(276, 50);
             this.panel26.TabIndex = 9;
@@ -1380,8 +1431,6 @@
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).EndInit();
             this.panel16.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.panel25.ResumeLayout(false);
@@ -1477,8 +1526,6 @@
         private CustomControls.RJControls.RJButton btn_EditAccount;
         private CustomControls.RJControls.RJButton btn_AddAccount;
         private CustomControls.RJControls.RJButton btn_ShowAccount;
-        private System.Windows.Forms.TextBox tb_PassWord;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.ComboBox cb_TypeAccount;
         private System.Windows.Forms.Label label8;
@@ -1488,9 +1535,12 @@
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.TextBox tb_UserName;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel27;
         private CustomControls.RJControls.RJButton rjButton13;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private CustomControls.RJControls.RJButton btn_SaveDrink;
+        private CustomControls.RJControls.RJButton btn_SaveDrinkType;
+        private CustomControls.RJControls.RJButton btn_SaveTable;
+        private CustomControls.RJControls.RJButton btn_SaveAccount;
     }
 }
 
