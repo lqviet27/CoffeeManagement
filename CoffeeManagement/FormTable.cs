@@ -130,10 +130,10 @@ namespace CoffeeManagement
                     Label lbl = new Label()
                     {
                         Name = "btnFB" + i,
-                        Text = " " + (i + 1) + ".    " + listBillDetail[i].drinkName,
+                        Text = (i + 1) + ".        " + listBillDetail[i].drinkName,
                         Width =200,
                         Height = 20,
-                        Location = new Point(2, 0)
+                        Location = new Point(15, 0)
                     };
                     Label lbl1 = new Label()
                     {
@@ -141,7 +141,7 @@ namespace CoffeeManagement
                         Text = "  " + listBillDetail[i].quantity.ToString(),
                         Width = 40,
                         Height = 20,
-                        Location = new Point(200, 0)
+                        Location = new Point(240, 0)
                     };
 
 					Button btn_QuantityDown = new Button();
@@ -151,7 +151,7 @@ namespace CoffeeManagement
 
 					btn_QuantityDown.Width = 20; // Thiết lập kích thước nút
 					btn_QuantityDown.Height = 20; // Thiết lập kích thước nút
-					btn_QuantityDown.Location = new Point(245, 0); // Đặt vị trí nút
+					btn_QuantityDown.Location = new Point(280, 0); // Đặt vị trí nút
 
 					// Thiết lập hình ảnh cho nút
 					btn_QuantityDown.BackgroundImage = global::CoffeeManagement.Properties.Resources.icons8minus32;
@@ -168,7 +168,7 @@ namespace CoffeeManagement
 						Text = dt_row["Price"].ToString() + "         ",
 						Width = 90,
 						Height = 20,
-						Location = new Point(270, 0)
+						Location = new Point(375, 0)
 					};
 					Label lbl3 = new Label()
 					{
@@ -176,7 +176,7 @@ namespace CoffeeManagement
 						Text = Convert.ToDouble(dt_row["Price"]) * listBillDetail[i].quantity+"",
 						Width = 90,
 						Height = 20,
-						Location = new Point(360, 0)
+						Location = new Point(475, 0)
 					};
 
 
@@ -481,9 +481,8 @@ namespace CoffeeManagement
             BUS_Table.Instance.MoveTable(TableFrom, TableTo);
         }
 
-		
 
-		private void btn_AcceptSwitch_Click(object sender, EventArgs e)
+        private void btn_AcceptSwitch_Click(object sender, EventArgs e)
         {
             try
             {
