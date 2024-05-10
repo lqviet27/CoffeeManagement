@@ -52,6 +52,15 @@ namespace DAL
             cmd.Parameters.Add("@EndDay", SqlDbType.DateTime).Value = EndDay;
             return DataProvider.Instance.ExecuteTable(cmd);
         }
+        public DataTable RevenueByCashier(DateTime startDay, DateTime endDay)
+        {
+            SqlCommand cmd = new SqlCommand("RevenueByCashier");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@StartDay", SqlDbType.DateTime).Value = startDay;
+            cmd.Parameters.Add("@EndDay", SqlDbType.DateTime).Value = endDay;
+            return DataProvider.Instance.ExecuteTable(cmd);
+        }
+        //-----------------------------------------------------
         // lay id hoa don theo ten ban
         public int getBillID(string tableName)
         {
@@ -109,5 +118,7 @@ namespace DAL
             cmd.Parameters.AddWithValue("@TableNameTo", SqlDbType.NVarChar).Value = tableTo;
             DataProvider.Instance.ExecuteNonQuery(cmd);
         }
+
+        
     }
 }

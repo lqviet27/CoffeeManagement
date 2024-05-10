@@ -32,17 +32,16 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pn_main = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_Drink = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_DeleteDrink = new CustomControls.RJControls.RJButton();
-            this.btn_EditDrink = new CustomControls.RJControls.RJButton();
-            this.btn_AddDrink = new CustomControls.RJControls.RJButton();
-            this.btn_ShowDrink = new CustomControls.RJControls.RJButton();
             this.pn_queryDrink = new System.Windows.Forms.Panel();
-            this.btn_SaveDrink = new CustomControls.RJControls.RJButton();
             this.tb_SearchDrinkName = new System.Windows.Forms.TextBox();
             this.btn_SearchDrink = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -63,7 +62,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_DrinkType = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_SaveDrinkType = new CustomControls.RJControls.RJButton();
             this.panel22 = new System.Windows.Forms.Panel();
             this.tb_DrinkTypeName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,16 +69,11 @@
             this.tb_DrinkTypeID = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_DeleteDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_EditDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_AddDrinkType = new CustomControls.RJControls.RJButton();
-            this.btn_ShowDrinkType = new CustomControls.RJControls.RJButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.dgv_Table = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btn_SaveTable = new CustomControls.RJControls.RJButton();
             this.panel20 = new System.Windows.Forms.Panel();
             this.tb_TableName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -88,16 +81,11 @@
             this.tb_TableID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btn_DeleteTable = new CustomControls.RJControls.RJButton();
-            this.btn_EditTable = new CustomControls.RJControls.RJButton();
-            this.btn_AddTable = new CustomControls.RJControls.RJButton();
-            this.btn_ShowTable = new CustomControls.RJControls.RJButton();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
             this.dgv_Account = new System.Windows.Forms.DataGridView();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.btn_SaveAccount = new CustomControls.RJControls.RJButton();
             this.panel24 = new System.Windows.Forms.Panel();
             this.cb_TypeAccount = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -108,21 +96,40 @@
             this.tb_UserName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btn_DeleteAccount = new CustomControls.RJControls.RJButton();
-            this.btn_EditAccount = new CustomControls.RJControls.RJButton();
-            this.btn_AddAccount = new CustomControls.RJControls.RJButton();
-            this.btn_ShowAccount = new CustomControls.RJControls.RJButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_Revenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgv_Revenue = new System.Windows.Forms.DataGridView();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.rjButton13 = new CustomControls.RJControls.RJButton();
             this.lb_to = new System.Windows.Forms.Label();
             this.lb_from = new System.Windows.Forms.Label();
             this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.btn_DeleteDrink = new CustomControls.RJControls.RJButton();
+            this.btn_EditDrink = new CustomControls.RJControls.RJButton();
+            this.btn_AddDrink = new CustomControls.RJControls.RJButton();
+            this.btn_ShowDrink = new CustomControls.RJControls.RJButton();
+            this.btn_SaveDrink = new CustomControls.RJControls.RJButton();
+            this.btn_SaveDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_DeleteDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_EditDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_AddDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_ShowDrinkType = new CustomControls.RJControls.RJButton();
+            this.btn_SaveTable = new CustomControls.RJControls.RJButton();
+            this.btn_DeleteTable = new CustomControls.RJControls.RJButton();
+            this.btn_EditTable = new CustomControls.RJControls.RJButton();
+            this.btn_AddTable = new CustomControls.RJControls.RJButton();
+            this.btn_ShowTable = new CustomControls.RJControls.RJButton();
+            this.btn_SaveAccount = new CustomControls.RJControls.RJButton();
+            this.btn_DeleteAccount = new CustomControls.RJControls.RJButton();
+            this.btn_EditAccount = new CustomControls.RJControls.RJButton();
+            this.btn_AddAccount = new CustomControls.RJControls.RJButton();
+            this.btn_ShowAccount = new CustomControls.RJControls.RJButton();
+            this.rjButton13 = new CustomControls.RJControls.RJButton();
+            this.chart_RevenueByCashier = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.checkBox_ByCashier = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage2.SuspendLayout();
             this.pn_main.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -160,10 +167,12 @@
             this.panel26.SuspendLayout();
             this.panel14.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Revenue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Revenue)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_RevenueByCashier)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -173,7 +182,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(896, 465);
+            this.tabPage2.Size = new System.Drawing.Size(1226, 545);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Drink";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -185,7 +194,7 @@
             this.pn_main.Location = new System.Drawing.Point(2, 2);
             this.pn_main.Margin = new System.Windows.Forms.Padding(2);
             this.pn_main.Name = "pn_main";
-            this.pn_main.Size = new System.Drawing.Size(892, 461);
+            this.pn_main.Size = new System.Drawing.Size(1222, 541);
             this.pn_main.TabIndex = 2;
             // 
             // panel4
@@ -197,7 +206,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(892, 461);
+            this.panel4.Size = new System.Drawing.Size(1222, 541);
             this.panel4.TabIndex = 2;
             // 
             // dgv_Drink
@@ -216,7 +225,7 @@
             this.dgv_Drink.RowHeadersWidth = 51;
             this.dgv_Drink.RowTemplate.Height = 24;
             this.dgv_Drink.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Drink.Size = new System.Drawing.Size(518, 461);
+            this.dgv_Drink.Size = new System.Drawing.Size(848, 541);
             this.dgv_Drink.TabIndex = 2;
             this.dgv_Drink.SelectionChanged += new System.EventHandler(this.dgv_Drink_SelectionChanged);
             // 
@@ -230,87 +239,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 461);
+            this.panel1.Size = new System.Drawing.Size(135, 541);
             this.panel1.TabIndex = 1;
-            // 
-            // btn_DeleteDrink
-            // 
-            this.btn_DeleteDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.BorderRadius = 10;
-            this.btn_DeleteDrink.BorderSize = 1;
-            this.btn_DeleteDrink.Enabled = false;
-            this.btn_DeleteDrink.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.Location = new System.Drawing.Point(12, 253);
-            this.btn_DeleteDrink.Name = "btn_DeleteDrink";
-            this.btn_DeleteDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_DeleteDrink.TabIndex = 7;
-            this.btn_DeleteDrink.Text = "Delete";
-            this.btn_DeleteDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_DeleteDrink.UseVisualStyleBackColor = false;
-            this.btn_DeleteDrink.Click += new System.EventHandler(this.btn_DeleteDrink_Click);
-            // 
-            // btn_EditDrink
-            // 
-            this.btn_EditDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.BorderRadius = 10;
-            this.btn_EditDrink.BorderSize = 1;
-            this.btn_EditDrink.Enabled = false;
-            this.btn_EditDrink.FlatAppearance.BorderSize = 0;
-            this.btn_EditDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.Location = new System.Drawing.Point(12, 193);
-            this.btn_EditDrink.Name = "btn_EditDrink";
-            this.btn_EditDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_EditDrink.TabIndex = 6;
-            this.btn_EditDrink.Text = "Edit";
-            this.btn_EditDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_EditDrink.UseVisualStyleBackColor = false;
-            this.btn_EditDrink.Click += new System.EventHandler(this.btn_EditDrink_Click);
-            // 
-            // btn_AddDrink
-            // 
-            this.btn_AddDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.BorderRadius = 10;
-            this.btn_AddDrink.BorderSize = 1;
-            this.btn_AddDrink.Enabled = false;
-            this.btn_AddDrink.FlatAppearance.BorderSize = 0;
-            this.btn_AddDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.Location = new System.Drawing.Point(12, 127);
-            this.btn_AddDrink.Name = "btn_AddDrink";
-            this.btn_AddDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_AddDrink.TabIndex = 5;
-            this.btn_AddDrink.Text = "Add";
-            this.btn_AddDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_AddDrink.UseVisualStyleBackColor = false;
-            this.btn_AddDrink.Click += new System.EventHandler(this.btn_AddDrink_Click);
-            // 
-            // btn_ShowDrink
-            // 
-            this.btn_ShowDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ShowDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.BorderRadius = 10;
-            this.btn_ShowDrink.BorderSize = 1;
-            this.btn_ShowDrink.FlatAppearance.BorderSize = 0;
-            this.btn_ShowDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.Location = new System.Drawing.Point(12, 64);
-            this.btn_ShowDrink.Name = "btn_ShowDrink";
-            this.btn_ShowDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_ShowDrink.TabIndex = 4;
-            this.btn_ShowDrink.Text = "Show";
-            this.btn_ShowDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_ShowDrink.UseVisualStyleBackColor = false;
-            this.btn_ShowDrink.Click += new System.EventHandler(this.btn_ShowDrink_Click);
             // 
             // pn_queryDrink
             // 
@@ -322,30 +252,11 @@
             this.pn_queryDrink.Controls.Add(this.panel9);
             this.pn_queryDrink.Controls.Add(this.panel18);
             this.pn_queryDrink.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_queryDrink.Location = new System.Drawing.Point(653, 0);
+            this.pn_queryDrink.Location = new System.Drawing.Point(983, 0);
             this.pn_queryDrink.Margin = new System.Windows.Forms.Padding(2);
             this.pn_queryDrink.Name = "pn_queryDrink";
-            this.pn_queryDrink.Size = new System.Drawing.Size(239, 461);
+            this.pn_queryDrink.Size = new System.Drawing.Size(239, 541);
             this.pn_queryDrink.TabIndex = 3;
-            // 
-            // btn_SaveDrink
-            // 
-            this.btn_SaveDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SaveDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SaveDrink.BorderColor = System.Drawing.Color.Black;
-            this.btn_SaveDrink.BorderRadius = 10;
-            this.btn_SaveDrink.BorderSize = 1;
-            this.btn_SaveDrink.FlatAppearance.BorderSize = 0;
-            this.btn_SaveDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SaveDrink.ForeColor = System.Drawing.Color.Black;
-            this.btn_SaveDrink.Location = new System.Drawing.Point(63, 395);
-            this.btn_SaveDrink.Name = "btn_SaveDrink";
-            this.btn_SaveDrink.Size = new System.Drawing.Size(109, 40);
-            this.btn_SaveDrink.TabIndex = 8;
-            this.btn_SaveDrink.Text = "Save";
-            this.btn_SaveDrink.TextColor = System.Drawing.Color.Black;
-            this.btn_SaveDrink.UseVisualStyleBackColor = false;
-            this.btn_SaveDrink.Click += new System.EventHandler(this.btn_SavaDrink_Click);
             // 
             // tb_SearchDrinkName
             // 
@@ -502,7 +413,7 @@
             this.tab_drink.Margin = new System.Windows.Forms.Padding(2);
             this.tab_drink.Name = "tab_drink";
             this.tab_drink.SelectedIndex = 0;
-            this.tab_drink.Size = new System.Drawing.Size(904, 498);
+            this.tab_drink.Size = new System.Drawing.Size(1234, 578);
             this.tab_drink.TabIndex = 4;
             // 
             // tabPage1
@@ -512,7 +423,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(896, 465);
+            this.tabPage1.Size = new System.Drawing.Size(1226, 545);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Drink Type";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -525,7 +436,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 461);
+            this.panel2.Size = new System.Drawing.Size(1222, 541);
             this.panel2.TabIndex = 3;
             // 
             // panel5
@@ -536,7 +447,7 @@
             this.panel5.Location = new System.Drawing.Point(151, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(741, 461);
+            this.panel5.Size = new System.Drawing.Size(1071, 541);
             this.panel5.TabIndex = 3;
             // 
             // dgv_DrinkType
@@ -555,7 +466,7 @@
             this.dgv_DrinkType.RowHeadersWidth = 51;
             this.dgv_DrinkType.RowTemplate.Height = 24;
             this.dgv_DrinkType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DrinkType.Size = new System.Drawing.Size(741, 346);
+            this.dgv_DrinkType.Size = new System.Drawing.Size(1071, 426);
             this.dgv_DrinkType.TabIndex = 3;
             this.dgv_DrinkType.SelectionChanged += new System.EventHandler(this.dgv_DrinkType_SelectionChanged);
             // 
@@ -568,27 +479,8 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(741, 115);
+            this.panel6.Size = new System.Drawing.Size(1071, 115);
             this.panel6.TabIndex = 0;
-            // 
-            // btn_SaveDrinkType
-            // 
-            this.btn_SaveDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SaveDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SaveDrinkType.BorderColor = System.Drawing.Color.Black;
-            this.btn_SaveDrinkType.BorderRadius = 10;
-            this.btn_SaveDrinkType.BorderSize = 1;
-            this.btn_SaveDrinkType.FlatAppearance.BorderSize = 0;
-            this.btn_SaveDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SaveDrinkType.ForeColor = System.Drawing.Color.Black;
-            this.btn_SaveDrinkType.Location = new System.Drawing.Point(282, 70);
-            this.btn_SaveDrinkType.Name = "btn_SaveDrinkType";
-            this.btn_SaveDrinkType.Size = new System.Drawing.Size(109, 40);
-            this.btn_SaveDrinkType.TabIndex = 9;
-            this.btn_SaveDrinkType.Text = "Save";
-            this.btn_SaveDrinkType.TextColor = System.Drawing.Color.Black;
-            this.btn_SaveDrinkType.UseVisualStyleBackColor = false;
-            this.btn_SaveDrinkType.Click += new System.EventHandler(this.btn_SaveDrinkType_Click);
             // 
             // panel22
             // 
@@ -658,8 +550,549 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(151, 461);
+            this.panel3.Size = new System.Drawing.Size(151, 541);
             this.panel3.TabIndex = 2;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel11);
+            this.tabPage3.Controls.Add(this.panel10);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(1226, 545);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Table";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.panel13);
+            this.panel11.Controls.Add(this.panel12);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(147, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1077, 541);
+            this.panel11.TabIndex = 4;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.dgv_Table);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 85);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1077, 456);
+            this.panel13.TabIndex = 2;
+            // 
+            // dgv_Table
+            // 
+            this.dgv_Table.AllowUserToAddRows = false;
+            this.dgv_Table.AllowUserToDeleteRows = false;
+            this.dgv_Table.AllowUserToResizeRows = false;
+            this.dgv_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Table.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Table.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Table.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Table.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Table.Name = "dgv_Table";
+            this.dgv_Table.ReadOnly = true;
+            this.dgv_Table.RowHeadersWidth = 51;
+            this.dgv_Table.RowTemplate.Height = 24;
+            this.dgv_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Table.Size = new System.Drawing.Size(1077, 456);
+            this.dgv_Table.TabIndex = 4;
+            this.dgv_Table.SelectionChanged += new System.EventHandler(this.dgv_Table_SelectionChanged);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btn_SaveTable);
+            this.panel12.Controls.Add(this.panel20);
+            this.panel12.Controls.Add(this.panel21);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1077, 85);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.tb_TableName);
+            this.panel20.Controls.Add(this.label5);
+            this.panel20.Location = new System.Drawing.Point(254, 22);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(318, 46);
+            this.panel20.TabIndex = 3;
+            // 
+            // tb_TableName
+            // 
+            this.tb_TableName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_TableName.Location = new System.Drawing.Point(141, 12);
+            this.tb_TableName.Name = "tb_TableName";
+            this.tb_TableName.Size = new System.Drawing.Size(174, 26);
+            this.tb_TableName.TabIndex = 5;
+            this.tb_TableName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Table Name ";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.tb_TableID);
+            this.panel21.Controls.Add(this.label6);
+            this.panel21.Location = new System.Drawing.Point(16, 22);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(213, 46);
+            this.panel21.TabIndex = 2;
+            // 
+            // tb_TableID
+            // 
+            this.tb_TableID.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_TableID.Location = new System.Drawing.Point(51, 12);
+            this.tb_TableID.Name = "tb_TableID";
+            this.tb_TableID.Size = new System.Drawing.Size(155, 26);
+            this.tb_TableID.TabIndex = 4;
+            this.tb_TableID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ID";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btn_DeleteTable);
+            this.panel10.Controls.Add(this.btn_EditTable);
+            this.panel10.Controls.Add(this.btn_AddTable);
+            this.panel10.Controls.Add(this.btn_ShowTable);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(145, 541);
+            this.panel10.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 153);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel15);
+            this.tabPage4.Controls.Add(this.panel14);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(1226, 545);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "Account";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.dgv_Account);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(164, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1060, 541);
+            this.panel15.TabIndex = 5;
+            // 
+            // dgv_Account
+            // 
+            this.dgv_Account.AllowUserToAddRows = false;
+            this.dgv_Account.AllowUserToDeleteRows = false;
+            this.dgv_Account.AllowUserToResizeRows = false;
+            this.dgv_Account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Account.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Account.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Account.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_Account.Location = new System.Drawing.Point(0, 111);
+            this.dgv_Account.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Account.Name = "dgv_Account";
+            this.dgv_Account.ReadOnly = true;
+            this.dgv_Account.RowHeadersWidth = 51;
+            this.dgv_Account.RowTemplate.Height = 24;
+            this.dgv_Account.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Account.Size = new System.Drawing.Size(1060, 430);
+            this.dgv_Account.TabIndex = 5;
+            this.dgv_Account.SelectionChanged += new System.EventHandler(this.dgv_Account_SelectionChanged);
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btn_SaveAccount);
+            this.panel16.Controls.Add(this.panel24);
+            this.panel16.Controls.Add(this.panel25);
+            this.panel16.Controls.Add(this.panel26);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1060, 111);
+            this.panel16.TabIndex = 2;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.cb_TypeAccount);
+            this.panel24.Controls.Add(this.label8);
+            this.panel24.Location = new System.Drawing.Point(312, 32);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(276, 50);
+            this.panel24.TabIndex = 11;
+            // 
+            // cb_TypeAccount
+            // 
+            this.cb_TypeAccount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_TypeAccount.FormattingEnabled = true;
+            this.cb_TypeAccount.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
+            this.cb_TypeAccount.Location = new System.Drawing.Point(101, 12);
+            this.cb_TypeAccount.Name = "cb_TypeAccount";
+            this.cb_TypeAccount.Size = new System.Drawing.Size(159, 28);
+            this.cb_TypeAccount.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(9, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 22);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Type";
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.tb_DisplayName);
+            this.panel25.Controls.Add(this.label9);
+            this.panel25.Location = new System.Drawing.Point(17, 58);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(276, 50);
+            this.panel25.TabIndex = 10;
+            // 
+            // tb_DisplayName
+            // 
+            this.tb_DisplayName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_DisplayName.Location = new System.Drawing.Point(110, 15);
+            this.tb_DisplayName.Name = "tb_DisplayName";
+            this.tb_DisplayName.Size = new System.Drawing.Size(159, 26);
+            this.tb_DisplayName.TabIndex = 5;
+            this.tb_DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 22);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Full Name";
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.tb_UserName);
+            this.panel26.Controls.Add(this.label10);
+            this.panel26.Location = new System.Drawing.Point(17, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(276, 50);
+            this.panel26.TabIndex = 9;
+            // 
+            // tb_UserName
+            // 
+            this.tb_UserName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_UserName.Location = new System.Drawing.Point(110, 18);
+            this.tb_UserName.Name = "tb_UserName";
+            this.tb_UserName.ReadOnly = true;
+            this.tb_UserName.Size = new System.Drawing.Size(159, 26);
+            this.tb_UserName.TabIndex = 4;
+            this.tb_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 22);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "User Name";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btn_DeleteAccount);
+            this.panel14.Controls.Add(this.btn_EditAccount);
+            this.panel14.Controls.Add(this.btn_AddAccount);
+            this.panel14.Controls.Add(this.btn_ShowAccount);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(162, 541);
+            this.panel14.TabIndex = 4;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.chart_Revenue);
+            this.tabPage5.Controls.Add(this.chart_RevenueByCashier);
+            this.tabPage5.Controls.Add(this.dgv_Revenue);
+            this.tabPage5.Controls.Add(this.panel17);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Size = new System.Drawing.Size(1226, 545);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Revenue";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // chart_Revenue
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart_Revenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Revenue.Legends.Add(legend1);
+            this.chart_Revenue.Location = new System.Drawing.Point(0, 76);
+            this.chart_Revenue.Name = "chart_Revenue";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Revenue";
+            this.chart_Revenue.Series.Add(series1);
+            this.chart_Revenue.Size = new System.Drawing.Size(614, 469);
+            this.chart_Revenue.TabIndex = 7;
+            this.chart_Revenue.Text = "Revenue";
+            title1.Name = "Revenue";
+            title1.Text = "Revenue";
+            this.chart_Revenue.Titles.Add(title1);
+            // 
+            // dgv_Revenue
+            // 
+            this.dgv_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Revenue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Revenue.Location = new System.Drawing.Point(2, 76);
+            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Revenue.Name = "dgv_Revenue";
+            this.dgv_Revenue.RowHeadersWidth = 51;
+            this.dgv_Revenue.RowTemplate.Height = 24;
+            this.dgv_Revenue.Size = new System.Drawing.Size(1222, 467);
+            this.dgv_Revenue.TabIndex = 6;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.groupBox1);
+            this.panel17.Controls.Add(this.rjButton13);
+            this.panel17.Controls.Add(this.lb_to);
+            this.panel17.Controls.Add(this.lb_from);
+            this.panel17.Controls.Add(this.dateTimePickerStart);
+            this.panel17.Controls.Add(this.dateTimePickerEnd);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1222, 74);
+            this.panel17.TabIndex = 2;
+            // 
+            // lb_to
+            // 
+            this.lb_to.AutoSize = true;
+            this.lb_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_to.Location = new System.Drawing.Point(389, 23);
+            this.lb_to.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_to.Name = "lb_to";
+            this.lb_to.Size = new System.Drawing.Size(53, 25);
+            this.lb_to.TabIndex = 3;
+            this.lb_to.Text = "To :";
+            // 
+            // lb_from
+            // 
+            this.lb_from.AutoSize = true;
+            this.lb_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_from.Location = new System.Drawing.Point(5, 23);
+            this.lb_from.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_from.Name = "lb_from";
+            this.lb_from.Size = new System.Drawing.Size(79, 25);
+            this.lb_from.TabIndex = 2;
+            this.lb_from.Text = "From :";
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Location = new System.Drawing.Point(88, 22);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(276, 26);
+            this.dateTimePickerStart.TabIndex = 1;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(446, 23);
+            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(288, 26);
+            this.dateTimePickerEnd.TabIndex = 0;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel19.Controls.Add(this.label11);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(1234, 83);
+            this.panel19.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Freestyle Script", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(508, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(229, 71);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "A D M I N";
+            // 
+            // btn_DeleteDrink
+            // 
+            this.btn_DeleteDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.BorderRadius = 10;
+            this.btn_DeleteDrink.BorderSize = 1;
+            this.btn_DeleteDrink.Enabled = false;
+            this.btn_DeleteDrink.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.Location = new System.Drawing.Point(12, 253);
+            this.btn_DeleteDrink.Name = "btn_DeleteDrink";
+            this.btn_DeleteDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_DeleteDrink.TabIndex = 7;
+            this.btn_DeleteDrink.Text = "Delete";
+            this.btn_DeleteDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_DeleteDrink.UseVisualStyleBackColor = false;
+            this.btn_DeleteDrink.Click += new System.EventHandler(this.btn_DeleteDrink_Click);
+            // 
+            // btn_EditDrink
+            // 
+            this.btn_EditDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.BorderRadius = 10;
+            this.btn_EditDrink.BorderSize = 1;
+            this.btn_EditDrink.Enabled = false;
+            this.btn_EditDrink.FlatAppearance.BorderSize = 0;
+            this.btn_EditDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.Location = new System.Drawing.Point(12, 193);
+            this.btn_EditDrink.Name = "btn_EditDrink";
+            this.btn_EditDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_EditDrink.TabIndex = 6;
+            this.btn_EditDrink.Text = "Edit";
+            this.btn_EditDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_EditDrink.UseVisualStyleBackColor = false;
+            this.btn_EditDrink.Click += new System.EventHandler(this.btn_EditDrink_Click);
+            // 
+            // btn_AddDrink
+            // 
+            this.btn_AddDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.BorderRadius = 10;
+            this.btn_AddDrink.BorderSize = 1;
+            this.btn_AddDrink.Enabled = false;
+            this.btn_AddDrink.FlatAppearance.BorderSize = 0;
+            this.btn_AddDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.Location = new System.Drawing.Point(12, 127);
+            this.btn_AddDrink.Name = "btn_AddDrink";
+            this.btn_AddDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_AddDrink.TabIndex = 5;
+            this.btn_AddDrink.Text = "Add";
+            this.btn_AddDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_AddDrink.UseVisualStyleBackColor = false;
+            this.btn_AddDrink.Click += new System.EventHandler(this.btn_AddDrink_Click);
+            // 
+            // btn_ShowDrink
+            // 
+            this.btn_ShowDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ShowDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.BorderRadius = 10;
+            this.btn_ShowDrink.BorderSize = 1;
+            this.btn_ShowDrink.FlatAppearance.BorderSize = 0;
+            this.btn_ShowDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.Location = new System.Drawing.Point(12, 64);
+            this.btn_ShowDrink.Name = "btn_ShowDrink";
+            this.btn_ShowDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_ShowDrink.TabIndex = 4;
+            this.btn_ShowDrink.Text = "Show";
+            this.btn_ShowDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_ShowDrink.UseVisualStyleBackColor = false;
+            this.btn_ShowDrink.Click += new System.EventHandler(this.btn_ShowDrink_Click);
+            // 
+            // btn_SaveDrink
+            // 
+            this.btn_SaveDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrink.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.BorderRadius = 10;
+            this.btn_SaveDrink.BorderSize = 1;
+            this.btn_SaveDrink.FlatAppearance.BorderSize = 0;
+            this.btn_SaveDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveDrink.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.Location = new System.Drawing.Point(63, 395);
+            this.btn_SaveDrink.Name = "btn_SaveDrink";
+            this.btn_SaveDrink.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveDrink.TabIndex = 8;
+            this.btn_SaveDrink.Text = "Save";
+            this.btn_SaveDrink.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveDrink.UseVisualStyleBackColor = false;
+            this.btn_SaveDrink.Click += new System.EventHandler(this.btn_SavaDrink_Click);
+            // 
+            // btn_SaveDrinkType
+            // 
+            this.btn_SaveDrinkType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrinkType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_SaveDrinkType.BorderColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.BorderRadius = 10;
+            this.btn_SaveDrinkType.BorderSize = 1;
+            this.btn_SaveDrinkType.FlatAppearance.BorderSize = 0;
+            this.btn_SaveDrinkType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveDrinkType.ForeColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.Location = new System.Drawing.Point(282, 70);
+            this.btn_SaveDrinkType.Name = "btn_SaveDrinkType";
+            this.btn_SaveDrinkType.Size = new System.Drawing.Size(109, 40);
+            this.btn_SaveDrinkType.TabIndex = 9;
+            this.btn_SaveDrinkType.Text = "Save";
+            this.btn_SaveDrinkType.TextColor = System.Drawing.Color.Black;
+            this.btn_SaveDrinkType.UseVisualStyleBackColor = false;
+            this.btn_SaveDrinkType.Click += new System.EventHandler(this.btn_SaveDrinkType_Click);
             // 
             // btn_DeleteDrinkType
             // 
@@ -740,73 +1173,6 @@
             this.btn_ShowDrinkType.UseVisualStyleBackColor = false;
             this.btn_ShowDrinkType.Click += new System.EventHandler(this.btn_Show_Drink_Type_Click);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panel11);
-            this.tabPage3.Controls.Add(this.panel10);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(896, 465);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Table";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.panel13);
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(147, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(747, 461);
-            this.panel11.TabIndex = 4;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.dgv_Table);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 85);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(747, 376);
-            this.panel13.TabIndex = 2;
-            // 
-            // dgv_Table
-            // 
-            this.dgv_Table.AllowUserToAddRows = false;
-            this.dgv_Table.AllowUserToDeleteRows = false;
-            this.dgv_Table.AllowUserToResizeRows = false;
-            this.dgv_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Table.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Table.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Table.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Table.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Table.Name = "dgv_Table";
-            this.dgv_Table.ReadOnly = true;
-            this.dgv_Table.RowHeadersWidth = 51;
-            this.dgv_Table.RowTemplate.Height = 24;
-            this.dgv_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Table.Size = new System.Drawing.Size(747, 376);
-            this.dgv_Table.TabIndex = 4;
-            this.dgv_Table.SelectionChanged += new System.EventHandler(this.dgv_Table_SelectionChanged);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btn_SaveTable);
-            this.panel12.Controls.Add(this.panel20);
-            this.panel12.Controls.Add(this.panel21);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(747, 85);
-            this.panel12.TabIndex = 1;
-            // 
             // btn_SaveTable
             // 
             this.btn_SaveTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -825,75 +1191,6 @@
             this.btn_SaveTable.TextColor = System.Drawing.Color.Black;
             this.btn_SaveTable.UseVisualStyleBackColor = false;
             this.btn_SaveTable.Click += new System.EventHandler(this.btn_SaveTable_Click);
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.tb_TableName);
-            this.panel20.Controls.Add(this.label5);
-            this.panel20.Location = new System.Drawing.Point(254, 22);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(318, 46);
-            this.panel20.TabIndex = 3;
-            // 
-            // tb_TableName
-            // 
-            this.tb_TableName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_TableName.Location = new System.Drawing.Point(141, 12);
-            this.tb_TableName.Name = "tb_TableName";
-            this.tb_TableName.Size = new System.Drawing.Size(174, 26);
-            this.tb_TableName.TabIndex = 5;
-            this.tb_TableName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Table Name ";
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.tb_TableID);
-            this.panel21.Controls.Add(this.label6);
-            this.panel21.Location = new System.Drawing.Point(16, 22);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(213, 46);
-            this.panel21.TabIndex = 2;
-            // 
-            // tb_TableID
-            // 
-            this.tb_TableID.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_TableID.Location = new System.Drawing.Point(51, 12);
-            this.tb_TableID.Name = "tb_TableID";
-            this.tb_TableID.Size = new System.Drawing.Size(155, 26);
-            this.tb_TableID.TabIndex = 4;
-            this.tb_TableID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "ID";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btn_DeleteTable);
-            this.panel10.Controls.Add(this.btn_EditTable);
-            this.panel10.Controls.Add(this.btn_AddTable);
-            this.panel10.Controls.Add(this.btn_ShowTable);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(2, 2);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(145, 461);
-            this.panel10.TabIndex = 3;
             // 
             // btn_DeleteTable
             // 
@@ -974,73 +1271,6 @@
             this.btn_ShowTable.UseVisualStyleBackColor = false;
             this.btn_ShowTable.Click += new System.EventHandler(this.btn_Show_Table_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 153);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
-            this.label4.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel15);
-            this.tabPage4.Controls.Add(this.panel14);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(896, 465);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Account";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.dgv_Account);
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(164, 2);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(730, 461);
-            this.panel15.TabIndex = 5;
-            // 
-            // dgv_Account
-            // 
-            this.dgv_Account.AllowUserToAddRows = false;
-            this.dgv_Account.AllowUserToDeleteRows = false;
-            this.dgv_Account.AllowUserToResizeRows = false;
-            this.dgv_Account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Account.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Account.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Account.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgv_Account.Location = new System.Drawing.Point(0, 111);
-            this.dgv_Account.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Account.Name = "dgv_Account";
-            this.dgv_Account.ReadOnly = true;
-            this.dgv_Account.RowHeadersWidth = 51;
-            this.dgv_Account.RowTemplate.Height = 24;
-            this.dgv_Account.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Account.Size = new System.Drawing.Size(730, 350);
-            this.dgv_Account.TabIndex = 5;
-            this.dgv_Account.SelectionChanged += new System.EventHandler(this.dgv_Account_SelectionChanged);
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.btn_SaveAccount);
-            this.panel16.Controls.Add(this.panel24);
-            this.panel16.Controls.Add(this.panel25);
-            this.panel16.Controls.Add(this.panel26);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(730, 111);
-            this.panel16.TabIndex = 2;
-            // 
             // btn_SaveAccount
             // 
             this.btn_SaveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1059,106 +1289,6 @@
             this.btn_SaveAccount.TextColor = System.Drawing.Color.Black;
             this.btn_SaveAccount.UseVisualStyleBackColor = false;
             this.btn_SaveAccount.Click += new System.EventHandler(this.btn_SaveAccount_Click);
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.cb_TypeAccount);
-            this.panel24.Controls.Add(this.label8);
-            this.panel24.Location = new System.Drawing.Point(312, 32);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(276, 50);
-            this.panel24.TabIndex = 11;
-            // 
-            // cb_TypeAccount
-            // 
-            this.cb_TypeAccount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_TypeAccount.FormattingEnabled = true;
-            this.cb_TypeAccount.Items.AddRange(new object[] {
-            "Admin",
-            "Staff"});
-            this.cb_TypeAccount.Location = new System.Drawing.Point(101, 12);
-            this.cb_TypeAccount.Name = "cb_TypeAccount";
-            this.cb_TypeAccount.Size = new System.Drawing.Size(159, 28);
-            this.cb_TypeAccount.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 22);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Type";
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.tb_DisplayName);
-            this.panel25.Controls.Add(this.label9);
-            this.panel25.Location = new System.Drawing.Point(17, 58);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(276, 50);
-            this.panel25.TabIndex = 10;
-            // 
-            // tb_DisplayName
-            // 
-            this.tb_DisplayName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_DisplayName.Location = new System.Drawing.Point(110, 15);
-            this.tb_DisplayName.Name = "tb_DisplayName";
-            this.tb_DisplayName.Size = new System.Drawing.Size(159, 26);
-            this.tb_DisplayName.TabIndex = 5;
-            this.tb_DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 22);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Full Name";
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.tb_UserName);
-            this.panel26.Controls.Add(this.label10);
-            this.panel26.Location = new System.Drawing.Point(17, 3);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(276, 50);
-            this.panel26.TabIndex = 9;
-            // 
-            // tb_UserName
-            // 
-            this.tb_UserName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_UserName.Location = new System.Drawing.Point(110, 18);
-            this.tb_UserName.Name = "tb_UserName";
-            this.tb_UserName.Size = new System.Drawing.Size(159, 26);
-            this.tb_UserName.TabIndex = 4;
-            this.tb_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 22);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "User Name";
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btn_DeleteAccount);
-            this.panel14.Controls.Add(this.btn_EditAccount);
-            this.panel14.Controls.Add(this.btn_AddAccount);
-            this.panel14.Controls.Add(this.btn_ShowAccount);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(2, 2);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(162, 461);
-            this.panel14.TabIndex = 4;
             // 
             // btn_DeleteAccount
             // 
@@ -1239,66 +1369,6 @@
             this.btn_ShowAccount.UseVisualStyleBackColor = false;
             this.btn_ShowAccount.Click += new System.EventHandler(this.btn_Show_Acc_Click);
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.chart1);
-            this.tabPage5.Controls.Add(this.dgv_Revenue);
-            this.tabPage5.Controls.Add(this.panel17);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(896, 465);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "Revenue";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(2, 76);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Revenue";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(894, 389);
-            this.chart1.TabIndex = 7;
-            this.chart1.Text = "Revenue";
-            title1.Name = "Revenue";
-            title1.Text = "Revenue";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Visible = false;
-            // 
-            // dgv_Revenue
-            // 
-            this.dgv_Revenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Revenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Revenue.Location = new System.Drawing.Point(2, 76);
-            this.dgv_Revenue.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Revenue.Name = "dgv_Revenue";
-            this.dgv_Revenue.RowHeadersWidth = 51;
-            this.dgv_Revenue.RowTemplate.Height = 24;
-            this.dgv_Revenue.Size = new System.Drawing.Size(892, 387);
-            this.dgv_Revenue.TabIndex = 6;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.rjButton13);
-            this.panel17.Controls.Add(this.lb_to);
-            this.panel17.Controls.Add(this.lb_from);
-            this.panel17.Controls.Add(this.dateTimePickerStart);
-            this.panel17.Controls.Add(this.dateTimePickerEnd);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(2, 2);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(892, 74);
-            this.panel17.TabIndex = 2;
-            // 
             // rjButton13
             // 
             this.rjButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1309,7 +1379,7 @@
             this.rjButton13.FlatAppearance.BorderSize = 0;
             this.rjButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton13.ForeColor = System.Drawing.Color.Black;
-            this.rjButton13.Location = new System.Drawing.Point(762, 17);
+            this.rjButton13.Location = new System.Drawing.Point(800, 15);
             this.rjButton13.Name = "rjButton13";
             this.rjButton13.Size = new System.Drawing.Size(109, 40);
             this.rjButton13.TabIndex = 16;
@@ -1318,70 +1388,52 @@
             this.rjButton13.UseVisualStyleBackColor = false;
             this.rjButton13.Click += new System.EventHandler(this.rjButton13_Click);
             // 
-            // lb_to
+            // chart_RevenueByCashier
             // 
-            this.lb_to.AutoSize = true;
-            this.lb_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_to.Location = new System.Drawing.Point(389, 23);
-            this.lb_to.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_to.Name = "lb_to";
-            this.lb_to.Size = new System.Drawing.Size(53, 25);
-            this.lb_to.TabIndex = 3;
-            this.lb_to.Text = "To :";
+            chartArea2.Name = "ChartArea1";
+            this.chart_RevenueByCashier.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_RevenueByCashier.Legends.Add(legend2);
+            this.chart_RevenueByCashier.Location = new System.Drawing.Point(611, 76);
+            this.chart_RevenueByCashier.Name = "chart_RevenueByCashier";
+            this.chart_RevenueByCashier.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Revenue";
+            this.chart_RevenueByCashier.Series.Add(series2);
+            this.chart_RevenueByCashier.Size = new System.Drawing.Size(615, 469);
+            this.chart_RevenueByCashier.TabIndex = 8;
+            this.chart_RevenueByCashier.Text = "Revenue By Cashier";
+            title2.Name = "Revenue By Cashier";
+            title2.Text = "Revenue";
+            this.chart_RevenueByCashier.Titles.Add(title2);
             // 
-            // lb_from
+            // checkBox_ByCashier
             // 
-            this.lb_from.AutoSize = true;
-            this.lb_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_from.Location = new System.Drawing.Point(5, 23);
-            this.lb_from.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_from.Name = "lb_from";
-            this.lb_from.Size = new System.Drawing.Size(79, 25);
-            this.lb_from.TabIndex = 2;
-            this.lb_from.Text = "From :";
+            this.checkBox_ByCashier.AutoSize = true;
+            this.checkBox_ByCashier.Location = new System.Drawing.Point(6, 34);
+            this.checkBox_ByCashier.Name = "checkBox_ByCashier";
+            this.checkBox_ByCashier.Size = new System.Drawing.Size(104, 24);
+            this.checkBox_ByCashier.TabIndex = 17;
+            this.checkBox_ByCashier.Text = "By Cashier";
+            this.checkBox_ByCashier.UseVisualStyleBackColor = true;
+            this.checkBox_ByCashier.CheckedChanged += new System.EventHandler(this.checkBox_ByCashier_CheckedChanged);
             // 
-            // dateTimePickerStart
+            // groupBox1
             // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(88, 22);
-            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(276, 26);
-            this.dateTimePickerStart.TabIndex = 1;
-            // 
-            // dateTimePickerEnd
-            // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(446, 23);
-            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(288, 26);
-            this.dateTimePickerEnd.TabIndex = 0;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel19.Controls.Add(this.label11);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Location = new System.Drawing.Point(0, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(904, 83);
-            this.panel19.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Freestyle Script", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(343, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(229, 71);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "A D M I N";
+            this.groupBox1.Controls.Add(this.checkBox_ByCashier);
+            this.groupBox1.Location = new System.Drawing.Point(1007, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 64);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Options";
             // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 581);
+            this.ClientSize = new System.Drawing.Size(1234, 661);
             this.Controls.Add(this.tab_drink);
             this.Controls.Add(this.panel19);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1439,12 +1491,15 @@
             this.panel26.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Revenue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Revenue)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_RevenueByCashier)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1536,11 +1591,14 @@
         private System.Windows.Forms.TextBox tb_UserName;
         private System.Windows.Forms.Label label10;
         private CustomControls.RJControls.RJButton rjButton13;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_Revenue;
         private CustomControls.RJControls.RJButton btn_SaveDrink;
         private CustomControls.RJControls.RJButton btn_SaveDrinkType;
         private CustomControls.RJControls.RJButton btn_SaveTable;
         private CustomControls.RJControls.RJButton btn_SaveAccount;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_RevenueByCashier;
+        private System.Windows.Forms.CheckBox checkBox_ByCashier;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

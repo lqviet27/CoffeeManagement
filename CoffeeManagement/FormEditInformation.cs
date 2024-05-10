@@ -46,12 +46,12 @@ namespace CoffeeManagement
 
         private void btn_ChangeName_Click(object sender, EventArgs e)
         {
-            currAccount.displayName = tb_DisplayName.Texts;
-            currAccount.userName = tb_UserName.Texts;
-            BUS_Account.Instance.Update(currAccount, FormLogin.UserNameCashier);
-            FormLogin.UserNameCashier = currAccount.userName;
-            MessageBox.Show("Change Information Success");
-            LoadCasier();
+            //currAccount.displayName = tb_DisplayName.Texts;
+            //currAccount.userName = tb_UserName.Texts;
+            //BUS_Account.Instance.Update(currAccount, FormLogin.UserNameCashier);
+            //FormLogin.UserNameCashier = currAccount.userName;
+            //MessageBox.Show("Change Information Success");
+            //LoadCasier();
         }
 
         private void btn_ChangePassword_Click(object sender, EventArgs e)
@@ -78,8 +78,8 @@ namespace CoffeeManagement
 
         private void btn_CancelChangeName_Click(object sender, EventArgs e)
         {
-            tb_DisplayName.Texts = "";
-            tb_UserName.Texts = "";
+            //tb_DisplayName.Texts = "";
+            //tb_UserName.Texts = "";
         }
 
         private void btn_CancelChangePassword_Click(object sender, EventArgs e)

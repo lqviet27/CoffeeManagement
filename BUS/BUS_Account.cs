@@ -19,10 +19,10 @@ namespace BUS
             foreach(DataRow dt in Read().Rows)
             {
                 list.Add(new Account{ 
-                    userName = dt["userName"].ToString(),
-                    displayName = dt["displayName"].ToString(),
-                    password = dt["password"].ToString(),
-                    type = dt["type"].ToString()
+                    userName = dt["UserName"].ToString(),
+                    displayName = dt["DisplayName"].ToString(),
+                    password = dt["PassWord"].ToString(),
+                    type = dt["Type"].ToString()
                 });
             }
         }

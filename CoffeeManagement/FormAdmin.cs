@@ -428,6 +428,7 @@ namespace CoffeeManagement
             DialogResult dialogResult = MessageBox.Show("Confirm Add Account ?", "Warning !", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                tb_UserName.ReadOnly = false;
                 choose = SAVE_ADD_ACCOUNT;
                 tb_UserName.Text = "";
                 tb_DisplayName.Text = "";
@@ -440,12 +441,13 @@ namespace CoffeeManagement
             DialogResult dialogResult = MessageBox.Show("Confirm Edit Account ?", "Warning !", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+
                 if (choose.Equals(SAVE_ADD_ACCOUNT))
                 {
                     btn_ShowAccount.PerformClick();
                 }
                 choose = SAVE_EDIT_ACCOUNT;
-                tb_UserName.Focus();
+                tb_DisplayName.Focus();
             }
         }
 
@@ -521,44 +523,143 @@ namespace CoffeeManagement
         // -------------------------------------------Revenue----------------------------------------------------
         private void rjButton13_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt.Rows.Clear();
-            chart1.Series.Clear();
+            DataTable dt_revenue = new DataTable();
+            DataTable dt_revenueByCashier = new DataTable();
+            dt_revenue.Rows.Clear();
+            dt_revenue.Columns.Clear();
+            chart_Revenue.Series.Clear();
+            chart_RevenueByCashier.Series.Clear();
+
 
             TimeSpan numberDays = dateTimePickerEnd.Value.Date.Subtract(dateTimePickerStart.Value.Date);
             int numDays = numberDays.Days;
-            chart1.Series.Add("Revenue");
+            chart_Revenue.Series.Add("Revenue");
+            chart_RevenueByCashier.Series.Add("Revenue By Cashier");
 
-            dt = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
-            if (dt.Rows.Count == 0)
+            checkBox_ByCashier.Checked = false;
+            chart_Revenue.Dock = DockStyle.Fill;
+
+            dt_revenue = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
+            if (dt_revenue.Rows.Count == 0)
             {
                 MessageBox.Show("Do not exist data!");
             }
             else
             {
-                if (dt.Rows.Count >= 7)
+                if (dt_revenue.Rows.Count >= 7)
                 {
-                    chart1.Series["Revenue"].ChartType = SeriesChartType.Line;
-                    chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -90;
+                    chart_Revenue.Series["Revenue"].ChartType = SeriesChartType.Line;
+                    chart_Revenue.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -90;
                 }
 
                 else
                 {
-                    chart1.Series["Revenue"].ChartType = SeriesChartType.Column;
-                    chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
+                    chart_Revenue.Series["Revenue"].ChartType = SeriesChartType.Column;
+                    chart_Revenue.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
                 }
 
-                chart1.DataSource = dt;
-                chart1.Series["Revenue"].XValueMember = "Day";
-                chart1.Series["Revenue"].YValueMembers = "Revenue";
-                chart1.ChartAreas[0].AxisX.Interval = 1;
-                chart1.Series["Revenue"].IsValueShownAsLabel = true;
-                chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-                chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-                chart1.Visible = true;
+                chart_Revenue.DataSource = dt_revenue;
+                chart_Revenue.Series["Revenue"].XValueMember = "Day";
+                chart_Revenue.Series["Revenue"].YValueMembers = "Revenue";
+                chart_Revenue.ChartAreas[0].AxisX.Interval = 1;
+                chart_Revenue.Series["Revenue"].IsValueShownAsLabel = true;
+                chart_Revenue.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                chart_Revenue.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                chart_Revenue.Visible = true;
+
             }
+
+
+            dt_revenueByCashier = BUS_Bill.Instance.RevenueByCashier(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date);
+            if (dt_revenueByCashier.Rows.Count == 0)
+            {
+                MessageBox.Show("Do not exist data!");
+            }
+            else
+            {
+                chart_RevenueByCashier.Series["Revenue By Cashier"].ChartType = SeriesChartType.Column;
+                chart_RevenueByCashier.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
+                chart_RevenueByCashier.DataSource = dt_revenueByCashier;
+                chart_RevenueByCashier.Series["Revenue By Cashier"].XValueMember = "Cashier";
+                chart_RevenueByCashier.Series["Revenue By Cashier"].YValueMembers = "Revenue";
+                chart_RevenueByCashier.ChartAreas[0].AxisX.Interval = 1;
+                chart_RevenueByCashier.Series["Revenue By Cashier"].IsValueShownAsLabel = true;
+                chart_RevenueByCashier.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                chart_RevenueByCashier.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                chart_RevenueByCashier.Visible = true;
+            }
+
+            //dt_revenue = BUS_Bill.Instance.Revenue(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date, numDays);
+            //if (dt_revenue.Rows.Count == 0)
+            //{
+            //    MessageBox.Show("Do not exist data!");
+            //}
+            //else
+            //{
+            //    if (dt_revenue.Rows.Count >= 7)
+            //    {
+            //        chart_Revenue.Series["Revenue"].ChartType = SeriesChartType.Line;
+            //        chart_Revenue.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = -90;
+            //    }
+
+            //    else
+            //    {
+            //        chart_Revenue.Series["Revenue"].ChartType = SeriesChartType.Column;
+            //        chart_Revenue.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
+            //    }
+
+            //    chart_Revenue.DataSource = dt_revenue;
+            //    chart_Revenue.Series["Revenue"].XValueMember = "Day";
+            //    chart_Revenue.Series["Revenue"].YValueMembers = "Revenue";
+            //    chart_Revenue.ChartAreas[0].AxisX.Interval = 1;
+            //    chart_Revenue.Series["Revenue"].IsValueShownAsLabel = true;
+            //    chart_Revenue.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            //    chart_Revenue.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+            //    chart_Revenue.Visible = true;
+
+            //}
+
+
+            //if (checkBox_ByCashier.Checked)
+            //{
+            //    chart_Revenue.Dock = DockStyle.None;
+            //    dt_revenueByCashier = BUS_Bill.Instance.RevenueByCashier(dateTimePickerStart.Value.Date, dateTimePickerEnd.Value.Date);
+            //    if (dt_revenueByCashier.Rows.Count == 0)
+            //    {
+            //        MessageBox.Show("Do not exist data!");
+            //    }
+            //    else
+            //    {
+            //        chart_RevenueByCashier.Series["Revenue By Cashier"].ChartType = SeriesChartType.Column;
+            //        chart_RevenueByCashier.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 0;
+            //        chart_RevenueByCashier.DataSource = dt_revenueByCashier;
+            //        chart_RevenueByCashier.Series["Revenue By Cashier"].XValueMember = "Cashier";
+            //        chart_RevenueByCashier.Series["Revenue By Cashier"].YValueMembers = "Revenue";
+            //        chart_RevenueByCashier.ChartAreas[0].AxisX.Interval = 1;
+            //        chart_RevenueByCashier.Series["Revenue By Cashier"].IsValueShownAsLabel = true;
+            //        chart_RevenueByCashier.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            //        chart_RevenueByCashier.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+
+            //    }
+            //}
+            //else
+            //{
+            //    chart_Revenue.Dock = DockStyle.Fill;
+            //}
         }
 
-        
+        private void checkBox_ByCashier_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (checkBox_ByCashier.Checked)
+            {
+                chart_Revenue.Dock = DockStyle.None;
+            }
+            else
+            {
+                chart_Revenue.Dock = DockStyle.Fill;
+
+            }
+        }
     }
 }

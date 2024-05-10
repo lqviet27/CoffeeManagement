@@ -43,6 +43,10 @@ namespace BUS
         {
             return DAL_Bill.Instance.Revenue(StartDay, EndDay, numDays);
         }
+        public DataTable RevenueByCashier(DateTime StartDay, DateTime EndDay)
+        {
+            return DAL_Bill.Instance.RevenueByCashier(StartDay, EndDay);
+        }
         // cap nhat tong tien cua hoa don khi them mon
         public void setTotal(string tableName, float drinkTotal)
         {
