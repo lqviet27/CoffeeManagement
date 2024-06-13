@@ -62,5 +62,18 @@ namespace BUS
         //    dgv.Rows.Clear();
         //    dgv.DataSource = this.Read();
         //}
+        public string GetPassword(string userName)
+        {
+            string password = "";
+            foreach (DataRow dt in Read().Rows)
+            {
+                if (dt["UserName"].ToString() == userName)
+                {
+                    password = dt["PassWord"].ToString();
+                    break;
+                }
+            }
+            return password;
+        }
     }
 }

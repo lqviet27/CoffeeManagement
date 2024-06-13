@@ -481,6 +481,10 @@ namespace CoffeeManagement
             BUS_Table.Instance.MoveTable(TableFrom, TableTo);
         }
 
+        private void txt_Total_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btn_AcceptSwitch_Click(object sender, EventArgs e)
         {

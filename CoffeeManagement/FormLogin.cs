@@ -95,6 +95,14 @@ namespace CoffeeManagement
             lb_invalidInput.Visible = false;
         }
 
-
+        private void rjTextBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            // check enter login
+            if (e.KeyCode == Keys.Enter)
+            {
+                rjBtn_Login.PerformClick();
+            }
+            
+        }
     }
 }

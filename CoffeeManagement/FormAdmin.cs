@@ -428,7 +428,7 @@ namespace CoffeeManagement
             DialogResult dialogResult = MessageBox.Show("Confirm Add Account ?", "Warning !", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                tb_UserName.ReadOnly = false;
+                //tb_UserName.ReadOnly = false;
                 choose = SAVE_ADD_ACCOUNT;
                 tb_UserName.Text = "";
                 tb_DisplayName.Text = "";
@@ -447,7 +447,7 @@ namespace CoffeeManagement
                     btn_ShowAccount.PerformClick();
                 }
                 choose = SAVE_EDIT_ACCOUNT;
-                tb_DisplayName.Focus();
+                tb_UserName.Focus();
             }
         }
 
@@ -470,6 +470,7 @@ namespace CoffeeManagement
                             displayName = tb_DisplayName.Text,
                             type = cb_TypeAccount.Text,
                             password = "1"
+
                         };
                         // cap nhat database
                         BUS_Account.Instance.Create(newAccount);
@@ -478,7 +479,7 @@ namespace CoffeeManagement
                     else if (choose.Equals(SAVE_EDIT_ACCOUNT))
                     {
                         string oldUserName = "";
-                        foreach (DataGridViewRow row in dgv_Account.SelectedRows)
+                        foreach (DataGridViewRow row in dgv_Account.SelectedRows)   
                         {
                             oldUserName = row.Cells[0].Value.ToString();
                         }
@@ -487,7 +488,7 @@ namespace CoffeeManagement
                             userName = tb_UserName.Text,
                             displayName = tb_DisplayName.Text,
                             type = cb_TypeAccount.Text,
-                            password = "1"
+                            password = BUS_Account.Instance.GetPassword(oldUserName)
                         };
                         // cap nhat database
                         BUS_Account.Instance.Update(newAccount, oldUserName);
