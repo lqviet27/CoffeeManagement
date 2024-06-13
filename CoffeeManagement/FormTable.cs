@@ -28,7 +28,9 @@ namespace CoffeeManagement
         {
             InitializeComponent();
             LoadTable();
-        }
+            loadDataForAddDrinkGRB();
+
+		}
 
         //-----------------------------------------Table + Bill --------------------------------------
         public void LoadTable()
