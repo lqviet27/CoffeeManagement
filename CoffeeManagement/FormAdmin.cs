@@ -380,5 +380,10 @@ namespace CoffeeManagement
                 chart1.Visible = true;
             }
         }
+
+        private void dgv_Drink_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
